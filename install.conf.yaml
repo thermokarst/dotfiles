@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf:        tmux.conf
+    ~/.gitconfig:        git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.psqlrc:           psqlrc
+    ~/.zpreztorc:        zsh/zpreztorc
+    ~/.zlogin:           zsh/zlogin
+    ~/.zlogout:          zsh/zlogout
+    ~/.zprofile:         zsh/zprofile
+    ~/.zshenv:           zsh/zshenv
+    ~/.zshrc:            zsh/zshrc
+    ~/.aspell.en.pws:    aspell.en.pws
+    ~/.vimrc:            vimrc

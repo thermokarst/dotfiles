@@ -1,0 +1,95 @@
+#!/usr/bin/env zsh
+
+taps=(
+    homebrew/binary
+    caskroom/cask
+    caskroom/fonts
+)
+
+packages=(
+    ag
+    aspell
+    blackbox
+    brew-cask
+    cmake
+    cmus
+    diff-so-fancy
+    git
+    gnupg
+    go
+    gpg-agent
+    graphviz
+    heroku
+    htop-osx
+    httpie
+    hugo
+    imagemagick
+    node
+    openssl
+    pass
+    postgresql
+    python
+    python3
+    reattach-to-user-namespace
+    tmux
+    tree
+    vim
+    wget
+    xz
+    zsh
+)
+
+cask_packages=(
+    arq
+    dropbox
+    font-inconsolata
+    font-anonymous-pro
+    gitify
+    google-chrome
+    google-drive
+    java
+    macdown
+    pandoc
+    slack
+    spectacle
+    the-unarchiver
+    vagrant
+    virtualbox
+    xquartz
+)
+
+function log() {
+    echo $* > /dev/stderr
+}
+
+log "brew update"
+brew update
+
+log "brew upgrade"
+brew upgrade
+
+log "tapping"
+for name in $taps
+do
+    log "brew tap ${name}"
+    brew tap $name
+done
+
+log "installing"
+for name_and_args in $packages
+do
+    log "brew install ${=name_and_args}"
+    brew install "${=name_and_args}"
+done
+
+for name_and_args in $cask_packages
+do
+    log "brew cask install ${=name_and_args}"
+    brew cask install "${=name_and_args}"
+done
+
+log "brew cleanup"
+brew cleanup
+
+log "brew linkapps"
+brew linkapps
