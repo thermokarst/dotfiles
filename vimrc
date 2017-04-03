@@ -1,11 +1,20 @@
 call plug#begin()
+  " Color/theme integration
   Plug 'chriskempson/base16-vim'
+  " Time-tracking
   Plug 'wakatime/vim-wakatime'
+  " Python Flake8 support
   Plug 'nvie/vim-flake8'
+  " Status bar
   Plug 'vim-airline/vim-airline'
+  " Color/theme integration
   Plug 'vim-airline/vim-airline-themes'
+  " Git integration
   Plug 'airblade/vim-gitgutter'
+  " Whitespace handling
   Plug 'ntpeters/vim-better-whitespace'
+  " Mustache/handlebars support
+  Plug 'mustache/vim-mustache-handlebars'
 call plug#end()
 
 set t_Co=256
@@ -137,13 +146,13 @@ au BufNewFile,BufRead *.py
     \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
-    \ set fileformat=unix |
+    \ set fileformat=unix
 
 " Everybody else
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
-    \ set shiftwidth=2 |
+    \ set shiftwidth=2
 
 " Stop the YAML madness
 autocmd FileType yaml setl indentkeys-=<:>
