@@ -4,7 +4,6 @@
 [core]
     editor = vim
     excludesfile = /Users/matthew/.gitignore_global
-    pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
     diff = auto
     status = auto
@@ -14,7 +13,7 @@
 [gc]
     auto = 1
 [merge]
-    summary=true
+    summary = true
     tool = vimdiff
     conflictstyle = diff3
     prompt = false
@@ -37,14 +36,10 @@
     lg = !"git lg1"
     # https://gist.github.com/mwhite/6887990
     a = add
-    ap = add -p
     c = commit --verbose
     ca = commit -a --verbose
-    cm = commit -m
-    cam = commit -a -m
     m = commit --amend --verbose
     d = diff
-    ds = diff --stat
     dc = diff --cached
     s = status -s
     co = checkout
