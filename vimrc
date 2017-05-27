@@ -15,6 +15,8 @@ call plug#begin()
   Plug 'ntpeters/vim-better-whitespace'
   " Mustache/handlebars support
   Plug 'mustache/vim-mustache-handlebars'
+  " Insert-mode tab completion
+  Plug 'ervandew/supertab'
 call plug#end()
 
 set t_Co=256
@@ -168,3 +170,11 @@ nmap <leader>l :bnext<CR>
 
 " cycle to previous buffer
 nmap <leader>h :bprevious<CR>
+
+set rtp+=/usr/local/opt/fzf
+
+" flake8 config
+let g:flake8_show_in_gutter = 1
+let g:flake8_error_marker = 'EE'
+let g:flake8_warning_marker = 'WW'
+autocmd BufWritePost *.py call Flake8()
