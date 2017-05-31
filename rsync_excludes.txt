@@ -3,10 +3,13 @@
 - node_modules
 - __pycache__
 - *.pyc
-- .nvim/plugged/
-- .vim/plugged/
+- Applications/
 - Library/
 - miniconda3/
 - tmp/
 - .cache/
 - .npm/
+- .Trash/
+- .cpan/
+- .nvim/plugged/
+- .vim/plugged/
