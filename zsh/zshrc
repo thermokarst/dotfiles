@@ -6,13 +6,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# set up local bin dirs
-export PATH="$PATH:$HOME/bin:$HOME/.bin"
-
-# shortcuts to projects
-export CDPATH="$CDPATH:$HOME/caporaso/qiime2"
-export CDPATH="$CDPATH:$HOME/projects"
-
 # shortcuts
 alias mailserver="sudo python -m smtpd -n -c DebuggingServer localhost:25"
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
@@ -22,21 +15,10 @@ alias devenv="deactivate"
 alias q="source activate q2dev"
 alias i="ipython3"
 
-# set up golang
-export GOPATH="/Users/matthew/go"
-export PATH="$PATH:$GOPATH/bin"
-export CDPATH="$CDPATH:$GOPATH/src/github.com:$GOPATH/src/code.google.com/p:$GOPATH/src/bitbucket.org"
-
-# set miniconda3 bin dir last
-export PATH="$PATH:$HOME/miniconda3/bin"
-
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 alias tmux="TERM=xterm-256color tmux"
-
-# set up local bin dir
-export PATH="$PATH:$HOME/bin"
 
 # Backup shortcuts
 alias back_things_up="rsync_tmbackup.sh $HOME /Volumes/field_on_fire/$HOST $HOME/.dotfiles/rsync_excludes.txt"
