@@ -34,3 +34,9 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 alias tmux="TERM=xterm-256color tmux"
+
+# set up local bin dir
+export PATH="$PATH:$HOME/bin"
+
+# Backup shortcuts
+alias back_things_up="rsync_tmbackup.sh $HOME /Volumes/field_on_fire/$HOST $HOME/.dotfiles/rsync_excludes.txt"

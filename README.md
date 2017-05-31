@@ -12,4 +12,7 @@ $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-
 $ ./install
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim +PlugInstall
+$ mkdir ~/bin
+$ git clone https://github.com/laurent22/rsync-time-backup ~/.rsync-time-backup
+$ ln -s ~/.rsync-time-backup/rsync_tmbackup.sh ~/bin/rsync_tmbackup.sh
 ```

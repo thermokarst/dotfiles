@@ -1,0 +1,12 @@
+- .DS_Store
+- venv
+- node_modules
+- __pycache__
+- *.pyc
+- .nvim/plugged/
+- .vim/plugged/
+- Library/
+- miniconda3/
+- tmp/
+- .cache/
+- .npm/
