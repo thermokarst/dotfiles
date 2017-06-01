@@ -20,5 +20,45 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 alias tmux="TERM=xterm-256color tmux"
 
-# Backup shortcuts
-alias back_things_up="rsync_tmbackup.sh $HOME /Volumes/field_on_fire/$HOST $HOME/.dotfiles/rsync_excludes.txt"
+# Backup shortcuts (borrowed parts from https://github.com/laurent22/rsync-time-backup
+function prune_backups() {
+  dest_root="/Volumes/field_on_fire/$HOST"
+  epoch=$(date "+%s")
+  previous='0000-00-00-000000'
+  for filename in $(find "$dest_root" -type d -name "????-??-??-??????" -prune | sort -r); do
+    backup_date=$(basename "$filename")
+    timestamp=$(date -j -f "%Y-%m-%d-%H%M%S" "$backup_date" "+%s")
+    if [ -z "$timestamp" ]; then
+      echo "Error parsing date date: $filename"
+      continue
+    fi
+    if [ $timestamp -ge $((epoch - 86400)) ]; then
+      true
+    elif [ $timestamp -ge $((epoch - 2678400)) ]; then
+      if [ "${backup_date:0:10}" '==' "${previous:0:10}" ]; then
+        rm -rf "$filename"
+      fi
+    else
+      if [ "${backup_date:0:7}" '==' "${previous:0:7}" ]; then
+        rm -rf "$filename"
+      fi
+    fi
+    previous=$backup_date
+  done
+}
+
+function back_things_up() {
+  date=$(date +"%Y-%m-%d-%H%M%S")
+  dest_root="/Volumes/field_on_fire/$HOST"
+  rsync -azPE \
+      --stats \
+      --human-readable \
+      --itemize-changes \
+      --link-dest=$dest_root/latest \
+      --exclude-from $HOME/.dotfiles/rsync_excludes.txt \
+      $HOME/ \
+      $dest_root/$date && \
+    rm -f $dest_root/latest && \
+    ln -s $dest_root/$date $dest_root/latest
+    # TODO: once confident pruning is working well, add that in here
+}

@@ -31,6 +31,7 @@ packages=(
     python
     python3
     reattach-to-user-namespace
+    rsync
     tmux
     tree
     vim
