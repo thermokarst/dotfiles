@@ -17,6 +17,10 @@ call plug#begin()
   Plug 'mustache/vim-mustache-handlebars'
   " Insert-mode tab completion
   Plug 'ervandew/supertab'
+  " elm-lang Support
+  Plug 'elmcast/elm-vim'
+  " ranger support
+  Plug 'francoiscabrol/ranger.vim'
 call plug#end()
 
 set t_Co=256
@@ -85,60 +89,8 @@ set writebackup
 " change the mapleader from \ to ,
 let mapleader=" "
 
-" netrw config
-let g:netrw_liststyle=0         " thin (change to 3 for tree)
-let g:netrw_banner=0            " no banner
-let g:netrw_altv=1              " open files on right
-let g:netrw_preview=1           " open previews vertically
-let g:netrw_list_hide='\.git,\.idea,.*\.swp$,.*\.pyc$,__pycache__,\.DS_Store'
-
-" http://ivanbrennan.nyc/blog/2014/01/16/rigging-vims-netrw/
-fun! VexOpen(dir)
-    let g:netrw_browse_split=4
-    let vex_width=25
-    execute "Vexplore " . a:dir
-    let t:vex_buf_nr = bufnr("%")
-    wincmd H
-    call VexSize(vex_width)
-endf
-
-fun! VexClose()
-    let cur_win_nr = winnr()
-    let target_nr = ( cur_win_nr == 1 ? winnr("#") : cur_win_nr )
-    1wincmd w
-    close
-    unlet t:vex_buf_nr
-    execute (target_nr - 1) . "wincmd w"
-    call NormalizeWidths()
-endf
-
-fun! VexSize(vex_width)
-    execute "vertical resize" . a:vex_width
-    set winfixwidth
-    call NormalizeWidths()
-endf
-
-fun! NormalizeWidths()
-    let eadir_pref = &eadirection
-    set eadirection=hor
-    set equalalways! equalalways!
-    let &eadirection = eadir_pref
-endf
-
-fun! VexToggle(dir)
-    if exists("t:vex_buf_nr")
-        call VexClose()
-    else
-        call VexOpen(a:dir)
-    endif
-endf
-
-noremap <Leader><Tab> :call VexToggle(getcwd())<CR>
-noremap <Leader>` :call VexToggle("")<CR>
-
-augroup NetrwGroup
-    autocmd! BufEnter * call NormalizeWidths()
-augroup END
+" ranger config
+map <leader><Tab> :RangerWorkingDirectory<CR>
 
 " PEP8 formatting
 au BufNewFile,BufRead *.py
