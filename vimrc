@@ -21,6 +21,8 @@ call plug#begin()
   Plug 'elmcast/elm-vim'
   " ranger support
   Plug 'francoiscabrol/ranger.vim'
+  " Delimited file querying
+  Plug 'mechatroner/rainbow_csv'
 call plug#end()
 
 set t_Co=256
