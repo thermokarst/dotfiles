@@ -1,32 +1,23 @@
 #!/usr/bin/env zsh
 
 taps=(
-    homebrew/binary
     caskroom/cask
-    caskroom/fonts
 )
 
 packages=(
     ag
     aspell
-    blackbox
-    brew-cask
-    cmake
     cmus
-    diff-so-fancy
     git
     gnupg
-    go
     gpg-agent
     graphviz
     heroku
     htop-osx
     httpie
-    hugo
     imagemagick
     node
     openssl
-    pass
     postgresql
     python
     python3
@@ -43,18 +34,9 @@ packages=(
 cask_packages=(
     arq
     dropbox
-    font-inconsolata
-    font-anonymous-pro
-    gitify
-    google-chrome
-    google-drive
-    java
-    macdown
-    pandoc
-    slack
-    spectacle
+    firefox
+    iterm2
     the-unarchiver
-    vagrant
     virtualbox
     xquartz
 )
@@ -91,6 +73,3 @@ done
 
 log "brew cleanup"
 brew cleanup
-
-log "brew linkapps"
-brew linkapps

@@ -23,6 +23,8 @@ call plug#begin()
   Plug 'francoiscabrol/ranger.vim'
   " Delimited file querying
   Plug 'mechatroner/rainbow_csv'
+  " fxf setup
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 set t_Co=256
@@ -91,8 +93,8 @@ set writebackup
 " change the mapleader from \ to ,
 let mapleader=" "
 
-" ranger config
-map <leader><Tab> :RangerWorkingDirectory<CR>
+" fzf config
+map <leader><Tab> :FZF<CR>
 
 " PEP8 formatting
 au BufNewFile,BufRead *.py
@@ -124,8 +126,6 @@ nmap <leader>l :bnext<CR>
 
 " cycle to previous buffer
 nmap <leader>h :bprevious<CR>
-
-set rtp+=/usr/local/opt/fzf
 
 " flake8 config
 let g:flake8_show_in_gutter = 1

@@ -1,0 +1,215 @@
+[src/qiime2/qiime2]
+checkout = git clone https://github.com/qiime2/qiime2 qiime2 && \
+    cd qiime2 && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/qiime2 && \
+    git fetch thermokarst
+
+[src/qiime2/q2cli]
+checkout = git clone https://github.com/qiime2/q2cli q2cli && \
+    cd q2cli && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2cli && \
+    git fetch thermokarst
+
+[src/qiime2/q2templates]
+checkout = git clone https://github.com/qiime2/q2templates q2templates && \
+    cd q2templates && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2templates && \
+    git fetch thermokarst
+
+[src/qiime2/q2-types]
+checkout = git clone https://github.com/qiime2/q2-types q2-types && \
+    cd q2-types && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-types && \
+    git fetch thermokarst
+
+[src/qiime2/q2-feature-table]
+checkout = git clone https://github.com/qiime2/q2-feature-table q2-feature-table && \
+    cd q2-feature-table && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-feature-table && \
+    git fetch thermokarst
+
+[src/qiime2/q2-alignment]
+checkout = git clone https://github.com/qiime2/q2-alignment q2-alignment && \
+    cd q2-alignment && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-alignment && \
+    git fetch thermokarst
+
+[src/qiime2/q2-composition]
+checkout = git clone https://github.com/qiime2/q2-composition q2-composition && \
+    cd q2-composition && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-composition && \
+    git fetch thermokarst
+
+[src/qiime2/q2-dada2]
+checkout = git clone https://github.com/qiime2/q2-dada2 q2-dada2 && \
+    cd q2-dada2 && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-dada2 && \
+    git fetch thermokarst
+
+[src/qiime2/q2-deblur]
+checkout = git clone https://github.com/qiime2/q2-deblur q2-deblur && \
+    cd q2-deblur && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-deblur && \
+    git fetch thermokarst
+
+[src/qiime2/q2-demux]
+checkout = git clone https://github.com/qiime2/q2-demux q2-demux && \
+    cd q2-demux && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-demux && \
+    git fetch thermokarst
+
+[src/qiime2/q2-diversity]
+checkout = git clone https://github.com/qiime2/q2-diversity q2-diversity && \
+    cd q2-diversity && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-diversity && \
+    git fetch thermokarst
+
+[src/qiime2/q2-emperor]
+checkout = git clone https://github.com/qiime2/q2-emperor q2-emperor && \
+    cd q2-emperor && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-emperor && \
+    git fetch thermokarst
+
+[src/qiime2/q2-feature-classifier]
+checkout = git clone https://github.com/qiime2/q2-feature-classifier q2-feature-classifier && \
+    cd q2-feature-classifier && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-feature-classifier && \
+    git fetch thermokarst
+
+[src/qiime2/q2-metadata]
+checkout = git clone https://github.com/qiime2/q2-metadata q2-metadata && \
+    cd q2-metadata && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-metadata && \
+    git fetch thermokarst
+
+[src/qiime2/q2-phylogeny]
+checkout = git clone https://github.com/qiime2/q2-phylogeny q2-phylogeny && \
+    cd q2-phylogeny && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-phylogeny && \
+    git fetch thermokarst
+
+[src/qiime2/q2-quality-filter]
+checkout = git clone https://github.com/qiime2/q2-quality-filter q2-quality-filter && \
+    cd q2-quality-filter && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-quality-filter && \
+    git fetch thermokarst
+
+[src/qiime2/q2-taxa]
+checkout = git clone https://github.com/qiime2/q2-taxa q2-taxa && \
+    cd q2-taxa && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-taxa && \
+    git fetch thermokarst
+
+[src/qiime2/q2-gneiss]
+checkout = git clone https://github.com/qiime2/q2-gneiss q2-gneiss && \
+    cd q2-gneiss && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-gneiss && \
+    git fetch thermokarst
+
+[src/qiime2/q2-sample-classifier]
+checkout = git clone https://github.com/qiime2/q2-sample-classifier q2-sample-classifier && \
+    cd q2-sample-classifier && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-sample-classifier && \
+    git fetch thermokarst
+
+[src/qiime2/q2-longitudinal]
+checkout = git clone https://github.com/qiime2/q2-longitudinal q2-longitudinal && \
+    cd q2-longitudinal && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-longitudinal && \
+    git fetch thermokarst
+
+[src/qiime2/q2-vsearch]
+checkout = git clone https://github.com/qiime2/q2-vsearch q2-vsearch && \
+    cd q2-vsearch && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-vsearch && \
+    git fetch thermokarst
+
+[src/qiime2/q2-quality-control]
+checkout = git clone https://github.com/qiime2/q2-quality-control q2-quality-control && \
+    cd q2-quality-control && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-quality-control && \
+    git fetch thermokarst
+
+[src/qiime2/data.qiime2.org]
+checkout = git clone https://github.com/qiime2/data.qiime2.org data.qiime2.org && \
+    cd data.qiime2.org && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/data.qiime2.org && \
+    git fetch thermokarst
+
+[src/qiime2/docs]
+checkout = git clone https://github.com/qiime2/docs docs && \
+    cd docs && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/docs && \
+    git fetch thermokarst
+
+[src/qiime2/q2studio]
+checkout = git clone https://github.com/qiime2/q2studio q2studio && \
+    cd q2studio && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2studio && \
+    git fetch thermokarst
+
+[src/qiime2/qiime2.github.io]
+checkout = git clone https://github.com/qiime2/qiime2.github.io qiime2.github.io && \
+    cd qiime2.github.io && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/qiime2.github.io && \
+    git fetch thermokarst
+
+[src/qiime2/busywork]
+checkout = git clone https://github.com/qiime2/busywork busywork && \
+    cd busywork && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/busywork && \
+    git fetch thermokarst
+
+[src/gregcaporaso/caporaso-lab-secrets]
+checkout = git clone https://github.com/gregcaporaso/caporaso-lab-secrets && \
+    cd caporaso-lab-secrets && \
+    git remote rename origin gregcaporaso && \
+    git remote add thermokarst https://github.com/thermokarst/caporaso-lab-secrets && \
+    git fetch thermokarst
+
+[src/thermokarst/ccdb-api]
+checkout = git clone https://github.com/thermokarst/ccdb-api && \
+    cd ccdb-api && \
+    git remote rename origin thermokarst
+
+[src/thermokarst/ccdb-web]
+checkout = git clone https://github.com/thermokarst/ccdb-web && \
+    cd ccdb-web && \
+    git remote rename origin thermokarst
+
+[src/thermokarst/fathm]
+checkout = git clone https://github.com/thermokarst/fathm && \
+    cd fathm && \
+    git remote rename origin thermokarst
+
+[src/thermokarst/tucotuco]
+checkout = git clone https://github.com/thermokarst/tucotuco && \
+    cd tucotuco && \
+    git remote rename origin thermokarst
