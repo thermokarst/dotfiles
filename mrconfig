@@ -166,6 +166,13 @@ checkout = git clone https://github.com/qiime2/docs docs && \
     git remote add thermokarst https://github.com/thermokarst/docs && \
     git fetch thermokarst
 
+[src/qiime2/docs.qiime2.org]
+checkout = git clone https://github.com/qiime2/docs.qiime2.org docs.qiime2.org && \
+    cd docs.qiime2.org && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/docs.qiime2.org && \
+    git fetch thermokarst
+
 [src/qiime2/q2studio]
 checkout = git clone https://github.com/qiime2/q2studio q2studio && \
     cd q2studio && \
@@ -185,6 +192,41 @@ checkout = git clone https://github.com/qiime2/busywork busywork && \
     cd busywork && \
     git remote rename origin qiime2 && \
     git remote add thermokarst https://github.com/thermokarst/busywork && \
+    git fetch thermokarst
+
+[src/qiime2/q2-cutadapt]
+checkout = git clone https://github.com/qiime2/q2-cutadapt q2-cutadapt && \
+    cd q2-cutadapt && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-cutadapt && \
+    git fetch thermokarst
+
+[src/qiime2/q2view]
+checkout = git clone https://github.com/qiime2/q2view q2view && \
+    cd q2view && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2view && \
+    git fetch thermokarst
+
+[src/qiime2/view.qiime2.org]
+checkout = git clone https://github.com/qiime2/view.qiime2.org view.qiime2.org && \
+    cd view.qiime2.org && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/view.qiime2.org && \
+    git fetch thermokarst
+
+[src/qiime2/workshop-playbooks]
+checkout = git clone https://github.com/qiime2/workshop-playbooks workshop-playbooks && \
+    cd workshop-playbooks && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/workshop-playbooks && \
+    git fetch thermokarst
+
+[src/qiime2/vm-playbooks]
+checkout = git clone https://github.com/qiime2/vm-playbooks vm-playbooks && \
+    cd vm-playbooks && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/vm-playbooks && \
     git fetch thermokarst
 
 [src/gregcaporaso/caporaso-lab-secrets]

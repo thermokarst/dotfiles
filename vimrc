@@ -23,7 +23,7 @@ call plug#begin()
   Plug 'francoiscabrol/ranger.vim'
   " Delimited file querying
   Plug 'mechatroner/rainbow_csv'
-  " fxf setup
+  " fzf setup
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
