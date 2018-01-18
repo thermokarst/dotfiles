@@ -166,6 +166,13 @@ checkout = git clone https://github.com/qiime2/docs docs && \
     git remote add thermokarst https://github.com/thermokarst/docs && \
     git fetch thermokarst
 
+[src/qiime2/dev-docs]
+checkout = git clone https://github.com/qiime2/dev-docs dev-docs && \
+    cd dev-docs && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/dev-docs && \
+    git fetch thermokarst
+
 [src/qiime2/docs.qiime2.org]
 checkout = git clone https://github.com/qiime2/docs.qiime2.org docs.qiime2.org && \
     cd docs.qiime2.org && \
