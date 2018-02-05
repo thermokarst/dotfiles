@@ -25,6 +25,8 @@ call plug#begin()
   Plug 'mechatroner/rainbow_csv'
   " fzf setup
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  " vue2
+  Plug 'posva/vim-vue'
 call plug#end()
 
 set t_Co=256

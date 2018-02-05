@@ -16,6 +16,7 @@ packages=(
     htop-osx
     httpie
     imagemagick
+    myrepos
     node
     openssl
     postgresql
