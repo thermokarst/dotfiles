@@ -12,7 +12,7 @@ alias mongod="mongod --config /usr/local/etc/mongod.conf"
 alias postgres="postgres -D /usr/local/var/postgres"
 alias venv="source venv/bin/activate"
 alias devenv="deactivate"
-alias q="source activate q2dev-2017.12"
+alias q="source activate q2dev"
 alias i="ipython3"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -64,3 +64,4 @@ function back_things_up() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'

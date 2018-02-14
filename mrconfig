@@ -17,8 +17,7 @@ checkout = git clone https://github.com/qiime2/q2templates q2templates && \
     cd q2templates && \
     git remote rename origin qiime2 && \
     git remote add thermokarst https://github.com/thermokarst/q2templates && \
-    git fetch thermokarst
-
+    git fetch thermokarst 
 [src/qiime2/q2-types]
 checkout = git clone https://github.com/qiime2/q2-types q2-types && \
     cd q2-types && \
@@ -234,6 +233,20 @@ checkout = git clone https://github.com/qiime2/vm-playbooks vm-playbooks && \
     cd vm-playbooks && \
     git remote rename origin qiime2 && \
     git remote add thermokarst https://github.com/thermokarst/vm-playbooks && \
+    git fetch thermokarst
+
+[src/qiime2/Keemei]
+checkout = git clone https://github.com/qiime2/Keemei Keemei && \
+    cd Keemei && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/Keemei && \
+    git fetch thermokarst
+
+[src/qiime2/logos]
+checkout = git clone https://github.com/qiime2/logos logos && \
+    cd logos && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/logos && \
     git fetch thermokarst
 
 [src/gregcaporaso/caporaso-lab-secrets]
