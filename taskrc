@@ -1,0 +1,19 @@
+data.location=~/.task
+
+include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-dark-256.theme
+include /Users/matthew/Dropbox/task/taskrc
+
+### reports
+
+# customize `next`
+report.next.filter=status:pending limit:15
+report.next.sort=recur+,urgency-
+report.next.columns=id,depends,priority,project,due.relative,description.count,urgency
+report.next.labels=id,depends,priority,project,due.relative,description,urgency
+
+# `main`
+report.main.description=everything, sans long-term projects
+report.main.filter=status:pending -reading -music
+report.main.sort=recur+,urgency-
+report.main.columns=id,depends,priority,project,due.relative,description.count,urgency
+report.main.labels=id,depends,priority,project,due.relative,description,urgency

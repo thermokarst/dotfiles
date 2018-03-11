@@ -17,7 +17,7 @@ checkout = git clone https://github.com/qiime2/q2templates q2templates && \
     cd q2templates && \
     git remote rename origin qiime2 && \
     git remote add thermokarst https://github.com/thermokarst/q2templates && \
-    git fetch thermokarst 
+    git fetch thermokarst
 [src/qiime2/q2-types]
 checkout = git clone https://github.com/qiime2/q2-types q2-types && \
     cd q2-types && \
