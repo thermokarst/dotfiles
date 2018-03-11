@@ -7,9 +7,9 @@ include /Users/matthew/Dropbox/task/taskrc
 
 # customize `next`
 report.next.filter=status:pending limit:15 -reading -music
-report.next.sort=recur+,urgency-
-report.next.columns=id,depends,priority,project,due.relative,description.count,urgency
-report.next.labels=id,depends,priority,project,due.relative,description,urgency
+#report.next.sort=recur+,urgency-
+report.next.columns=id,depends,priority,project,scheduled.relative,due.relative,description.count,urgency
+report.next.labels=id,depends,priority,project,scheduled,due,description,urgency
 
 # `main`
 report.main.description=everything, sans long-term projects
