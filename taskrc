@@ -6,7 +6,7 @@ include /Users/matthew/Dropbox/task/taskrc
 ### reports
 
 # customize `next`
-report.next.filter=status:pending limit:15
+report.next.filter=status:pending limit:15 -reading -music
 report.next.sort=recur+,urgency-
 report.next.columns=id,depends,priority,project,due.relative,description.count,urgency
 report.next.labels=id,depends,priority,project,due.relative,description,urgency
@@ -17,3 +17,18 @@ report.main.filter=status:pending -reading -music
 report.main.sort=recur+,urgency-
 report.main.columns=id,depends,priority,project,due.relative,description.count,urgency
 report.main.labels=id,depends,priority,project,due.relative,description,urgency
+
+# `inbox`
+report.inbox.description=inbox
+report.inbox.filter=status:pending project:
+report.inbox.sort=recur+,urgency-
+report.inbox.columns=id,depends,priority,project,due.relative,description.count,urgency
+report.inbox.labels=id,depends,priority,project,due.relative,description,urgency
+
+# tasksh
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING ) and -reading and -music
