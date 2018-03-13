@@ -10,6 +10,13 @@ report.next.filter=status:pending limit:15 -reading project.not:music
 report.next.columns=id,depends,priority,project,scheduled.relative,due.relative,description.count,urgency
 report.next.labels=ID,depends,priority,project,scheduled,due,description,urgency
 
+# customize `work`
+report.work.description=cap lab and qiime2
+report.work.filter=status:pending limit:20 (project:q2 or project:clab)
+report.work.sort=urgency-
+report.work.columns=id,depends,priority,project,scheduled.relative,due.relative,description.count,urgency
+report.work.labels=ID,depends,priority,project,scheduled,due,description,urgency
+
 # `main`
 report.main.description=everything, sans long-term projects
 report.main.filter=status:pending -reading project.not:music
