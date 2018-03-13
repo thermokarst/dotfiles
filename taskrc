@@ -38,3 +38,9 @@ report._reviewed.description=Tasksh review report
 report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING ) and -reading and project.not:music
+
+### contexts
+
+# work
+context.work=project:q2 or project:clab
+context=work
