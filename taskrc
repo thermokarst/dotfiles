@@ -6,7 +6,7 @@ include /Users/matthew/Dropbox/task/taskrc
 ### reports
 
 # customize `next`
-report.next.filter=status:pending limit:15 -reading project.not:music
+report.next.filter=status:pending limit:15 -reading -pending project.not:music
 report.next.columns=id,depends,priority,project,scheduled.relative,due.relative,description.count,urgency
 report.next.labels=ID,depends,priority,project,scheduled,due,description,urgency
 
@@ -43,4 +43,3 @@ report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +P
 
 # work
 context.work=project:q2 or project:clab
-context=work
