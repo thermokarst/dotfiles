@@ -43,15 +43,16 @@ path=(
   $path
 )
 
-# set up local bin dirs
-export PATH="$PATH:$HOME/bin:$HOME/.bin"
-
 # shortcuts to projects
 export CDPATH="$CDPATH:$HOME/src/qiime2"
 export CDPATH="$CDPATH:$HOME/src/thermokarst"
 
-# set miniconda3 bin dir last
-export PATH="$PATH:$HOME/opt/miniconda3/bin"
+# macports
+export PATH="$PATH:/opt/local/bin"
+export PATH="$PATH:/opt/local/sbin"
+
+# miniconda
+export PATH="$PATH:/opt/miniconda3/bin"
 
 #
 # Less
