@@ -1,6 +1,5 @@
 data.location=~/.task
 
-include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-dark-256.theme
 include /Users/matthew/Dropbox/task/taskrc
 
 ### reports

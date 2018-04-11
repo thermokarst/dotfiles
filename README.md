@@ -12,7 +12,7 @@ $ sudo port install \
   cmus \
   git \
   gnupg2 \
-  graphviz \
+  graphviz-devel \
   htop \
   imagemagick \
   myrepos \
@@ -31,6 +31,7 @@ $ sudo port install \
   zsh
 $ sudo port select --set python python36
 $ sudo port select --set python3 python36
+$ sudo port select --set postgresql postgresql10
 $ sudo chpass -s '/opt/local/bin/zsh' $USER
 $ sudo sh -c 'echo /opt/local/bin/zsh >>/etc/shells'
 $ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
@@ -39,4 +40,10 @@ $ ./install
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim +PlugInstall
 $ mr checkout
+```
+
+## Typical `pip` modifications for macports
+
+```bash
+pip install --global-option=build_ext --global-option=-I/opt/local/include -r requirements.txt
 ```
