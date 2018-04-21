@@ -47,3 +47,14 @@ $ mr checkout
 ```bash
 pip install --global-option=build_ext --global-option=-I/opt/local/include -r requirements.txt
 ```
+
+## postgresql setup
+
+```bash
+sudo mkdir -p /opt/local/var/db/postgresql10/defaultdb
+sudo chown postgres:postgres /opt/local/var/db/postgresql10/defaultdb
+sudo su postgres -c '/opt/local/lib/postgresql10/bin/initdb -D /opt/local/var/db/postgresql10/defaultdb'
+sudo port load postgresql10-server
+sudo su postgres -c "createuser matthew --createdb --login --superuser"
+sudo su postgres -c "createdb matthew"
+```
