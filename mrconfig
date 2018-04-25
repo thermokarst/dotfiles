@@ -249,6 +249,13 @@ checkout = git clone https://github.com/qiime2/logos logos && \
     git remote add thermokarst https://github.com/thermokarst/logos && \
     git fetch thermokarst
 
+[src/qiime2/discourse-unhandled-tagger]
+checkout = git clone https://github.com/qiime2/discourse-unhandled-tagger discourse-unhandled-tagger && \
+    cd discourse-unhandled-tagger && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/discourse-unhandled-tagger && \
+    git fetch thermokarst
+
 [src/gregcaporaso/caporaso-lab-secrets]
 checkout = git clone https://github.com/gregcaporaso/caporaso-lab-secrets && \
     cd caporaso-lab-secrets && \

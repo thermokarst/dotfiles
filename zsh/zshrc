@@ -9,7 +9,6 @@ fi
 # shortcuts
 alias mailserver="sudo python -m smtpd -n -c DebuggingServer localhost:25"
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
-alias postgres="postgres -D /usr/local/var/postgres"
 alias venv="source venv/bin/activate"
 alias devenv="deactivate"
 alias q="source activate q2dev"
