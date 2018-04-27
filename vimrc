@@ -27,6 +27,9 @@ call plug#begin()
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   " vue2
   Plug 'posva/vim-vue'
+  " golang support
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
 set t_Co=256
