@@ -263,6 +263,13 @@ checkout = git clone https://github.com/gregcaporaso/caporaso-lab-secrets && \
     git remote add thermokarst https://github.com/thermokarst/caporaso-lab-secrets && \
     git fetch thermokarst
 
+[src/caporaso-lab/SurveySync]
+checkout = git clone https://github.com/caporaso-lab/SurveySync && \
+    cd SurveySync && \
+    git remote rename origin caporaso-lab && \
+    git remote add thermokarst https://github.com/thermokarst/SurveySync && \
+    git fetch thermokarst
+
 [src/thermokarst/ccdb-api]
 checkout = git clone https://github.com/thermokarst/ccdb-api && \
     cd ccdb-api && \
