@@ -1,27 +1,34 @@
-data.location=~/.task
+### general
 
+data.location=~/.task
 include /Users/matthew/Dropbox/task/taskrc
+
+### colors
+
+include /opt/local/share/doc/task/rc/no-color.theme
+color.overdue=bold white on color2
+color.active=color0 on color4
 
 ### reports
 
 # customize `next`
-report.next.filter=status:pending limit:15 -reading -pending project.not:music
-report.next.columns=id,depends,priority,project,scheduled.relative,due.relative,description.count,urgency
-report.next.labels=ID,depends,priority,project,scheduled,due,description,urgency
-
-# `main`
-report.main.description=everything, sans long-term projects
-report.main.filter=status:pending -reading project.not:music
-report.main.sort=recur+,urgency-
-report.main.columns=id,depends,priority,project,due.relative,description.count,urgency
-report.main.labels=ID,depends,priority,project,due.relative,description,urgency
+report.next.filter=status:pending limit:15 -reading -pending -BLOCKED
+report.next.columns=id,depends,project,priority,scheduled.relative,due.relative,description.count,urgency
+report.next.labels=id,depends,project,priority,scheduled,due,description,urgency
 
 # `inbox`
-report.inbox.description=inbox
+report.inbox.description=Incoming unfiled todos
 report.inbox.filter=status:pending project:
 report.inbox.sort=recur+,urgency-
 report.inbox.columns=id,depends,priority,project,due.relative,description.count,urgency
-report.inbox.labels=ID,depends,priority,project,due.relative,description,urgency
+report.inbox.labels=id,depends,priority,project,due.relative,description,urgency
+
+# `workweek`
+report.workweek.description=workweek
+report.workweek.sort=project+/
+report.workweek.filter=end.after:today-1wk and status:completed and (project:q2 or project:clab or project:yuma)
+report.workweek.columns=id,uuid.short,entry,end,entry.age,depends,priority,project,tags,due,description
+report.workweek.labels=id,uuid,entry,end,entry,depends,priority,project,tags,due,description
 
 # tasksh
 uda.reviewed.type=date
@@ -29,7 +36,7 @@ uda.reviewed.label=Reviewed
 report._reviewed.description=Tasksh review report
 report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
-report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING ) and -reading and project.not:music
+report._reviewed.filter=(reviewed.none: or reviewed.before:now-6days) and (+PENDING or +WAITING) and -reading and project.not:music
 
 ### contexts
 

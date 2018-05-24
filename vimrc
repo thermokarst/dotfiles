@@ -29,7 +29,8 @@ call plug#begin()
   Plug 'posva/vim-vue'
   " golang support
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
+  " elixir
+  Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 set t_Co=256
