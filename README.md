@@ -15,6 +15,7 @@ $ sudo port install \
   graphviz-devel \
   htop \
   imagemagick \
+  mutt +sasl +kyotocabinet \
   myrepos \
   nodejs9 \
   openssl \

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+task add +email email: $(grep 'Subject' $* | awk -F: '{print $2}')
