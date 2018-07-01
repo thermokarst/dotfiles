@@ -29,6 +29,11 @@ macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 macro index gt "<change-folder>=[Gmail]/Trash<enter>" "Go to trash"
-macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
-macro index,pager y "<save-message>=[Gmail]/All%20Mail<enter><enter>" "Archive"
+macro index d "<save-message>=[Gmail]/Trash<enter>" "Trash"
+macro pager d "<save-message>=[Gmail]/Trash<enter>" "Trash"
+macro index y "<save-message>=[Gmail]/All%20Mail<enter>" "Archive"
+macro pager y "<save-message>=[Gmail]/All%20Mail<enter>" "Archive"
 macro index t "<pipe-message>mutt2task<enter>" "Add to taskwarrior"
+
+alternative_order text/plain text/html
+auto_view text/html
