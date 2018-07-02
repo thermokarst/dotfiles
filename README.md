@@ -17,7 +17,8 @@ $ sudo port install \
   imagemagick \
   elinks \
   w3m \
-  mutt +sasl +kyotocabinet \
+  neomutt +sasl +kyotocabinet \
+  procmail \
   myrepos \
   nodejs9 \
   openssl \

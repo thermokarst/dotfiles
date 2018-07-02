@@ -1,2 +1,4 @@
 text/html;  elinks -dump %s; nametemplate=%s.html; copiousoutput
 image/*; open %s; copiousoutput
+application/pdf; open %s; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; open %s; copiousoutput

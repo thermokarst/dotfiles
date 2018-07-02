@@ -1,3 +1,9 @@
 #!/bin/sh
 
-task add +email email: $(grep 'Subject' $* | awk -F: '{print $2}')
+msg="$(cat)"
+from=$(echo "$msg" | formail -x From:)
+subject=$(echo "$msg" | formail -x Subject:)
+body=$(echo "$msg" | formail -I "")
+task_msg=$(task add +email "$from|$subject")
+tid=$(echo "$task_msg" | tr -dc '0-9')
+task anno $tid "${body}"
