@@ -31,6 +31,8 @@ call plug#begin()
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " elixir
   Plug 'elixir-editors/vim-elixir'
+  " the silver searcher
+  Plug 'mileszs/ack.vim'
 call plug#end()
 
 set t_Co=256
@@ -138,3 +140,6 @@ let g:flake8_show_in_gutter = 1
 let g:flake8_error_marker = 'EE'
 let g:flake8_warning_marker = 'WW'
 autocmd BufWritePost *.py call Flake8()
+
+" Inform ack.vim that we are actually using the_silver_searcher
+let g:ackprg = 'ag --vimgrep'
