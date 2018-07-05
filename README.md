@@ -19,6 +19,8 @@ $ sudo port install \
   w3m \
   neomutt +sasl +kyotocabinet \
   procmail \
+  offlineimap \
+  msmtp \
   myrepos \
   nodejs9 \
   openssl \

@@ -17,3 +17,4 @@
     ~/.taskrc:           taskrc
     ~/.mutt:             mutt
     ~/.mailcap:          mailcap
+    ~/.msmtprc:          msmtprc
