@@ -18,3 +18,4 @@
     ~/.mutt:             mutt
     ~/.mailcap:          mailcap
     ~/.msmtprc:          msmtprc
+    ~/.offlineimaprc:    offlineimaprc
