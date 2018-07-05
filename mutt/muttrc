@@ -1,4 +1,5 @@
 source $HOME/.mutt/base16.muttrc
+source $HOME/.mutt/muttrc-gmail
 
 set folder           = $HOME/.mail
 set header_cache     = $HOME/.mutt/matthewrdillon/headers
@@ -23,18 +24,20 @@ set uncollapse_jump
 set sort_re
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
-folder-hook 'gmail' 'set from = matthewrdillon@gmail.com; set sendmail = "msmtp -a gmail"'
-folder-hook 'nau' 'set from = matthew.dillon@nau.edu; set sendmail = "msmtp -a nau"'
+folder-hook 'gmail/*' source $HOME/.mutt/muttrc-gmail
+folder-hook 'nau/*' source $HOME/.mutt/muttrc-nau
 
 set sendmail_wait = 0
-unset record
 
 set spoolfile = "+gmail/INBOX"
 mailboxes +gmail/INBOX \
           +nau/INBOX \
+          +gmail/sent \
+          '+nau/Sent Items' \
+          +gmail/archive \
+          +nau/Archive \
           +gmail/Notes \
           +gmail/academic_uaf \
-          +gmail/archive \
           +gmail/brenton \
           +gmail/caporaso \
           +gmail/dad \
@@ -57,32 +60,27 @@ mailboxes +gmail/INBOX \
           +gmail/random \
           +gmail/reference \
           +gmail/rx \
-          +gmail/sent \
           +gmail/tucotuco \
           +gmail/village-travel \
-          +nau/Archive \
           +nau/Drafts \
-          '+nau/Sent Items' \
           '+nau/Undergrad Applications' \
 
 bind pager g noop
-bind pager k  previous-line
-bind pager j  next-line
+bind pager k previous-line
+bind pager j next-line
 bind pager gg top
-bind pager G  bottom
+bind pager G bottom
 
-bind pager R  group-reply
+bind pager R group-reply
 bind index <tab> sync-mailbox
 bind index <space> collapse-thread
-macro index o ":set my_wait_key = $wait_key<return>:unset wait_key<return><shell-escape>offlineimap -qf INBOX<enter>:set wait_key=$my_wait_key<return>:unset my_wait_key<return>" "run offlineimap to sync inbox"
-macro index O "<shell-escape>offlineimap<enter>" "run offlineimap to sync all mail"
-bind index,pager \CJ sidebar-next
-bind index,pager \CK sidebar-prev
-bind index,pager \CL sidebar-open
-macro index a "<save-message>=gmail/archive<enter>" "Archive"
-macro pager a "<save-message>=gmail/archive<enter><exit>" "Archive"
+macro index o ":set my_wait_key = $wait_key<return>:unset wait_key<return><shell-escape>offlineimap -q<enter>:set wait_key=$my_wait_key<return>:unset my_wait_key<return>" "run quick offlineimap sync"
+macro index O ":set my_wait_key = $wait_key<return>:unset wait_key<return><shell-escape>offlineimap<enter>:set wait_key=$my_wait_key<return>:unset my_wait_key<return>" "run offlineimap to sync all mail"
+bind index,pager J sidebar-next
+bind index,pager K sidebar-prev
+bind index,pager L sidebar-open
 macro index,pager t "<pipe-message>mutt2task<enter><enter>" "Add to taskwarrior"
-macro pager d '<delete-message><exit>'
+macro pager d '<delete-message>'
 
 alternative_order text/plain text/html
 auto_view text/html
