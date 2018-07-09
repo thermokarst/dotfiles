@@ -91,7 +91,7 @@ ssl=true
 sslcacertfile = /opt/local/etc/openssl/cert.pem
 folderfilter = lambda folder: folder not in [
                                              'INBOX.Trash',
-                                             'INBOX.Spam',
+                                             'INBOX.spam',
                                              ]
 nametrans = lambda folder: {
                             'INBOX.ARCHIVED': 'archive',
