@@ -32,37 +32,23 @@ set sendmail_wait = 0
 set spoolfile = "+gmail/INBOX"
 mailboxes +gmail/INBOX \
           +nau/INBOX \
-          +gmail/sent \
-          '+nau/Sent Items' \
+          +akdillon/INBOX \
+          ------archive---------- \
           +gmail/archive \
           +nau/Archive \
-          +gmail/Notes \
-          +gmail/academic_uaf \
-          +gmail/brenton \
-          +gmail/caporaso \
-          +gmail/dad \
-          +gmail/danielle \
+          +akdillon/archive \
+          ------sent------------- \
+          +gmail/sent \
+          '+nau/Sent Items' \
+          +akdillon/sent \
+          ------drafts----------- \
           +gmail/drafts \
-          +gmail/eva \
-          +gmail/evalulogic \
-          +gmail/flagged \
-          +gmail/github \
-          +gmail/invoices \
-          +gmail/japan \
-          +gmail/jonathan \
-          +gmail/jotimaz_at_gmail_dot_com \
-          +gmail/matthew_at_akdillon_dot_net \
-          +gmail/matthew_at_mdsolutionsak_dot_com \
-          +gmail/milo \
-          +gmail/mom \
-          +gmail/mrdillon_at_alaska_dot_edu \
-          +gmail/patrick \
-          +gmail/random \
-          +gmail/reference \
-          +gmail/rx \
-          +gmail/tucotuco \
-          +gmail/village-travel \
           +nau/Drafts \
+          +akdillon/drafts \
+          ------misc-gmail------- \
+          +gmail/flagged \
+          +gmail/matthew_at_mdsolutionsak_dot_com \
+          ------misc-nau--------- \
           '+nau/Undergrad Applications' \
 
 bind pager g noop
