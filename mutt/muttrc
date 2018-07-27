@@ -26,6 +26,7 @@ set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
 folder-hook 'gmail/*' source $HOME/.mutt/muttrc-gmail
 folder-hook 'nau/*' source $HOME/.mutt/muttrc-nau
+folder-hook 'akdillon/*' source $HOME/.mutt/muttrc-akdillon
 
 set sendmail_wait = 0
 
@@ -65,7 +66,7 @@ macro index O ":set my_wait_key = $wait_key<return>:unset wait_key<return><shell
 bind index,pager J sidebar-next
 bind index,pager K sidebar-prev
 bind index,pager L sidebar-open
-macro index,pager t "<pipe-message>mutt2task<enter><enter>" "Add to taskwarrior"
+macro index,pager y "<pipe-message>mutt2task<enter><enter>" "Add to taskwarrior"
 macro pager d '<delete-message>'
 
 alternative_order text/plain text/html

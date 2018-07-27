@@ -37,6 +37,10 @@ call plug#begin()
   Plug 'mileszs/ack.vim'
   " vimwiki
   Plug 'vimwiki/vimwiki'
+  " taskwiki
+  Plug 'tbabej/taskwiki'
+  " typescript syntax highlighting
+  Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 set t_Co=256
