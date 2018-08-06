@@ -1,5 +1,3 @@
-set nocompatible
-
 call plug#begin()
   " Color/theme integration
   Plug 'chriskempson/base16-vim'
@@ -37,8 +35,6 @@ call plug#begin()
   Plug 'mileszs/ack.vim'
   " vimwiki
   Plug 'vimwiki/vimwiki'
-  " taskwiki
-  Plug 'tbabej/taskwiki'
   " typescript syntax highlighting
   Plug 'leafgarland/typescript-vim'
 call plug#end()
@@ -106,7 +102,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
-" change the mapleader from \ to <space>
+" change the mapleader from \ to ,
 let mapleader=" "
 
 " fzf config
