@@ -39,20 +39,20 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
-  $path
+  /opt/local/bin
+  /opt/local/sbin
+  /opt/miniconda3/bin
+  $HOME/.dotfiles/bin
+  $GOROOT/bin
 )
+
+export PATH_SAVE=$PATH
 
 # shortcuts to projects
 export CDPATH="$CDPATH:$HOME/src/qiime2"
 export CDPATH="$CDPATH:$HOME/src/thermokarst"
 
-# macports
-export PATH="$PATH:/opt/local/bin"
-export PATH="$PATH:/opt/local/sbin"
-
-# miniconda
-export PATH="$PATH:/opt/miniconda3/bin"
+export GOROOT=/opt/go
 
 #
 # Less

@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin()
   " Color/theme integration
   Plug 'chriskempson/base16-vim'
@@ -33,6 +35,10 @@ call plug#begin()
   Plug 'elixir-editors/vim-elixir'
   " the silver searcher
   Plug 'mileszs/ack.vim'
+  " vimwiki
+  Plug 'vimwiki/vimwiki'
+  " taskwiki
+  Plug 'tbabej/taskwiki'
 call plug#end()
 
 set t_Co=256
@@ -98,7 +104,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
-" change the mapleader from \ to ,
+" change the mapleader from \ to <space>
 let mapleader=" "
 
 " fzf config
@@ -143,3 +149,6 @@ autocmd BufWritePost *.py call Flake8()
 
 " Inform ack.vim that we are actually using the_silver_searcher
 let g:ackprg = 'ag --vimgrep'
+
+" vimwiki config
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
