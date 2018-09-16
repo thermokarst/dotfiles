@@ -27,34 +27,6 @@ if [[ -z "$LANG" ]]; then
 fi
 
 #
-# Paths
-#
-
-typeset -gU cdpath fpath mailpath path
-
-# Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
-)
-
-# shortcuts to projects
-export CDPATH="$CDPATH:$HOME/src/qiime2"
-export CDPATH="$CDPATH:$HOME/src/thermokarst"
-
-# macports
-export PATH="$PATH:/opt/local/bin"
-export PATH="$PATH:/opt/local/sbin"
-
-# miniconda
-export PATH="$PATH:/opt/miniconda3/bin"
-
-#
 # Less
 #
 
@@ -81,3 +53,33 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+#
+# Paths
+#
+
+# shortcuts to projects
+export CDPATH="$CDPATH:$HOME/src/qiime2"
+export CDPATH="$CDPATH:$HOME/src/thermokarst"
+
+# macports
+export PATH="$PATH:/opt/local/bin"
+export PATH="$PATH:/opt/local/sbin"
+
+# miniconda
+export PATH="$PATH:/opt/miniconda3/bin"
+
+typeset -gU cdpath fpath mailpath path
+
+# Set the the list of directories that cd searches.
+# cdpath=(
+#   $cdpath
+# )
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  /usr/local/{bin,sbin}
+  $path
+)
+
+export -U PATH
