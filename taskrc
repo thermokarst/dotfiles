@@ -12,7 +12,7 @@ color.active=color0 on color4
 ### reports
 
 # customize `next`
-report.next.filter=status:pending limit:20 -reading
+report.next.filter=status:pending limit:10 -reading project.not:shopping
 report.next.columns=id,depends,project,tags,priority,scheduled.relative,due.relative,description.count,urgency
 report.next.labels=id,depends,project,tags,priority,scheduled,due,description,urgency
 
