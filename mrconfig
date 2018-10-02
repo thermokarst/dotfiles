@@ -1,41 +1,129 @@
-[src/qiime2/qiime2]
-checkout = git clone https://github.com/qiime2/qiime2 qiime2 && \
-    cd qiime2 && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/qiime2 && \
+### applied-bioinformatics
+[src/applied-bioinformatics/An-Introduction-To-Applied-Bioinformatics]
+checkout = git clone https://github.com/applied-bioinformatics/An-Introduction-To-Applied-Bioinformatics An-Introduction-To-Applied-Bioinformatics && \
+    cd An-Introduction-To-Applied-Bioinformatics && \
+    git remote rename origin applied-bioinformatics && \
+    git remote add thermokarst https://github.com/thermokarst/An-Introduction-To-Applied-Bioinformatics && \
     git fetch thermokarst
 
-[src/qiime2/q2cli]
-checkout = git clone https://github.com/qiime2/q2cli q2cli && \
-    cd q2cli && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2cli && \
+
+### biocore
+checkout = git clone https://github.com/biocore/deblur deblur && \
+    cd deblur && \
+    git remote rename origin biocore && \
+    git remote add thermokarst https://github.com/thermokarst/deblur && \
     git fetch thermokarst
 
-[src/qiime2/q2templates]
-checkout = git clone https://github.com/qiime2/q2templates q2templates && \
-    cd q2templates && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2templates && \
-    git fetch thermokarst
-[src/qiime2/q2-types]
-checkout = git clone https://github.com/qiime2/q2-types q2-types && \
-    cd q2-types && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-types && \
+checkout = git clone https://github.com/biocore/scikit-bio scikit-bio && \
+    cd scikit-bio && \
+    git remote rename origin biocore && \
+    git remote add ElDeveloper https://github.com/ElDeveloper/scikit-bio && \
+    git remote add ebolyen https://github.com/ebolyen/scikit-bio && \
+    git remote add wasade https://github.com/wasade/scikit-bio && \
+    git remote add thermokarst https://github.com/thermokarst/scikit-bio && \
     git fetch thermokarst
 
-[src/qiime2/q2-feature-table]
-checkout = git clone https://github.com/qiime2/q2-feature-table q2-feature-table && \
-    cd q2-feature-table && \
+
+### caporaso-lab
+[src/caporaso-lab/SurveySync]
+checkout = git clone https://github.com/caporaso-lab/SurveySync SurveySync && \
+    cd SurveySync && \
+    git remote rename origin caporaso-lab && \
+    git remote add turanoo https://github.com/turanoo/SurveySync && \
+    git remote add thermokarst https://github.com/thermokarst/SurveySync && \
+    git fetch thermokarst
+
+[src/caporaso-lab/caporaso-lab.github.io]
+checkout = git clone https://github.com/caporaso-lab/caporaso-lab.github.io caporaso-lab.github.io && \
+    cd caporaso-lab.github.io && \
+    git remote rename origin caporaso-lab && \
+    git remote add thermokarst https://github.com/thermokarst/caporaso-lab.github.io && \
+    git fetch thermokarst
+
+[src/caporaso-lab/sc18-poster]
+checkout = git clone https://github.com/caporaso-lab/sc18-poster sc18-poster && \
+    cd sc18-poster && \
+    git remote rename origin caporaso-lab && \
+    git remote add thermokarst https://github.com/thermokarst/sc18-poster && \
+    git fetch thermokarst
+
+
+### qiime2
+[src/qiime2/Keemei]
+checkout = git clone https://github.com/qiime2/Keemei Keemei && \
+    cd Keemei && \
     git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-feature-table && \
+    git remote add thermokarst https://github.com/thermokarst/Keemei && \
+    git fetch thermokarst
+
+[src/qiime2/busywork]
+checkout = git clone https://github.com/qiime2/busywork busywork && \
+    cd busywork && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/busywork && \
+    git fetch thermokarst
+
+[src/qiime2/data.qiime2.org]
+checkout = git clone https://github.com/qiime2/data.qiime2.org data.qiime2.org && \
+    cd data.qiime2.org && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/data.qiime2.org && \
+    git fetch thermokarst
+
+[src/qiime2/dev-docs]
+checkout = git clone https://github.com/qiime2/dev-docs dev-docs && \
+    cd dev-docs && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/dev-docs && \
+    git fetch thermokarst
+
+[src/qiime2/discourse-unhandled-tagger]
+checkout = git clone https://github.com/qiime2/discourse-unhandled-tagger discourse-unhandled-tagger && \
+    cd discourse-unhandled-tagger && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/discourse-unhandled-tagger && \
+    git fetch thermokarst
+
+[src/qiime2/docs]
+checkout = git clone https://github.com/qiime2/docs docs && \
+    cd docs && \
+    git remote rename origin qiime2 && \
+    git remote add ChrisKeefe https://github.com/ChrisKeefe/docs && \
+    git remote add antgonza https://github.com/antgonza/docs && \
+    git remote add cduvallet https://github.com/cduvallet/docs && \
+    git remote add ebolyen https://github.com/ebolyen/docs && \
+    git remote add nbokulich https://github.com/nbokulich/docs && \
+    git remote add turanoo https://github.com/turanoo/docs && \
+    git remote add gregcaporaso https://github.com/gregcaporaso/docs && \
+    git remote add thermokarst https://github.com/thermokarst/docs && \
+    git fetch thermokarst
+
+[src/qiime2/environment-files]
+checkout = git clone https://github.com/qiime2/environment-files environment-files && \
+    cd environment-files && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/environment-files && \
+    git fetch thermokarst
+
+[src/qiime2/library]
+checkout = git clone https://github.com/qiime2/library library && \
+    cd library && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/library && \
+    git fetch thermokarst
+
+[src/qiime2/logos]
+checkout = git clone https://github.com/qiime2/logos logos && \
+    cd logos && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/logos && \
     git fetch thermokarst
 
 [src/qiime2/q2-alignment]
 checkout = git clone https://github.com/qiime2/q2-alignment q2-alignment && \
     cd q2-alignment && \
     git remote rename origin qiime2 && \
+    git remote add turanoo https://github.com/turanoo/q2-alignment && \
     git remote add thermokarst https://github.com/thermokarst/q2-alignment && \
     git fetch thermokarst
 
@@ -43,13 +131,24 @@ checkout = git clone https://github.com/qiime2/q2-alignment q2-alignment && \
 checkout = git clone https://github.com/qiime2/q2-composition q2-composition && \
     cd q2-composition && \
     git remote rename origin qiime2 && \
+    git remote add nbokulich https://github.com/nbokulich/q2-composition && \
     git remote add thermokarst https://github.com/thermokarst/q2-composition && \
+    git fetch thermokarst
+
+[src/qiime2/q2-cutadapt]
+checkout = git clone https://github.com/qiime2/q2-cutadapt q2-cutadapt && \
+    cd q2-cutadapt && \
+    git remote rename origin qiime2 && \
+    git remote add ebolyen https://github.com/ebolyen/q2-cutadapt && \
+    git remote add thermokarst https://github.com/thermokarst/q2-cutadapt && \
     git fetch thermokarst
 
 [src/qiime2/q2-dada2]
 checkout = git clone https://github.com/qiime2/q2-dada2 q2-dada2 && \
     cd q2-dada2 && \
     git remote rename origin qiime2 && \
+    git remote add benjjneb https://github.com/benjjneb/q2-dada2 && \
+    git remote add ebolyen https://github.com/ebolyen/q2-dada2 && \
     git remote add thermokarst https://github.com/thermokarst/q2-dada2 && \
     git fetch thermokarst
 
@@ -71,6 +170,10 @@ checkout = git clone https://github.com/qiime2/q2-demux q2-demux && \
 checkout = git clone https://github.com/qiime2/q2-diversity q2-diversity && \
     cd q2-diversity && \
     git remote rename origin qiime2 && \
+    git remote add ChrisKeefe https://github.com/ChrisKeefe/q2-diversity && \
+    git remote add ElDeveloper https://github.com/ElDeveloper/q2-diversity && \
+    git remote add ebolyen https://github.com/ebolyen/q2-diversity && \
+    git remote add nbokulich https://github.com/nbokulich/q2-diversity && \
     git remote add thermokarst https://github.com/thermokarst/q2-diversity && \
     git fetch thermokarst
 
@@ -78,6 +181,7 @@ checkout = git clone https://github.com/qiime2/q2-diversity q2-diversity && \
 checkout = git clone https://github.com/qiime2/q2-emperor q2-emperor && \
     cd q2-emperor && \
     git remote rename origin qiime2 && \
+    git remote add ElDeveloper https://github.com/ElDeveloper/q2-emperor && \
     git remote add thermokarst https://github.com/thermokarst/q2-emperor && \
     git fetch thermokarst
 
@@ -85,7 +189,33 @@ checkout = git clone https://github.com/qiime2/q2-emperor q2-emperor && \
 checkout = git clone https://github.com/qiime2/q2-feature-classifier q2-feature-classifier && \
     cd q2-feature-classifier && \
     git remote rename origin qiime2 && \
+    git remote add nbokulich https://github.com/nbokulich/q2-feature-classifier && \
     git remote add thermokarst https://github.com/thermokarst/q2-feature-classifier && \
+    git fetch thermokarst
+
+[src/qiime2/q2-feature-table]
+checkout = git clone https://github.com/qiime2/q2-feature-table q2-feature-table && \
+    cd q2-feature-table && \
+    git remote rename origin qiime2 && \
+    git remote add ebolyen https://github.com/ebolyen/q2-feature-table && \
+    git remote add gregcaporaso https://github.com/gregcaporaso/q2-feature-table && \
+    git remote add wasade https://github.com/wasade/q2-feature-table && \
+    git remote add thermokarst https://github.com/thermokarst/q2-feature-table && \
+    git fetch thermokarst
+
+[src/qiime2/q2-gneiss]
+checkout = git clone https://github.com/qiime2/q2-gneiss q2-gneiss && \
+    cd q2-gneiss && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-gneiss && \
+    git fetch thermokarst
+
+[src/qiime2/q2-longitudinal]
+checkout = git clone https://github.com/qiime2/q2-longitudinal q2-longitudinal && \
+    cd q2-longitudinal && \
+    git remote rename origin qiime2 && \
+    git remote add nbokulich https://github.com/nbokulich/q2-longitudinal && \
+    git remote add thermokarst https://github.com/thermokarst/q2-longitudinal && \
     git fetch thermokarst
 
 [src/qiime2/q2-metadata]
@@ -99,7 +229,16 @@ checkout = git clone https://github.com/qiime2/q2-metadata q2-metadata && \
 checkout = git clone https://github.com/qiime2/q2-phylogeny q2-phylogeny && \
     cd q2-phylogeny && \
     git remote rename origin qiime2 && \
+    git remote add mikerobeson https://github.com/mikerobeson/q2-phylogeny && \
     git remote add thermokarst https://github.com/thermokarst/q2-phylogeny && \
+    git fetch thermokarst
+
+[src/qiime2/q2-quality-control]
+checkout = git clone https://github.com/qiime2/q2-quality-control q2-quality-control && \
+    cd q2-quality-control && \
+    git remote rename origin qiime2 && \
+    git remote add nbokulich https://github.com/nbokulich/q2-quality-control && \
+    git remote add thermokarst https://github.com/thermokarst/q2-quality-control && \
     git fetch thermokarst
 
 [src/qiime2/q2-quality-filter]
@@ -109,6 +248,15 @@ checkout = git clone https://github.com/qiime2/q2-quality-filter q2-quality-filt
     git remote add thermokarst https://github.com/thermokarst/q2-quality-filter && \
     git fetch thermokarst
 
+[src/qiime2/q2-sample-classifier]
+checkout = git clone https://github.com/qiime2/q2-sample-classifier q2-sample-classifier && \
+    cd q2-sample-classifier && \
+    git remote rename origin qiime2 && \
+    git remote add BenKaehler https://github.com/BenKaehler/q2-sample-classifier && \
+    git remote add nbokulich https://github.com/nbokulich/q2-sample-classifier && \
+    git remote add thermokarst https://github.com/thermokarst/q2-sample-classifier && \
+    git fetch thermokarst
+
 [src/qiime2/q2-taxa]
 checkout = git clone https://github.com/qiime2/q2-taxa q2-taxa && \
     cd q2-taxa && \
@@ -116,25 +264,11 @@ checkout = git clone https://github.com/qiime2/q2-taxa q2-taxa && \
     git remote add thermokarst https://github.com/thermokarst/q2-taxa && \
     git fetch thermokarst
 
-[src/qiime2/q2-gneiss]
-checkout = git clone https://github.com/qiime2/q2-gneiss q2-gneiss && \
-    cd q2-gneiss && \
+[src/qiime2/q2-types]
+checkout = git clone https://github.com/qiime2/q2-types q2-types && \
+    cd q2-types && \
     git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-gneiss && \
-    git fetch thermokarst
-
-[src/qiime2/q2-sample-classifier]
-checkout = git clone https://github.com/qiime2/q2-sample-classifier q2-sample-classifier && \
-    cd q2-sample-classifier && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-sample-classifier && \
-    git fetch thermokarst
-
-[src/qiime2/q2-longitudinal]
-checkout = git clone https://github.com/qiime2/q2-longitudinal q2-longitudinal && \
-    cd q2-longitudinal && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-longitudinal && \
+    git remote add thermokarst https://github.com/thermokarst/q2-types && \
     git fetch thermokarst
 
 [src/qiime2/q2-vsearch]
@@ -144,46 +278,44 @@ checkout = git clone https://github.com/qiime2/q2-vsearch q2-vsearch && \
     git remote add thermokarst https://github.com/thermokarst/q2-vsearch && \
     git fetch thermokarst
 
-[src/qiime2/q2-quality-control]
-checkout = git clone https://github.com/qiime2/q2-quality-control q2-quality-control && \
-    cd q2-quality-control && \
+[src/qiime2/q2cli]
+checkout = git clone https://github.com/qiime2/q2cli q2cli && \
+    cd q2cli && \
     git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-quality-control && \
+    git remote add ebolyen https://github.com/ebolyen/q2cli && \
+    git remote add turanoo https://github.com/turanoo/q2cli && \
+    git remote add thermokarst https://github.com/thermokarst/q2cli && \
     git fetch thermokarst
-
-[src/qiime2/data.qiime2.org]
-checkout = git clone https://github.com/qiime2/data.qiime2.org data.qiime2.org && \
-    cd data.qiime2.org && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/data.qiime2.org && \
-    git fetch thermokarst
-
-[src/qiime2/docs]
-checkout = git clone https://github.com/qiime2/docs docs && \
-    cd docs && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/docs && \
-    git fetch thermokarst
-
-[src/qiime2/dev-docs]
-checkout = git clone https://github.com/qiime2/dev-docs dev-docs && \
-    cd dev-docs && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/dev-docs && \
-    git fetch thermokarst
-
-# [src/qiime2/docs.qiime2.org]
-# checkout = git clone https://github.com/qiime2/docs.qiime2.org docs.qiime2.org && \
-#     cd docs.qiime2.org && \
-#     git remote rename origin qiime2 && \
-#     git remote add thermokarst https://github.com/thermokarst/docs.qiime2.org && \
-#     git fetch thermokarst
 
 [src/qiime2/q2studio]
 checkout = git clone https://github.com/qiime2/q2studio q2studio && \
     cd q2studio && \
     git remote rename origin qiime2 && \
     git remote add thermokarst https://github.com/thermokarst/q2studio && \
+    git fetch thermokarst
+
+[src/qiime2/q2templates]
+checkout = git clone https://github.com/qiime2/q2templates q2templates && \
+    cd q2templates && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2templates && \
+    git fetch thermokarst
+
+[src/qiime2/q2view]
+checkout = git clone https://github.com/qiime2/q2view q2view && \
+    cd q2view && \
+    git remote rename origin qiime2 && \
+    git remote add ebolyen https://github.com/ebolyen/q2view && \
+    git remote add turanoo https://github.com/turanoo/q2view && \
+    git remote add thermokarst https://github.com/thermokarst/q2view && \
+    git fetch thermokarst
+
+[src/qiime2/qiime2]
+checkout = git clone https://github.com/qiime2/qiime2 qiime2 && \
+    cd qiime2 && \
+    git remote rename origin qiime2 && \
+    git remote add ebolyen https://github.com/ebolyen/qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/qiime2 && \
     git fetch thermokarst
 
 [src/qiime2/qiime2.github.io]
@@ -193,25 +325,11 @@ checkout = git clone https://github.com/qiime2/qiime2.github.io qiime2.github.io
     git remote add thermokarst https://github.com/thermokarst/qiime2.github.io && \
     git fetch thermokarst
 
-[src/qiime2/busywork]
-checkout = git clone https://github.com/qiime2/busywork busywork && \
-    cd busywork && \
+[src/qiime2/template-repo]
+checkout = git clone https://github.com/qiime2/template-repo template-repo && \
+    cd template-repo && \
     git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/busywork && \
-    git fetch thermokarst
-
-[src/qiime2/q2-cutadapt]
-checkout = git clone https://github.com/qiime2/q2-cutadapt q2-cutadapt && \
-    cd q2-cutadapt && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2-cutadapt && \
-    git fetch thermokarst
-
-[src/qiime2/q2view]
-checkout = git clone https://github.com/qiime2/q2view q2view && \
-    cd q2view && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/q2view && \
+    git remote add thermokarst https://github.com/thermokarst/template-repo && \
     git fetch thermokarst
 
 [src/qiime2/view.qiime2.org]
@@ -221,13 +339,6 @@ checkout = git clone https://github.com/qiime2/view.qiime2.org view.qiime2.org &
     git remote add thermokarst https://github.com/thermokarst/view.qiime2.org && \
     git fetch thermokarst
 
-[src/qiime2/workshop-playbooks]
-checkout = git clone https://github.com/qiime2/workshop-playbooks workshop-playbooks && \
-    cd workshop-playbooks && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/workshop-playbooks && \
-    git fetch thermokarst
-
 [src/qiime2/vm-playbooks]
 checkout = git clone https://github.com/qiime2/vm-playbooks vm-playbooks && \
     cd vm-playbooks && \
@@ -235,27 +346,22 @@ checkout = git clone https://github.com/qiime2/vm-playbooks vm-playbooks && \
     git remote add thermokarst https://github.com/thermokarst/vm-playbooks && \
     git fetch thermokarst
 
-[src/qiime2/Keemei]
-checkout = git clone https://github.com/qiime2/Keemei Keemei && \
-    cd Keemei && \
+[src/qiime2/workshop-playbooks]
+checkout = git clone https://github.com/qiime2/workshop-playbooks workshop-playbooks && \
+    cd workshop-playbooks && \
     git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/Keemei && \
+    git remote add thermokarst https://github.com/thermokarst/workshop-playbooks && \
     git fetch thermokarst
 
-[src/qiime2/logos]
-checkout = git clone https://github.com/qiime2/logos logos && \
-    cd logos && \
+[src/qiime2/workshops.qiime2.org]
+checkout = git clone https://github.com/qiime2/workshops.qiime2.org workshops.qiime2.org && \
+    cd workshops.qiime2.org && \
     git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/logos && \
+    git remote add thermokarst https://github.com/thermokarst/workshops.qiime2.org && \
     git fetch thermokarst
 
-[src/qiime2/discourse-unhandled-tagger]
-checkout = git clone https://github.com/qiime2/discourse-unhandled-tagger discourse-unhandled-tagger && \
-    cd discourse-unhandled-tagger && \
-    git remote rename origin qiime2 && \
-    git remote add thermokarst https://github.com/thermokarst/discourse-unhandled-tagger && \
-    git fetch thermokarst
 
+### gregcaporaso
 [src/gregcaporaso/caporaso-lab-secrets]
 checkout = git clone https://github.com/gregcaporaso/caporaso-lab-secrets && \
     cd caporaso-lab-secrets && \
@@ -263,13 +369,22 @@ checkout = git clone https://github.com/gregcaporaso/caporaso-lab-secrets && \
     git remote add thermokarst https://github.com/thermokarst/caporaso-lab-secrets && \
     git fetch thermokarst
 
-[src/caporaso-lab/SurveySync]
-checkout = git clone https://github.com/caporaso-lab/SurveySync && \
-    cd SurveySync && \
-    git remote rename origin caporaso-lab && \
-    git remote add thermokarst https://github.com/thermokarst/SurveySync && \
+[src/gregcaporaso/qiime2-meta-figures]
+checkout = git clone https://github.com/gregcaporaso/qiime2-meta-figures && \
+    cd qiime2-meta-figures && \
+    git remote rename origin gregcaporaso && \
+    git remote add thermokarst https://github.com/thermokarst/qiime2-meta-figures && \
     git fetch thermokarst
 
+[src/gregcaporaso/workshop-tutorials]
+checkout = git clone https://github.com/gregcaporaso/workshop-tutorials && \
+    cd workshop-tutorials && \
+    git remote rename origin gregcaporaso && \
+    git remote add thermokarst https://github.com/thermokarst/workshop-tutorials && \
+    git fetch thermokarst
+
+
+### thermokarst
 [src/thermokarst/ccdb-api]
 checkout = git clone https://github.com/thermokarst/ccdb-api && \
     cd ccdb-api && \
@@ -283,7 +398,9 @@ checkout = git clone https://github.com/thermokarst/ccdb-web && \
 [src/thermokarst/fathm]
 checkout = git clone https://github.com/thermokarst/fathm && \
     cd fathm && \
-    git remote rename origin thermokarst
+    git remote rename origin thermokarst && \
+    git remote add gitlab https://gitlab.com/evalulogic/fathm.git && \
+    git fetch gitlab
 
 [src/thermokarst/tucotuco]
 checkout = git clone https://github.com/thermokarst/tucotuco && \
