@@ -1,6 +1,0 @@
-set from = 'matthew.dillon@nau.edu'
-set sendmail = 'msmtp -a nau'
-set record = '+nau/Sent Items'
-
-macro index a "<save-message>=nau/Archive<enter><enter>" "Archive"
-macro pager a "<save-message>=nau/Archive<enter><enter>" "Archive"

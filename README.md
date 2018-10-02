@@ -3,6 +3,7 @@
 ```bash
 $ git clone https://github.com/thermokarst/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
+$ git remote rename origin thermokarst
 # Install macports
 $ sudo port selfupdate
 $ sudo port install \
@@ -10,17 +11,12 @@ $ sudo port install \
   aspell \
   aspell-dict-en \
   cmus \
+  curl \
   git \
   gnupg2 \
   graphviz-devel \
   htop \
   imagemagick \
-  elinks \
-  w3m \
-  neomutt +sasl +kyotocabinet \
-  procmail \
-  offlineimap \
-  msmtp \
   myrepos \
   nodejs9 \
   openssl \

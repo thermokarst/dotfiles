@@ -59,6 +59,9 @@ fi
 #
 
 # shortcuts to projects
+export CDPATH="$CDPATH:$HOME/src/biocore"
+export CDPATH="$CDPATH:$HOME/src/caporaso-lab"
+export CDPATH="$CDPATH:$HOME/src/gregcaporaso"
 export CDPATH="$CDPATH:$HOME/src/qiime2"
 export CDPATH="$CDPATH:$HOME/src/thermokarst"
 
@@ -69,12 +72,19 @@ export PATH="$PATH:/opt/local/sbin"
 # miniconda
 export PATH="$PATH:/opt/miniconda3/bin"
 
+# javascript
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# golang
+export GOROOT=/opt/go
+export PATH=$PATH:$GOROOT/bin
+
 typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
+cdpath=(
+  $cdpath
+)
 
 # Set the list of directories that Zsh searches for programs.
 path=(

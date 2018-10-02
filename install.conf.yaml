@@ -15,7 +15,3 @@
     ~/.vimrc:            vimrc
     ~/.mrconfig:         mrconfig
     ~/.taskrc:           taskrc
-    ~/.mutt:             mutt
-    ~/.mailcap:          mailcap
-    ~/.msmtprc:          msmtprc
-    ~/.offlineimaprc:    offlineimaprc

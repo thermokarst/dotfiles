@@ -1,6 +1,0 @@
-set from = 'matthew@akdillon.net'
-set sendmail = 'msmtp -a akdillon'
-set record = '+akdillon/sent'
-
-macro index a "<save-message>=akdillon/archive<enter><enter>" "Archive"
-macro pager a "<save-message>=akdillon/archive<enter><enter>" "Archive"

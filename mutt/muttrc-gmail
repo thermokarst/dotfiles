@@ -1,6 +1,0 @@
-set from = 'matthewrdillon@gmail.com'
-set sendmail = 'msmtp -a gmail'
-unset record
-
-macro index a "<save-message>=gmail/archive<enter><enter>" "Archive"
-macro pager a "<save-message>=gmail/archive<enter><enter>" "Archive"
