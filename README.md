@@ -60,3 +60,7 @@ sudo port load postgresql10-server
 sudo su postgres -c "createuser matthew --createdb --login --superuser"
 sudo su postgres -c "createdb matthew"
 ```
+
+### Trackpad
+
+https://github.com/pilotmoon/Scroll-Reverser
