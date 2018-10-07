@@ -64,3 +64,7 @@ sudo su postgres -c "createdb matthew"
 ### Trackpad
 
 https://github.com/pilotmoon/Scroll-Reverser
+
+### Typeface
+
+https://fonts.google.com/specimen/Inconsolata (iTerm2 16pt anti-aliased)
