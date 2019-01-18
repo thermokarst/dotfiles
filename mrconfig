@@ -203,6 +203,13 @@ checkout = git clone https://github.com/qiime2/q2-feature-table q2-feature-table
     git remote add thermokarst https://github.com/thermokarst/q2-feature-table && \
     git fetch thermokarst
 
+[src/qiime2/q2-fragment-insertion]
+checkout = git clone https://github.com/qiime2/q2-fragment-insertion q2-fragment-insertion && \
+    cd q2-fragment-insertion && \
+    git remote rename origin qiime2 && \
+    git remote add thermokarst https://github.com/thermokarst/q2-fragment-insertion && \
+    git fetch thermokarst
+
 [src/qiime2/q2-gneiss]
 checkout = git clone https://github.com/qiime2/q2-gneiss q2-gneiss && \
     cd q2-gneiss && \
@@ -285,6 +292,30 @@ checkout = git clone https://github.com/qiime2/q2cli q2cli && \
     git remote add ebolyen https://github.com/ebolyen/q2cli && \
     git remote add turanoo https://github.com/turanoo/q2cli && \
     git remote add thermokarst https://github.com/thermokarst/q2cli && \
+    git fetch thermokarst
+
+[src/qiime2/q2cwl]
+checkout = git clone https://github.com/qiime2/q2cwl q2cwl && \
+    cd q2cwl && \
+    git remote rename origin qiime2 && \
+    git remote add ebolyen https://github.com/ebolyen/q2cwl && \
+    git remote add thermokarst https://github.com/thermokarst/q2cwl && \
+    git fetch thermokarst
+
+[src/qiime2/q2galaxy]
+checkout = git clone https://github.com/qiime2/q2galaxy q2galaxy && \
+    cd q2galaxy && \
+    git remote rename origin qiime2 && \
+    git remote add ebolyen https://github.com/ebolyen/q2galaxy && \
+    git remote add thermokarst https://github.com/thermokarst/q2galaxy && \
+    git fetch thermokarst
+
+[src/qiime2/galaxy]
+checkout = git clone https://github.com/galaxyproject/galaxy galaxy && \
+    cd galaxy && \
+    git remote rename origin galaxyproject && \
+    git remote add ebolyen https://github.com/ebolyen/galaxy && \
+    git remote add thermokarst https://github.com/thermokarst/galaxy && \
     git fetch thermokarst
 
 [src/qiime2/q2studio]

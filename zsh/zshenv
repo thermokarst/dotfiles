@@ -64,6 +64,7 @@ export CDPATH="$CDPATH:$HOME/src/caporaso-lab"
 export CDPATH="$CDPATH:$HOME/src/gregcaporaso"
 export CDPATH="$CDPATH:$HOME/src/qiime2"
 export CDPATH="$CDPATH:$HOME/src/thermokarst"
+export CDPATH="$CDPATH:."
 
 # macports
 export PATH="$PATH:/opt/local/bin"
