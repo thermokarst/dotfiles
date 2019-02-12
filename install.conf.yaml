@@ -13,3 +13,5 @@
     ~/.zshrc:            zsh/zshrc
     ~/.aspell.en.pws:    aspell.en.pws
     ~/.vimrc:            vimrc
+    ~/.mrconfig:         mrconfig
+    ~/.taskrc:           taskrc

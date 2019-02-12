@@ -1,6 +1,18 @@
-personal_ws-1.1 en 5 
+personal_ws-1.1 en 17 
+env
+conda
+yml
+linux
+Miniconda
+osx
+macOS
+linenos
 informatics
 microbiome
-Microbiome
+py
+cli
+qiime
 QIIME
+dev
+wget
 metadata

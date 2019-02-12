@@ -27,38 +27,6 @@ if [[ -z "$LANG" ]]; then
 fi
 
 #
-# Paths
-#
-
-typeset -gU cdpath fpath mailpath path
-
-# Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
-)
-
-# set up local bin dirs
-export PATH="$PATH:$HOME/bin:$HOME/.bin"
-
-# shortcuts to projects
-export CDPATH="$CDPATH:$HOME/caporaso/qiime2"
-export CDPATH="$CDPATH:$HOME/projects"
-
-# set up golang
-export GOPATH="/Users/matthew/go"
-export PATH="$PATH:$GOPATH/bin"
-export CDPATH="$CDPATH:$GOPATH/src/github.com:$GOPATH/src/code.google.com/p:$GOPATH/src/bitbucket.org"
-
-# set miniconda3 bin dir last
-export PATH="$PATH:$HOME/miniconda3/bin"
-
-#
 # Less
 #
 
@@ -85,3 +53,41 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+
+#
+# Paths
+#
+
+# shortcuts to projects
+export CDPATH="$CDPATH:$HOME/src/biocore"
+export CDPATH="$CDPATH:$HOME/src/caporaso-lab"
+export CDPATH="$CDPATH:$HOME/src/gregcaporaso"
+export CDPATH="$CDPATH:$HOME/src/qiime2"
+export CDPATH="$CDPATH:$HOME/src/thermokarst"
+export CDPATH="$CDPATH:."
+
+# miniconda
+export PATH="/opt/miniconda3/bin:$PATH"
+
+# macports
+export PATH="/opt/local/bin:$PATH"
+export PATH="/opt/local/sbin:$PATH"
+
+# golang
+export GOROOT=/opt/go
+export PATH="$GOROOT/bin:$PATH"
+
+typeset -gU cdpath fpath mailpath path
+
+# Set the the list of directories that cd searches.
+cdpath=(
+  $cdpath
+)
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  $path
+  /usr/local/{bin,sbin}
+)
+
+export -U PATH

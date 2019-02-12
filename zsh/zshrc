@@ -9,10 +9,9 @@ fi
 # shortcuts
 alias mailserver="sudo python -m smtpd -n -c DebuggingServer localhost:25"
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
-alias postgres="postgres -D /usr/local/var/postgres"
 alias venv="source venv/bin/activate"
 alias devenv="deactivate"
-alias q="source activate q2dev-2017.10"
+alias q="source activate q2dev"
 alias i="ipython3"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -62,4 +61,3 @@ function back_things_up() {
     ln -s $dest_root/$date $dest_root/latest
     # TODO: once confident pruning is working well, add that in here
 }
-alias gmg=$GOPATH/bin/go-many-git
