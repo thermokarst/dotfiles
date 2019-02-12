@@ -47,6 +47,13 @@ checkout = git clone https://github.com/caporaso-lab/sc18-poster sc18-poster && 
     git remote add thermokarst https://github.com/thermokarst/sc18-poster && \
     git fetch thermokarst
 
+[src/caporaso-lab/pretrained-feature-classifiers]
+checkout = git clone https://github.com/caporaso-lab/pretrained-feature-classifiers pretrained-feature-classifiers && \
+    cd pretrained-feature-classifiers && \
+    git remote rename origin caporaso-lab && \
+    git remote add thermokarst https://github.com/thermokarst/pretrained-feature-classifiers && \
+    git fetch thermokarst
+
 
 ### qiime2
 [src/qiime2/Keemei]
@@ -175,6 +182,14 @@ checkout = git clone https://github.com/qiime2/q2-diversity q2-diversity && \
     git remote add ebolyen https://github.com/ebolyen/q2-diversity && \
     git remote add nbokulich https://github.com/nbokulich/q2-diversity && \
     git remote add thermokarst https://github.com/thermokarst/q2-diversity && \
+    git fetch thermokarst
+
+[src/qiime2/q2-diversity-lib]
+checkout = git clone https://github.com/qiime2/q2-diversity-lib q2-diversity-lib && \
+    cd q2-diversity-lib && \
+    git remote rename origin qiime2 && \
+    git remote add ChrisKeefe https://github.com/ChrisKeefe/q2-diversity-lib && \
+    git remote add thermokarst https://github.com/thermokarst/q2-diversity-lib && \
     git fetch thermokarst
 
 [src/qiime2/q2-emperor]

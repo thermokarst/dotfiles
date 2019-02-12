@@ -149,3 +149,6 @@ let g:ackprg = 'ag --vimgrep'
 
 " vimwiki config
 let g:vimwiki_list = [{'path': '$HOME/Dropbox/vimwiki/'}]
+
+" netrw
+let g:netrw_liststyle = 3 " tree view
