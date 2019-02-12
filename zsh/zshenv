@@ -66,19 +66,16 @@ export CDPATH="$CDPATH:$HOME/src/qiime2"
 export CDPATH="$CDPATH:$HOME/src/thermokarst"
 export CDPATH="$CDPATH:."
 
-# macports
-export PATH="$PATH:/opt/local/bin"
-export PATH="$PATH:/opt/local/sbin"
-
 # miniconda
-export PATH="$PATH:/opt/miniconda3/bin"
+export PATH="/opt/miniconda3/bin:$PATH"
 
-# javascript
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# macports
+export PATH="/opt/local/bin:$PATH"
+export PATH="/opt/local/sbin:$PATH"
 
 # golang
 export GOROOT=/opt/go
-export PATH=$PATH:$GOROOT/bin
+export PATH="$GOROOT/bin:$PATH"
 
 typeset -gU cdpath fpath mailpath path
 
@@ -89,8 +86,8 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
   $path
+  /usr/local/{bin,sbin}
 )
 
 export -U PATH
