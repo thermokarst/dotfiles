@@ -6,6 +6,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+source /opt/miniconda3/etc/profile.d/conda.sh
+
 # shortcuts
 alias mailserver="sudo python -m smtpd -n -c DebuggingServer localhost:25"
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
