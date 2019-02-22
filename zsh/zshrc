@@ -6,7 +6,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-source /opt/miniconda3/etc/profile.d/conda.sh
+if [[ -s "/opt/miniconda3/etc/profile.d/conda.sh" ]]; then
+  source /opt/miniconda3/etc/profile.d/conda.sh
+fi
 
 # shortcuts
 alias mailserver="sudo python -m smtpd -n -c DebuggingServer localhost:25"
@@ -18,8 +20,6 @@ alias i="ipython3"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-alias tmux="TERM=xterm-256color tmux"
 
 # Backup shortcuts (borrowed parts from https://github.com/laurent22/rsync-time-backup
 function prune_backups() {
@@ -50,6 +50,7 @@ function prune_backups() {
 
 function back_things_up() {
   date=$(date +"%Y-%m-%d-%H%M%S")
+  # TODO: update this...
   dest_root="/Volumes/field_on_fire/$HOST"
   rsync -azPE \
       --stats \

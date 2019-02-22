@@ -76,16 +76,7 @@ cdpath=(
 path=(
   # miniconda
   /opt/miniconda3/bin
-
-  # macports
-  /opt/local/bin
-  /opt/local/sbin
-
-  # xquartz
-  /opt/X11/bin
-
-  # latex
-  /Library/Tex/texbin
+  $path
 )
 
 export -U PATH

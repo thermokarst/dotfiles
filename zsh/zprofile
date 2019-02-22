@@ -1,7 +1,2 @@
 # Matthew Dillon
 # matthewrdillon@gmail.com
-
-# Doing this to get around `path_helper`, which reorders my path when I
-# least expect it!
-# https://github.com/sorin-ionescu/prezto/issues/381
-export PATH=$PATH_SAVE:$PATH
