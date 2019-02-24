@@ -76,8 +76,11 @@ cdpath=(
 path=(
   # miniconda
   /opt/miniconda3/bin
+  # yarn
+  $HOME/.yarn/bin
+  $HOME/.config/yarn/global/node_modules/.bin
+
   $path
 )
 
 export -U PATH
-export PATH_SAVE=$PATH

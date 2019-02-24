@@ -20,6 +20,7 @@ alias i="ipython3"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # Backup shortcuts (borrowed parts from https://github.com/laurent22/rsync-time-backup
 function prune_backups() {
@@ -65,3 +66,4 @@ function back_things_up() {
     ln -s $dest_root/$date $dest_root/latest
     # TODO: once confident pruning is working well, add that in here
 }
+
