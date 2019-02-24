@@ -52,10 +52,11 @@ function back_things_up() {
   date=$(date +"%Y-%m-%d-%H%M%S")
   # TODO: update this...
   dest_root="/Volumes/field_on_fire/$HOST"
-  rsync -azPE \
+  rsync -azP \
       --stats \
       --human-readable \
       --itemize-changes \
+      --size-only \
       --link-dest=$dest_root/latest \
       --exclude-from $HOME/.dotfiles/rsync_excludes.txt \
       $HOME/ \

@@ -13,3 +13,12 @@
 - .cpan/
 - .nvim/plugged/
 - .vim/plugged/
+- .conda/
+- .mail/
+- .dropbox/
+- .wine/
+- .cisco/
+- .fzf/
+- .local/
+- .zprezto/
+- .conda-bld/
