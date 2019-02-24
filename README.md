@@ -4,6 +4,8 @@
 $ sudo zypper install \
   the_silver_searcher \
   cmus \
+  docker \
+  gcc \
   git \
   htop \
   mr \
