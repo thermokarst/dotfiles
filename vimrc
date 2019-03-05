@@ -1,6 +1,6 @@
 call plug#begin()
   " Color/theme integration
-  Plug 'chriskempson/base16-vim'
+  Plug 'danielwe/base16-vim'
   " Time-tracking
   Plug 'wakatime/vim-wakatime'
   " Python Flake8 support
