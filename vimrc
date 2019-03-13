@@ -1,3 +1,8 @@
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\   'python': ['flake8', 'pyls'],
+\}
+
 call plug#begin()
   " Color/theme integration
   Plug 'danielwe/base16-vim'
@@ -37,6 +42,8 @@ call plug#begin()
   Plug 'vimwiki/vimwiki'
   " typescript syntax highlighting
   Plug 'leafgarland/typescript-vim'
+  " lsp
+  Plug 'w0rp/ale'
 call plug#end()
 
 set t_Co=256
