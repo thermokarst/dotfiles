@@ -21,14 +21,12 @@ font:
     family: Anonymous Pro
   size: 12.0
   offset:
-    x: -0.7
+    x: 0
     y: 0
   glyph_offset:
     x: 0
     y: 0
-  scale_with_dpi: false
 render_timer: false
-custom_cursor_colors: false
 draw_bold_text_with_bright_colors: true
 
 #### Unmodified from here down:
@@ -166,20 +164,6 @@ selection:
   save_to_clipboard: false
 
 dynamic_title: true
-
-hide_cursor_when_typing: false
-
-# Cursor style
-#
-# Values for 'cursor_style':
-#   - Block
-#   - Underline
-#   - Beam
-cursor_style: Block
-
-# If this is `true`, the cursor will be rendered as a hollow box when the
-# window is not focused.
-unfocused_hollow_cursor: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
