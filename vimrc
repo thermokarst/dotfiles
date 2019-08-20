@@ -1,8 +1,3 @@
-let g:ale_completion_enabled = 1
-let g:ale_linters = {
-\   'python': ['flake8', 'pyls'],
-\}
-
 call plug#begin()
   " Color/theme integration
   Plug 'danielwe/base16-vim'
@@ -20,30 +15,10 @@ call plug#begin()
   Plug 'ntpeters/vim-better-whitespace'
   " Mustache/handlebars support
   Plug 'mustache/vim-mustache-handlebars'
-  " Insert-mode tab completion
-  Plug 'ervandew/supertab'
-  " elm-lang Support
-  Plug 'elmcast/elm-vim'
-  " ranger support
-  Plug 'francoiscabrol/ranger.vim'
-  " Delimited file querying
-  Plug 'mechatroner/rainbow_csv'
-  " fzf setup
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  " vue2
-  Plug 'posva/vim-vue'
-  " golang support
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  " elixir
-  Plug 'elixir-editors/vim-elixir'
   " the silver searcher
   Plug 'mileszs/ack.vim'
-  " vimwiki
-  Plug 'vimwiki/vimwiki'
-  " typescript syntax highlighting
-  Plug 'leafgarland/typescript-vim'
-  " lsp
-  Plug 'w0rp/ale'
+  " ctag generation
+  Plug 'jsfaint/gen_tags.vim'
 call plug#end()
 
 set t_Co=256
@@ -68,6 +43,7 @@ syntax on
 
 " turn on line numbering
 set number
+set relativenumber
 
 " make backspace behave as expected
 set backspace=indent,eol,start
@@ -112,9 +88,6 @@ set writebackup
 " change the mapleader from \ to ,
 let mapleader=" "
 
-" fzf config
-map <leader><Tab> :FZF<CR>
-
 " PEP8 formatting
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -154,8 +127,59 @@ let g:flake8_warning_marker = 'WW'
 " Inform ack.vim that we are actually using the_silver_searcher
 let g:ackprg = 'ag --vimgrep'
 
-" vimwiki config
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/vimwiki/'}]
+" relative numbers in normal mode, absolute in insert
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " netrw
-let g:netrw_liststyle = 3 " tree view
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_altv = 1
+let g:netrw_preview=1           " open previews vertically
+let g:netrw_list_hide='\.git,\.idea,.*\.swp$,.*\.pyc$,__pycache__,\.DS_Store'
+autocmd FileType netrw setlocal bufhidden=delete
+" http://ivanbrennan.nyc/2014-01-16/rigging-vims-netrw
+fun! VexOpen(dir)
+    let g:netrw_browse_split=4
+    let vex_width=25
+    execute "Vexplore " . a:dir
+    set number relativenumber
+    let t:vex_buf_nr = bufnr("%")
+    wincmd H
+    call VexSize(vex_width)
+endf
+fun! VexClose()
+    let cur_win_nr = winnr()
+    let target_nr = ( cur_win_nr == 1 ? winnr("#") : cur_win_nr )
+    1wincmd w
+    close
+    unlet t:vex_buf_nr
+    execute (target_nr - 1) . "wincmd w"
+    call NormalizeWidths()
+endf
+fun! VexSize(vex_width)
+    execute "vertical resize" . a:vex_width
+    set winfixwidth
+    call NormalizeWidths()
+endf
+fun! NormalizeWidths()
+    let eadir_pref = &eadirection
+    set eadirection=hor
+    set equalalways! equalalways!
+    let &eadirection = eadir_pref
+endf
+fun! VexToggle(dir)
+    if exists("t:vex_buf_nr")
+        call VexClose()
+    else
+        call VexOpen(a:dir)
+    endif
+endf
+noremap <Leader><Tab> :call VexToggle(getcwd())<CR>
+noremap <Leader>` :call VexToggle("")<CR>
+augroup NetrwGroup
+    autocmd! BufEnter * call NormalizeWidths()
+augroup END
