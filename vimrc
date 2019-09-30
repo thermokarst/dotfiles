@@ -19,6 +19,8 @@ call plug#begin()
   Plug 'mileszs/ack.vim'
   " ctag generation
   Plug 'jsfaint/gen_tags.vim'
+  " fzf setup
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 set t_Co=256
@@ -134,52 +136,5 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-" netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_altv = 1
-let g:netrw_preview=1           " open previews vertically
-let g:netrw_list_hide='\.git,\.idea,.*\.swp$,.*\.pyc$,__pycache__,\.DS_Store'
-autocmd FileType netrw setlocal bufhidden=delete
-" http://ivanbrennan.nyc/2014-01-16/rigging-vims-netrw
-fun! VexOpen(dir)
-    let g:netrw_browse_split=4
-    let vex_width=25
-    execute "Vexplore " . a:dir
-    set number relativenumber
-    let t:vex_buf_nr = bufnr("%")
-    wincmd H
-    call VexSize(vex_width)
-endf
-fun! VexClose()
-    let cur_win_nr = winnr()
-    let target_nr = ( cur_win_nr == 1 ? winnr("#") : cur_win_nr )
-    1wincmd w
-    close
-    unlet t:vex_buf_nr
-    execute (target_nr - 1) . "wincmd w"
-    call NormalizeWidths()
-endf
-fun! VexSize(vex_width)
-    execute "vertical resize" . a:vex_width
-    set winfixwidth
-    call NormalizeWidths()
-endf
-fun! NormalizeWidths()
-    let eadir_pref = &eadirection
-    set eadirection=hor
-    set equalalways! equalalways!
-    let &eadirection = eadir_pref
-endf
-fun! VexToggle(dir)
-    if exists("t:vex_buf_nr")
-        call VexClose()
-    else
-        call VexOpen(a:dir)
-    endif
-endf
-noremap <Leader><Tab> :call VexToggle(getcwd())<CR>
-noremap <Leader>` :call VexToggle("")<CR>
-augroup NetrwGroup
-    autocmd! BufEnter * call NormalizeWidths()
-augroup END
+" fzf config
+map <leader><Tab> :FZF<CR>
