@@ -21,3 +21,6 @@
     ~/.config/alacritty/alacritty.yml:
       create: true
       path: alacritty.yml
+    ~/.config/Code/User/settings.json:
+      create: true
+      path: vscode_settings.json

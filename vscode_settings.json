@@ -1,0 +1,9 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "block",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.colorTheme": "Base16 Dark Ashes",
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "window.zoomLevel": 0
+}
