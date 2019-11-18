@@ -15,6 +15,7 @@
     ~/.vimrc:                    vimrc
     ~/.mrconfig:                 mrconfig
     ~/.taskrc:                   taskrc
+    ~/.spacemacs:                spacemacs
     ~/.config/beets/config.yaml:
       create: true
       path: beets.yaml
