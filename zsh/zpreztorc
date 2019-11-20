@@ -31,7 +31,6 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'prompt' \
   'tmux' \
-  'gpg'
 
 #
 # Editor
