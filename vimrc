@@ -17,8 +17,6 @@ call plug#begin()
   Plug 'mustache/vim-mustache-handlebars'
   " the silver searcher
   Plug 'mileszs/ack.vim'
-  " ctag generation
-  Plug 'jsfaint/gen_tags.vim'
   " fzf setup
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()

@@ -3,6 +3,12 @@
 #
 
 #
+# Nix
+#
+
+export NIX_IGNORE_SYMLINK_STORE=1
+
+#
 # Browser
 #
 
