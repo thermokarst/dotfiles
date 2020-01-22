@@ -6,6 +6,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+if [[ -s "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]]; then
+  source $HOME/.nix-profile/etc/profile.d/nix.sh
+fi
+
 if [[ -s "/opt/miniconda3/etc/profile.d/conda.sh" ]]; then
   source /opt/miniconda3/etc/profile.d/conda.sh
 fi
@@ -69,3 +73,5 @@ function back_things_up() {
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
