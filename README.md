@@ -11,9 +11,8 @@ $ sudo chown $USER /System/Volumes/Data/nix
 $ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 $ ./install
-# Source new shell config
-$ base16_ashes
 $ curl https://nixos.org/nix/install | sh
+$ source ~/.zshrc
 $ nix-env -i \
   alacritty \
   docker \
@@ -26,6 +25,7 @@ $ nix-env -i \
   vim \
   wget \
   xz
+$ base16_ashes
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim +PlugInstall
 $ mr checkout
