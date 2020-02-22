@@ -14,4 +14,7 @@
     ~/.mrconfig:                 mrconfig
     ~/Library/Application Support/Code/User/settings.json:
       create: true
-      path: vscode_settings.json
+      path: vscode/settings.json
+    ~/Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json:
+      create: true
+      path: vscode/projects.json
