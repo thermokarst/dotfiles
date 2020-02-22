@@ -20,6 +20,7 @@ $ nix-env -i \
   htop \
   mr \
   postgresql \
+  reattach-to-user-namespace \
   silver-searcher \
   tmux \
   vim \
