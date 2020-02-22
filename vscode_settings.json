@@ -1,9 +1,14 @@
 {
-    "editor.renderWhitespace": "all",
     "editor.cursorStyle": "block",
+    "editor.minimap.enabled": false,
+
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+
     "workbench.colorTheme": "Base16 Dark Ashes",
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "window.zoomLevel": 0
+
+    "window.zoomLevel": 0,
+    "window.restoreFullscreen": true,
+
+    "python.jediEnabled": false
 }

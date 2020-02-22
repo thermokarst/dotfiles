@@ -11,16 +11,7 @@
     ~/.zprofile:                 zsh/zprofile
     ~/.zshenv:                   zsh/zshenv
     ~/.zshrc:                    zsh/zshrc
-    ~/.aspell.en.pws:            aspell.en.pws
-    ~/.vimrc:                    vimrc
     ~/.mrconfig:                 mrconfig
-    ~/.taskrc:                   taskrc
-    ~/.config/beets/config.yaml:
-      create: true
-      path: beets.yaml
-    ~/.config/alacritty/alacritty.yml:
-      create: true
-      path: alacritty.yml
-    ~/.config/Code/User/settings.json:
+    ~/Library/Application Support/Code/User/settings.json:
       create: true
       path: vscode_settings.json

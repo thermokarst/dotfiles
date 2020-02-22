@@ -26,8 +26,10 @@ $ nix-env -i \
   wget \
   xz
 $ base16_ashes
-$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-$ vim +PlugInstall
+$ code --install-extension AndrsDC.base16-themes
+$ code --install-extension lextudio.restructuredtext
+$ code --install-extension ms-python.python
+$ code --install-extension vscodevim.vim
 $ mr checkout
 $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 $ sudo sh Miniconda3-latest-MacOSX-x86_64.sh -p /opt/miniconda3 -b
