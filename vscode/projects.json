@@ -1,0 +1,380 @@
+[
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "keemei",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/Keemei"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "busywork",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/busywork"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "data.qiime2.org",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/data.qiime2.org"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "dev-docs",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/dev-docs"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "discourse-unhandled-tagger",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/discourse-unhandled-tagger"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "docs",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/docs"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "environment-files",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/environment-files"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "galaxy",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/galaxy"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "library",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/library"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "logos",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/logos"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-alignment",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-alignment"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-composition",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-composition"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-cutadapt",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-cutadapt"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-dada2",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-dada2"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-deblur",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-deblur"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-demux",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-demux"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-diversity",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-diversity"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-diversity-lib",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-diversity-lib"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-emperor",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-emperor"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-feature-classifier",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-feature-classifier"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-feature-table",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-feature-table"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-fragment-insertion",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-fragment-insertion"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-gneiss",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-gneiss"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-longitudinal",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-longitudinal"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-metadata",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-metadata"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-phylogeny",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-phylogeny"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-quality-control",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-quality-control"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-quality-filter",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-quality-filter"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-sample-classifier",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-sample-classifier"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-taxa",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-taxa"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-types",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-types"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2-vsearch",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2-vsearch"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2cli",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2cli"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2cwl",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2cwl"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2galaxy",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2galaxy"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2studio",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2studio"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2templates",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2templates"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "q2view",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/q2view"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "qiime2",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/qiime2"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "qiime2.github.io",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/qiime2.github.io"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "template-repo",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/template-repo"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "view.qiime2.org",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/view.qiime2.org"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "vm-playbooks",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/vm-playbooks"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "workshop-playbooks",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/workshop-playbooks"
+    },
+    {
+        "enabled": true,
+        "group": "qiime2",
+        "name": "workshops.qiime2.org",
+        "paths": [],
+        "rootPath": "$home/src/qiime2/workshops.qiime2.org"
+    },
+    {
+        "enabled": true,
+        "group": "thermokarst",
+        "name": "ccdb-api",
+        "paths": [],
+        "rootPath": "$home/src/thermokarst/ccdb-api"
+    },
+    {
+        "enabled": true,
+        "group": "thermokarst",
+        "name": "ccdb-web",
+        "paths": [],
+        "rootPath": "$home/src/thermokarst/ccdb-web"
+    },
+    {
+        "enabled": true,
+        "group": "thermokarst",
+        "name": "fathm",
+        "paths": [],
+        "rootPath": "$home/src/thermokarst/fathm"
+    },
+    {
+        "enabled": true,
+        "group": "thermokarst",
+        "name": "tucotuco",
+        "paths": [],
+        "rootPath": "$home/src/thermokarst/tucotuco"
+    },
+    {
+        "enabled": true,
+        "group": "caporaso-lab",
+        "name": "caporaso-lab.github.io",
+        "paths": [],
+        "rootPath": "$home/src/caporaso-lab/caporaso-lab.github.io"
+    },
+    {
+        "enabled": true,
+        "group": "caporaso-lab",
+        "name": "pretrained-feature-classifiers",
+        "paths": [],
+        "rootPath": "$home/src/caporaso-lab/pretrained-feature-classifiers"
+    },
+    {
+        "enabled": true,
+        "group": "gregcaporaso",
+        "name": "caporaso-lab-secrets",
+        "paths": [],
+        "rootPath": "$home/src/gregcaporaso/caporaso-lab-secrets"
+    },
+    {
+        "enabled": true,
+        "group": "gregcaporaso",
+        "name": "qiime2-meta-figures",
+        "paths": [],
+        "rootPath": "$home/src/gregcaporaso/qiime2-meta-figures"
+    },
+    {
+        "enabled": true,
+        "group": "",
+        "name": "dotfiles",
+        "paths": [],
+        "rootPath": "$home/.dotfiles"
+    }
+]

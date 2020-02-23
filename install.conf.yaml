@@ -11,16 +11,16 @@
     ~/.zprofile:                 zsh/zprofile
     ~/.zshenv:                   zsh/zshenv
     ~/.zshrc:                    zsh/zshrc
-    ~/.aspell.en.pws:            aspell.en.pws
-    ~/.vimrc:                    vimrc
     ~/.mrconfig:                 mrconfig
-    ~/.taskrc:                   taskrc
-    ~/.config/beets/config.yaml:
+    ~/Library/Application Support/Code/User/settings.json:
       create: true
-      path: beets.yaml
-    ~/.config/alacritty/alacritty.yml:
+      path: vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json:
       create: true
-      path: alacritty.yml
-    ~/.config/Code/User/settings.json:
+      path: vscode/keybindings.json
+    ~/Library/Application Support/Code/User/tasks.json:
       create: true
-      path: vscode_settings.json
+      path: vscode/tasks.json
+    ~/Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json:
+      create: true
+      path: vscode/projects.json

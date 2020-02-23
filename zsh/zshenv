@@ -20,8 +20,8 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='code'
+export VISUAL='code'
 export PAGER='less'
 
 #
@@ -84,9 +84,14 @@ path=(
 
   # miniconda
   /opt/miniconda3/bin
+
   # yarn
   $HOME/.yarn/bin
   $HOME/.config/yarn/global/node_modules/.bin
+
+  # misc apps
+  /Applications/Postgres.app/Contents/Versions/12/bin/
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
 )
 
 export -U PATH

@@ -1,2 +1,0 @@
-tasksh 545
-variants {debug universal} depends_build path:bin/cmake:cmake portdir office/tasksh description {tasksh is a shell command that wraps Taskwarrior commands} homepage http://tasktools.org/projects/tasksh.html depends_run port:task epoch 0 platforms darwin name tasksh depends_lib port:readline maintainers nomaintainer license MIT long_description {{tasksh is a shell command that wraps Taskwarrior commands.} It is intended to provide simpler Taskwarrior access, and add a few new features of its own.} categories office version 1.2.0 revision 1
