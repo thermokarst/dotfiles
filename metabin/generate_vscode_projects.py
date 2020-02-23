@@ -68,34 +68,30 @@ gregcaporaso_projects = [
 
 projects = []
 
-def record(proj, path, group):
+def record(name, rootPath, group):
     return {
-        'name': proj.lower(),
-        'rootPath': '/'.join([path, proj]),
+        'name': name,
+        'rootPath': rootPath,
         'paths': [],
         'group': group,
         'enabled': True,
     }
 
+Record = lambda x, y, z: record(x.lower(), '/'.join([y, x]), z)
+
 for proj in qiime2_projects:
-    projects.append(record(proj, '$home/src/qiime2', 'qiime2'))
+    projects.append(Record(proj, '$home/src/qiime2', 'qiime2'))
 
 for proj in thermokarst_projects:
-    projects.append(record(proj, '$home/src/thermokarst', 'thermokarst'))
+    projects.append(Record(proj, '$home/src/thermokarst', 'thermokarst'))
 
 for proj in cap_lab_projects:
-    projects.append(record(proj, '$home/src/caporaso-lab', 'caporaso-lab'))
+    projects.append(Record(proj, '$home/src/caporaso-lab', 'caporaso-lab'))
 
 for proj in gregcaporaso_projects:
-    projects.append(record(proj, '$home/src/gregcaporaso', 'gregcaporaso'))
+    projects.append(Record(proj, '$home/src/gregcaporaso', 'gregcaporaso'))
 
-projects.append({
-    'name': 'dotfiles',
-    'rootPath': '$home/.dotfiles',
-    'paths': [],
-    'group': '',
-    'enabled': True,
-})
+projects.append(record('dotfiles', '$home/.dotfiles', ''))
 
 with open('vscode/projects.json', 'w') as fh:
     json.dump(projects, fh, sort_keys=True, indent=4)
