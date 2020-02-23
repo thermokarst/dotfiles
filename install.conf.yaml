@@ -18,6 +18,9 @@
     ~/Library/Application Support/Code/User/keybindings.json:
       create: true
       path: vscode/keybindings.json
+    ~/Library/Application Support/Code/User/tasks.json:
+      create: true
+      path: vscode/tasks.json
     ~/Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json:
       create: true
       path: vscode/projects.json
