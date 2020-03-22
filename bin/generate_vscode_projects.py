@@ -8,9 +8,10 @@ def render_vscode_workspace(projects, output_fp, include_dotfiles=False):
     folders = []
     for org, repos in projects.items():
         for repo in repos:
+            fp = os.path.join(os.sep, 'Users', 'matthew', 'src', org, repo)
             folders.append({
                 'name': repo.lower(),
-                'path': os.path.join(os.sep, 'Users', 'matthew', 'src', org, repo)
+                'path': fp,
             })
 
     if include_dotfiles:
@@ -19,7 +20,8 @@ def render_vscode_workspace(projects, output_fp, include_dotfiles=False):
                         'path': dotfile_fp})
 
     with open(output_fp, 'w') as fh:
-        json.dump({'folders': sorted(folders, key=lambda x: x['name'])}, fh, sort_keys=True, indent=4)
+        json.dump({'folders': sorted(folders, key=lambda x: x['name'])},
+                  fh, sort_keys=True, indent=4)
 
 
 if __name__ == '__main__':
