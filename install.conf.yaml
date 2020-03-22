@@ -1,17 +1,23 @@
-- clean: ['~']
+- clean:
+  - '~'
+
+- create:
+  - ~/src2/qiime2
+
+- shell:
+  - python bin/generate_vscode_projects.py
 
 - link:
-    ~/.tmux.conf:                tmux.conf
-    ~/.gitconfig:                git/gitconfig
-    ~/.gitignore_global:         git/gitignore_global
-    ~/.psqlrc:                   psqlrc
-    ~/.zpreztorc:                zsh/zpreztorc
-    ~/.zlogin:                   zsh/zlogin
-    ~/.zlogout:                  zsh/zlogout
-    ~/.zprofile:                 zsh/zprofile
-    ~/.zshenv:                   zsh/zshenv
-    ~/.zshrc:                    zsh/zshrc
-    ~/.mrconfig:                 mrconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.psqlrc: psqlrc
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc
     ~/Library/Application Support/Code/User/settings.json:
       create: true
       path: vscode/settings.json
@@ -21,8 +27,4 @@
     ~/Library/Application Support/Code/User/tasks.json:
       create: true
       path: vscode/tasks.json
-    ~/qiime2.code-workspace:     vscode/qiime2.code-workspace
-
-- create:
-    - ~/src/qiime2
-    - ~/downloads
+    ~/qiime2.code-workspace: vscode/qiime2.code-workspace
