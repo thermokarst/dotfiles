@@ -1,12 +1,16 @@
 {
     "folders": [
         {
-            "name": "keemei", 
-            "path": "/Users/matthew/src/qiime2/Keemei"
-        }, 
-        {
             "name": "busywork", 
             "path": "/Users/matthew/src/qiime2/busywork"
+        }, 
+        {
+            "name": "caporaso-lab-secrets", 
+            "path": "/Users/matthew/src/gregcaporaso/caporaso-lab-secrets"
+        }, 
+        {
+            "name": "caporaso-lab.github.io", 
+            "path": "/Users/matthew/src/caporaso-lab/caporaso-lab.github.io"
         }, 
         {
             "name": "data.qiime2.org", 
@@ -25,6 +29,10 @@
             "path": "/Users/matthew/src/qiime2/docs"
         }, 
         {
+            "name": "dotfiles", 
+            "path": "/Users/matthew/.dotfiles"
+        }, 
+        {
             "name": "environment-files", 
             "path": "/Users/matthew/src/qiime2/environment-files"
         }, 
@@ -33,12 +41,20 @@
             "path": "/Users/matthew/src/qiime2/galaxy"
         }, 
         {
+            "name": "keemei", 
+            "path": "/Users/matthew/src/qiime2/Keemei"
+        }, 
+        {
             "name": "library", 
             "path": "/Users/matthew/src/qiime2/library"
         }, 
         {
             "name": "logos", 
             "path": "/Users/matthew/src/qiime2/logos"
+        }, 
+        {
+            "name": "pretrained-feature-classifiers", 
+            "path": "/Users/matthew/src/caporaso-lab/pretrained-feature-classifiers"
         }, 
         {
             "name": "q2-alignment", 
@@ -157,6 +173,10 @@
             "path": "/Users/matthew/src/qiime2/qiime2"
         }, 
         {
+            "name": "qiime2-meta-figures", 
+            "path": "/Users/matthew/src/gregcaporaso/qiime2-meta-figures"
+        }, 
+        {
             "name": "qiime2.github.io", 
             "path": "/Users/matthew/src/qiime2/qiime2.github.io"
         }, 
@@ -179,22 +199,6 @@
         {
             "name": "workshops.qiime2.org", 
             "path": "/Users/matthew/src/qiime2/workshops.qiime2.org"
-        }, 
-        {
-            "name": "caporaso-lab.github.io", 
-            "path": "/Users/matthew/src/caporaso-lab/caporaso-lab.github.io"
-        }, 
-        {
-            "name": "pretrained-feature-classifiers", 
-            "path": "/Users/matthew/src/caporaso-lab/pretrained-feature-classifiers"
-        }, 
-        {
-            "name": "caporaso-lab-secrets", 
-            "path": "/Users/matthew/src/gregcaporaso/caporaso-lab-secrets"
-        }, 
-        {
-            "name": "qiime2-meta-figures", 
-            "path": "/Users/matthew/src/gregcaporaso/qiime2-meta-figures"
         }
     ]
 }
