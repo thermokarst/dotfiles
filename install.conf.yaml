@@ -21,6 +21,8 @@
     ~/Library/Application Support/Code/User/tasks.json:
       create: true
       path: vscode/tasks.json
-    ~/Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json:
-      create: true
-      path: vscode/projects.json
+    ~/qiime2.code-workspace:     vscode/qiime2.code-workspace
+
+- create:
+    - ~/src/qiime2
+    - ~/downloads
