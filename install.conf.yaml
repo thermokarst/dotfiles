@@ -2,29 +2,31 @@
   - '~'
 
 - create:
-  - ~/src2/qiime2
+  - ~/src2
 
-- shell:
-  - python3 bin/generate_vscode_workspaces.py
-
-- link:
-    ~/.tmux.conf: tmux.conf
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore_global
-    ~/.psqlrc: psqlrc
-    ~/.zpreztorc: zsh/zpreztorc
-    ~/.zlogin: zsh/zlogin
-    ~/.zlogout: zsh/zlogout
-    ~/.zprofile: zsh/zprofile
-    ~/.zshenv: zsh/zshenv
-    ~/.zshrc: zsh/zshrc
-    ~/Library/Application Support/Code/User/settings.json:
-      create: true
-      path: vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json:
-      create: true
-      path: vscode/keybindings.json
-    ~/Library/Application Support/Code/User/tasks.json:
-      create: true
-      path: vscode/tasks.json
-    ~/qiime2.code-workspace: vscode/qiime2.code-workspace
+# - shell:
+#   - python3 bin/generate_vscode_workspaces.py
+#   - python3 bin/bootstrap_git_repos.py
+# 
+# - link:
+#     ~/.tmux.conf: tmux.conf
+#     ~/.gitconfig: git/gitconfig
+#     ~/.gitignore_global: git/gitignore_global
+#     ~/.psqlrc: psqlrc
+#     ~/.zpreztorc: zsh/zpreztorc
+#     ~/.zlogin: zsh/zlogin
+#     ~/.zlogout: zsh/zlogout
+#     ~/.zprofile: zsh/zprofile
+#     ~/.zshenv: zsh/zshenv
+#     ~/.zshrc: zsh/zshrc
+#     ~/Library/Application Support/Code/User/settings.json:
+#       create: true
+#       path: vscode/settings.json
+#     ~/Library/Application Support/Code/User/keybindings.json:
+#       create: true
+#       path: vscode/keybindings.json
+#     ~/Library/Application Support/Code/User/tasks.json:
+#       create: true
+#       path: vscode/tasks.json
+#     ~/qiime2.code-workspace: vscode/qiime2.code-workspace
+# 

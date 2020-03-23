@@ -2,12 +2,11 @@ PROJECTS = {
     'qiime2': [
         'Keemei',
         'busywork',
-        'data.qiime2.org',
+        'data302',
         'dev-docs',
         'discourse-unhandled-tagger',
         'docs',
         'environment-files',
-        'galaxy',
         'library',
         'logos',
         'q2-alignment',
