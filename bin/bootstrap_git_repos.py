@@ -45,6 +45,6 @@ if __name__ == '__main__':
 
     fetch_projects(
         Q2_PROJECTS,
-        os.path.join('~', 'qiime2'),
+        os.path.join('~', 'projects', 'qiime2'),
         remotes,
     )

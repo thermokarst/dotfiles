@@ -8,7 +8,8 @@ def render_vscode_workspace(projects, output_fp, include_dotfiles=False):
     folders = []
     for org, repos in projects.items():
         for repo in repos:
-            fp = os.path.join(os.sep, 'Users', 'matthew', 'src', org, repo)
+            fp = os.path.join('~', 'projects', 'qiime2', repo)
+            fp = os.path.expanduser(fp)
             folders.append({
                 'name': repo.lower(),
                 'path': fp,
