@@ -18,7 +18,6 @@ $ nix-env -i \
   docker \
   git \
   htop \
-  mr \
   postgresql \
   reattach-to-user-namespace \
   silver-searcher \
@@ -28,13 +27,13 @@ $ nix-env -i \
   xz
 $ base16_ashes
 $ code --install-extension AndrsDC.base16-themes
+$ code --install-extension donjayamanne.githistory
+$ code --install-extension karigari.chat
 $ code --install-extension lextudio.restructuredtext
 $ code --install-extension ms-python.python
+$ code --install-extension ms-vsliveshare.vsliveshare
 $ code --install-extension vscodevim.vim
-$ code --install-extension alefragnani.project-manager
-$ code --install-extension donjayamanne.githistory
 $ code --install-extension wakatime.vscode-wakatime
-$ mr checkout
 $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 $ sudo sh Miniconda3-latest-MacOSX-x86_64.sh -p /opt/miniconda3 -b
 $ sudo conda update conda
