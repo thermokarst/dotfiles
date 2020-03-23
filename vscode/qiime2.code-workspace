@@ -17,6 +17,10 @@
             "path": "/Users/matthew/projects/qiime2/data302"
         },
         {
+            "name": "deblur",
+            "path": "/Users/matthew/projects/qiime2/deblur"
+        },
+        {
             "name": "dev-docs",
             "path": "/Users/matthew/projects/qiime2/dev-docs"
         },
@@ -175,6 +179,10 @@
         {
             "name": "qiime2.github.io",
             "path": "/Users/matthew/projects/qiime2/qiime2.github.io"
+        },
+        {
+            "name": "scikit-bio",
+            "path": "/Users/matthew/projects/qiime2/scikit-bio"
         },
         {
             "name": "template-repo",

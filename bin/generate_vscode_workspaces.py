@@ -2,13 +2,15 @@ import json
 import os
 
 from qiime2_projects import PROJECTS as Q2_PROJECTS
+from mds_projects import PROJECTS as MDS_PROJECTS
 
 
-def render_vscode_workspace(projects, output_fp, include_dotfiles=False):
+def render_vscode_workspace(projects, project_name, output_fp,
+                            include_dotfiles=True):
     folders = []
     for org, repos in projects.items():
         for repo in repos:
-            fp = os.path.join('~', 'projects', 'qiime2', repo)
+            fp = os.path.join('~', 'projects', project_name, repo)
             fp = os.path.expanduser(fp)
             folders.append({
                 'name': repo.lower(),
@@ -28,6 +30,12 @@ def render_vscode_workspace(projects, output_fp, include_dotfiles=False):
 if __name__ == '__main__':
     render_vscode_workspace(
         Q2_PROJECTS,
+        'qiime2',
         os.path.join('vscode', 'qiime2.code-workspace'),
-        include_dotfiles=True,
+    )
+
+    render_vscode_workspace(
+        MDS_PROJECTS,
+        'mds',
+        os.path.join('vscode', 'mds.code-workspace'),
     )

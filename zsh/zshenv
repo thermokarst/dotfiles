@@ -20,8 +20,8 @@ fi
 # Editors
 #
 
-export EDITOR='code'
-export VISUAL='code'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -67,16 +67,10 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
-cdpath=(
-  # shortcuts to projects
-  $HOME/src/biocore
-  $HOME/src/caporaso-lab
-  $HOME/src/gregcaporaso
-  $HOME/src/qiime2
-  $HOME/src/thermokarst
-  .
-  $cdpath
-)
+# cdpath=(
+#   .
+#   $cdpath
+# )
 
 # Set the list of directories that Zsh searches for programs.
 path=(
@@ -84,10 +78,6 @@ path=(
 
   # miniconda
   /opt/miniconda3/bin
-
-  # yarn
-  $HOME/.yarn/bin
-  $HOME/.config/yarn/global/node_modules/.bin
 
   # misc apps
   /Applications/Postgres.app/Contents/Versions/12/bin/

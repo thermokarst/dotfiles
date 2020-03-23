@@ -55,4 +55,9 @@ PROJECTS = {
         'caporaso-lab-secrets',
         'qiime2-meta-figures',
     ],
+
+    'biocore': [
+        'scikit-bio',
+        'deblur',
+    ]
 }

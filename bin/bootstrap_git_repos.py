@@ -3,10 +3,12 @@ import os
 import subprocess
 
 from qiime2_projects import PROJECTS as Q2_PROJECTS
+from mds_projects import PROJECTS as MDS_PROJECTS
 
 
 def fetch_projects(projects, base_fp, remotes):
     for org, repos in projects.items():
+        base_fp = os.path.join('~', 'projects', base_fp)
         base_fp = os.path.expanduser(base_fp)
 
         for repo in repos:
@@ -37,14 +39,14 @@ def fetch_projects(projects, base_fp, remotes):
                 except subprocess.CalledProcessError as e:
                     if url not in str(e.stderr):
                         raise
+                    else:
+                        subprocess.run(['git', 'remote', 'remove', remote],
+                                       cwd=repo_fp)
 
 
 if __name__ == '__main__':
     remotes = ['thermokarst', 'ebolyen', 'gregcaporaso', 'ChrisKeefe',
                'Oddant1', 'nbokulich', 'andrewsanchez']
 
-    fetch_projects(
-        Q2_PROJECTS,
-        os.path.join('~', 'projects', 'qiime2'),
-        remotes,
-    )
+    fetch_projects(Q2_PROJECTS, 'qiime2', remotes)
+    fetch_projects(MDS_PROJECTS, 'mds', [])
