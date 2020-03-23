@@ -2,11 +2,12 @@
   - '~'
 
 - create:
-  - ~/src2
+  - ~/qiime2
+  - ~/qiime2/data/moving-pictures
 
-# - shell:
-#   - python3 bin/generate_vscode_workspaces.py
-#   - python3 bin/bootstrap_git_repos.py
+- shell:
+  - python3 bin/generate_vscode_workspaces.py
+  - python3 bin/bootstrap_git_repos.py
 # 
 # - link:
 #     ~/.tmux.conf: tmux.conf
