@@ -30,3 +30,4 @@
       create: true
       path: vscode/tasks.json
     ~/qiime2.code-workspace: vscode/qiime2.code-workspace
+    ~/mds.code-workspace: vscode/mds.code-workspace
