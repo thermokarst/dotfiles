@@ -53,6 +53,10 @@
             "path": "/Users/matthew/projects/qiime2/logos"
         },
         {
+            "name": "paper2",
+            "path": "/Users/matthew/projects/qiime2/paper2"
+        },
+        {
             "name": "pretrained-feature-classifiers",
             "path": "/Users/matthew/projects/qiime2/pretrained-feature-classifiers"
         },

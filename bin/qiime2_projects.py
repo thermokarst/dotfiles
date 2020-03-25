@@ -9,6 +9,7 @@ PROJECTS = {
         'environment-files',
         'library',
         'logos',
+        'paper2',
         'q2-alignment',
         'q2-composition',
         'q2-cutadapt',
