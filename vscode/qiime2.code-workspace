@@ -5,6 +5,10 @@
             "path": "/Users/matthew/projects/qiime2/busywork"
         },
         {
+            "name": "busywork2_action_playground",
+            "path": "/Users/matthew/projects/qiime2/busywork2_action_playground"
+        },
+        {
             "name": "caporaso-lab-secrets",
             "path": "/Users/matthew/projects/qiime2/caporaso-lab-secrets"
         },
@@ -123,6 +127,10 @@
         {
             "name": "q2-metadata",
             "path": "/Users/matthew/projects/qiime2/q2-metadata"
+        },
+        {
+            "name": "q2-no-op",
+            "path": "/Users/matthew/projects/qiime2/q2-no-op"
         },
         {
             "name": "q2-phylogeny",

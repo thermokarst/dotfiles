@@ -60,5 +60,10 @@ PROJECTS = {
     'biocore': [
         'scikit-bio',
         'deblur',
+    ],
+
+    'thermokarst': [
+        'q2-no-op',
+        'busywork2_action_playground',
     ]
 }
