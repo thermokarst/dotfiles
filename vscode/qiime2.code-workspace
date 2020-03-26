@@ -13,6 +13,10 @@
             "path": "/Users/matthew/projects/qiime2/caporaso-lab.github.io"
         },
         {
+            "name": "data",
+            "path": "/Users/matthew/projects/qiime2/data"
+        },
+        {
             "name": "data302",
             "path": "/Users/matthew/projects/qiime2/data302"
         },
