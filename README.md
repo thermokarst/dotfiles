@@ -28,6 +28,7 @@ $ nix-env -i \
 $ base16_ashes
 $ code --install-extension AndrsDC.base16-themes
 $ code --install-extension donjayamanne.githistory
+$ code --install-extension github.vscode-pull-request-github
 $ code --install-extension karigari.chat
 $ code --install-extension lextudio.restructuredtext
 $ code --install-extension ms-python.python

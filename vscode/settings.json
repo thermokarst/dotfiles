@@ -12,5 +12,11 @@
 
     "python.jediEnabled": false,
 
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "thermokarst",
+        "qiime2"
+    ]
 }
