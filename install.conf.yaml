@@ -13,6 +13,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
+    ~/.npmrc: npmrc
     ~/.psqlrc: psqlrc
     ~/.zpreztorc: zsh/zpreztorc
     ~/.zlogin: zsh/zlogin

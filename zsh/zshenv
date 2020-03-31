@@ -79,6 +79,9 @@ path=(
   # miniconda
   /opt/miniconda3/bin
 
+  # npm
+  $HOME/.npm-packages/bin
+
   # misc apps
   /Applications/Postgres.app/Contents/Versions/12/bin/
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
