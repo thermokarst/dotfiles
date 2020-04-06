@@ -1,0 +1,240 @@
+{
+    "folders": [
+        {
+            "name": "action-library-packaging",
+            "path": "/Users/matthew/projects/qiime2/action-library-packaging"
+        },
+        {
+            "name": "busywork",
+            "path": "/Users/matthew/projects/qiime2/busywork"
+        },
+        {
+            "name": "busywork2_action_playground",
+            "path": "/Users/matthew/projects/qiime2/busywork2_action_playground"
+        },
+        {
+            "name": "caporaso-lab-secrets",
+            "path": "/Users/matthew/projects/qiime2/caporaso-lab-secrets"
+        },
+        {
+            "name": "caporaso-lab.github.io",
+            "path": "/Users/matthew/projects/qiime2/caporaso-lab.github.io"
+        },
+        {
+            "name": "data",
+            "path": "/Users/matthew/projects/qiime2/data"
+        },
+        {
+            "name": "data302",
+            "path": "/Users/matthew/projects/qiime2/data302"
+        },
+        {
+            "name": "deblur",
+            "path": "/Users/matthew/projects/qiime2/deblur"
+        },
+        {
+            "name": "dev-docs",
+            "path": "/Users/matthew/projects/qiime2/dev-docs"
+        },
+        {
+            "name": "discourse-unhandled-tagger",
+            "path": "/Users/matthew/projects/qiime2/discourse-unhandled-tagger"
+        },
+        {
+            "name": "docs",
+            "path": "/Users/matthew/projects/qiime2/docs"
+        },
+        {
+            "name": "dotfiles",
+            "path": "/Users/matthew/.dotfiles"
+        },
+        {
+            "name": "environment-files",
+            "path": "/Users/matthew/projects/qiime2/environment-files"
+        },
+        {
+            "name": "keemei",
+            "path": "/Users/matthew/projects/qiime2/Keemei"
+        },
+        {
+            "name": "library",
+            "path": "/Users/matthew/projects/qiime2/library"
+        },
+        {
+            "name": "logos",
+            "path": "/Users/matthew/projects/qiime2/logos"
+        },
+        {
+            "name": "paper2",
+            "path": "/Users/matthew/projects/qiime2/paper2"
+        },
+        {
+            "name": "pretrained-feature-classifiers",
+            "path": "/Users/matthew/projects/qiime2/pretrained-feature-classifiers"
+        },
+        {
+            "name": "q2-alignment",
+            "path": "/Users/matthew/projects/qiime2/q2-alignment"
+        },
+        {
+            "name": "q2-composition",
+            "path": "/Users/matthew/projects/qiime2/q2-composition"
+        },
+        {
+            "name": "q2-cutadapt",
+            "path": "/Users/matthew/projects/qiime2/q2-cutadapt"
+        },
+        {
+            "name": "q2-dada2",
+            "path": "/Users/matthew/projects/qiime2/q2-dada2"
+        },
+        {
+            "name": "q2-deblur",
+            "path": "/Users/matthew/projects/qiime2/q2-deblur"
+        },
+        {
+            "name": "q2-demux",
+            "path": "/Users/matthew/projects/qiime2/q2-demux"
+        },
+        {
+            "name": "q2-diversity",
+            "path": "/Users/matthew/projects/qiime2/q2-diversity"
+        },
+        {
+            "name": "q2-diversity-lib",
+            "path": "/Users/matthew/projects/qiime2/q2-diversity-lib"
+        },
+        {
+            "name": "q2-emperor",
+            "path": "/Users/matthew/projects/qiime2/q2-emperor"
+        },
+        {
+            "name": "q2-feature-classifier",
+            "path": "/Users/matthew/projects/qiime2/q2-feature-classifier"
+        },
+        {
+            "name": "q2-feature-table",
+            "path": "/Users/matthew/projects/qiime2/q2-feature-table"
+        },
+        {
+            "name": "q2-fragment-insertion",
+            "path": "/Users/matthew/projects/qiime2/q2-fragment-insertion"
+        },
+        {
+            "name": "q2-gneiss",
+            "path": "/Users/matthew/projects/qiime2/q2-gneiss"
+        },
+        {
+            "name": "q2-longitudinal",
+            "path": "/Users/matthew/projects/qiime2/q2-longitudinal"
+        },
+        {
+            "name": "q2-metadata",
+            "path": "/Users/matthew/projects/qiime2/q2-metadata"
+        },
+        {
+            "name": "q2-mystery-stew",
+            "path": "/Users/matthew/projects/qiime2/q2-mystery-stew"
+        },
+        {
+            "name": "q2-no-op",
+            "path": "/Users/matthew/projects/qiime2/q2-no-op"
+        },
+        {
+            "name": "q2-phylogenomics",
+            "path": "/Users/matthew/projects/qiime2/q2-phylogenomics"
+        },
+        {
+            "name": "q2-phylogeny",
+            "path": "/Users/matthew/projects/qiime2/q2-phylogeny"
+        },
+        {
+            "name": "q2-quality-control",
+            "path": "/Users/matthew/projects/qiime2/q2-quality-control"
+        },
+        {
+            "name": "q2-quality-filter",
+            "path": "/Users/matthew/projects/qiime2/q2-quality-filter"
+        },
+        {
+            "name": "q2-sample-classifier",
+            "path": "/Users/matthew/projects/qiime2/q2-sample-classifier"
+        },
+        {
+            "name": "q2-shogun",
+            "path": "/Users/matthew/projects/qiime2/q2-shogun"
+        },
+        {
+            "name": "q2-taxa",
+            "path": "/Users/matthew/projects/qiime2/q2-taxa"
+        },
+        {
+            "name": "q2-types",
+            "path": "/Users/matthew/projects/qiime2/q2-types"
+        },
+        {
+            "name": "q2-vsearch",
+            "path": "/Users/matthew/projects/qiime2/q2-vsearch"
+        },
+        {
+            "name": "q2cli",
+            "path": "/Users/matthew/projects/qiime2/q2cli"
+        },
+        {
+            "name": "q2cwl",
+            "path": "/Users/matthew/projects/qiime2/q2cwl"
+        },
+        {
+            "name": "q2galaxy",
+            "path": "/Users/matthew/projects/qiime2/q2galaxy"
+        },
+        {
+            "name": "q2studio",
+            "path": "/Users/matthew/projects/qiime2/q2studio"
+        },
+        {
+            "name": "q2templates",
+            "path": "/Users/matthew/projects/qiime2/q2templates"
+        },
+        {
+            "name": "q2view",
+            "path": "/Users/matthew/projects/qiime2/q2view"
+        },
+        {
+            "name": "qiime2",
+            "path": "/Users/matthew/projects/qiime2/qiime2"
+        },
+        {
+            "name": "qiime2-meta-figures",
+            "path": "/Users/matthew/projects/qiime2/qiime2-meta-figures"
+        },
+        {
+            "name": "qiime2.github.io",
+            "path": "/Users/matthew/projects/qiime2/qiime2.github.io"
+        },
+        {
+            "name": "scikit-bio",
+            "path": "/Users/matthew/projects/qiime2/scikit-bio"
+        },
+        {
+            "name": "template-repo",
+            "path": "/Users/matthew/projects/qiime2/template-repo"
+        },
+        {
+            "name": "view.qiime2.org",
+            "path": "/Users/matthew/projects/qiime2/view.qiime2.org"
+        },
+        {
+            "name": "vm-playbooks",
+            "path": "/Users/matthew/projects/qiime2/vm-playbooks"
+        },
+        {
+            "name": "workshop-playbooks",
+            "path": "/Users/matthew/projects/qiime2/workshop-playbooks"
+        },
+        {
+            "name": "workshops.qiime2.org",
+            "path": "/Users/matthew/projects/qiime2/workshops.qiime2.org"
+        }
+    ]
+}

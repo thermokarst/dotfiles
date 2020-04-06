@@ -1,6 +1,7 @@
 PROJECTS = {
     'qiime2': [
         'Keemei',
+        'action-library-packaging',
         'busywork',
         'data302',
         'dev-docs',
@@ -25,10 +26,13 @@ PROJECTS = {
         'q2-gneiss',
         'q2-longitudinal',
         'q2-metadata',
+        'q2-mystery-stew',
+        'q2-phylogenomics',
         'q2-phylogeny',
         'q2-quality-control',
         'q2-quality-filter',
         'q2-sample-classifier',
+        'q2-shogun',
         'q2-taxa',
         'q2-types',
         'q2-vsearch',

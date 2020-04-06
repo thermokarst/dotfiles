@@ -33,12 +33,15 @@ def render_vscode_workspace(projects, project_name, output_fp,
 
 
 if __name__ == '__main__':
-    render_vscode_workspace(
+    def qws(ws_number: int):
+        return render_vscode_workspace(
         Q2_PROJECTS,
         'qiime2',
-        os.path.join('vscode', 'qiime2.code-workspace'),
+        os.path.join('vscode', 'qiime2-%d.code-workspace' % (ws_number, )),
         extra_dirs={'data': 'data'},
     )
+
+    [qws(i) for i in range(1, 4)]
 
     render_vscode_workspace(
         MDS_PROJECTS,

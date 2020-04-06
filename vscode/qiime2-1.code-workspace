@@ -1,6 +1,10 @@
 {
     "folders": [
         {
+            "name": "action-library-packaging",
+            "path": "/Users/matthew/projects/qiime2/action-library-packaging"
+        },
+        {
             "name": "busywork",
             "path": "/Users/matthew/projects/qiime2/busywork"
         },
@@ -129,8 +133,16 @@
             "path": "/Users/matthew/projects/qiime2/q2-metadata"
         },
         {
+            "name": "q2-mystery-stew",
+            "path": "/Users/matthew/projects/qiime2/q2-mystery-stew"
+        },
+        {
             "name": "q2-no-op",
             "path": "/Users/matthew/projects/qiime2/q2-no-op"
+        },
+        {
+            "name": "q2-phylogenomics",
+            "path": "/Users/matthew/projects/qiime2/q2-phylogenomics"
         },
         {
             "name": "q2-phylogeny",
@@ -147,6 +159,10 @@
         {
             "name": "q2-sample-classifier",
             "path": "/Users/matthew/projects/qiime2/q2-sample-classifier"
+        },
+        {
+            "name": "q2-shogun",
+            "path": "/Users/matthew/projects/qiime2/q2-shogun"
         },
         {
             "name": "q2-taxa",

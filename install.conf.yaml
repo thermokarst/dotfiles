@@ -30,5 +30,7 @@
     ~/Library/Application Support/Code/User/tasks.json:
       create: true
       path: vscode/tasks.json
-    ~/qiime2.code-workspace: vscode/qiime2.code-workspace
+    ~/qiime2-1.code-workspace: vscode/qiime2-1.code-workspace
+    ~/qiime2-2.code-workspace: vscode/qiime2-2.code-workspace
+    ~/qiime2-3.code-workspace: vscode/qiime2-3.code-workspace
     ~/mds.code-workspace: vscode/mds.code-workspace
