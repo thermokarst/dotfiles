@@ -5,6 +5,10 @@
             "path": "/Users/matthew/projects/qiime2/action-library-packaging"
         },
         {
+            "name": "bioconda-recipes",
+            "path": "/Users/matthew/projects/qiime2/bioconda-recipes"
+        },
+        {
             "name": "busywork",
             "path": "/Users/matthew/projects/qiime2/busywork"
         },
