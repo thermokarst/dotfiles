@@ -3,6 +3,7 @@ import os
 
 from qiime2_projects import PROJECTS as Q2_PROJECTS
 from mds_projects import PROJECTS as MDS_PROJECTS
+from personal_projects import PROJECTS as PERSONAL_PROJECTS
 
 
 def render_vscode_workspace(projects, project_name, output_fp,
@@ -47,4 +48,10 @@ if __name__ == '__main__':
         MDS_PROJECTS,
         'mds',
         os.path.join('vscode', 'mds.code-workspace'),
+    )
+
+    render_vscode_workspace(
+        PERSONAL_PROJECTS,
+        'personal',
+        os.path.join('vscode', 'personal.code-workspace'),
     )

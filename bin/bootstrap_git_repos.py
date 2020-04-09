@@ -4,6 +4,7 @@ import subprocess
 
 from qiime2_projects import PROJECTS as Q2_PROJECTS
 from mds_projects import PROJECTS as MDS_PROJECTS
+from personal_projects import PROJECTS as PERSONAL_PROJECTS
 
 
 def fetch_projects(projects, base_fp, remotes):
@@ -50,3 +51,4 @@ if __name__ == '__main__':
 
     fetch_projects(Q2_PROJECTS, 'qiime2', remotes)
     fetch_projects(MDS_PROJECTS, 'mds', [])
+    fetch_projects(PERSONAL_PROJECTS, 'personal', [])
