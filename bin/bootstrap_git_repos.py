@@ -47,7 +47,7 @@ def fetch_projects(projects, base_fp, remotes):
 
 if __name__ == '__main__':
     remotes = ['thermokarst', 'ebolyen', 'gregcaporaso', 'ChrisKeefe',
-               'Oddant1', 'nbokulich', 'andrewsanchez']
+               'Oddant1', 'nbokulich', 'andrewsanchez', 'David-Rod']
 
     fetch_projects(Q2_PROJECTS, 'qiime2', remotes)
     fetch_projects(MDS_PROJECTS, 'mds', [])
