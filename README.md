@@ -27,12 +27,16 @@ $ nix-env -i \
   xz
 $ base16_ashes
 $ code --install-extension AndrsDC.base16-themes
-$ code --install-extension donjayamanne.githistory
-$ code --install-extension github.vscode-pull-request-github
+$ code --install-extension ecmel.vscode-html-css
+$ code --install-extension formulahendry.auto-close-tag
+$ code --install-extension hollowtree.vue-snippets
+$ code --install-extension JakeBecker.elixir-ls
 $ code --install-extension karigari.chat
 $ code --install-extension lextudio.restructuredtext
 $ code --install-extension ms-python.python
+$ code --install-extension ms-vscode.Go
 $ code --install-extension ms-vsliveshare.vsliveshare
+$ code --install-extension redhat.vscode-yaml
 $ code --install-extension vscodevim.vim
 $ code --install-extension wakatime.vscode-wakatime
 $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh

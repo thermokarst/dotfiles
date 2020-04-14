@@ -19,4 +19,7 @@
         "thermokarst",
         "qiime2"
     ],
+    "[elixir]": {
+       "editor.tabSize": 2,
+    },
 }
