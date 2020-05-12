@@ -65,3 +65,5 @@ function back_things_up() {
     ln -s $dest_root/$date $dest_root/latest
     # TODO: once confident pruning is working well, add that in here
 }
+
+ eval "$(gh completion -s zsh)"

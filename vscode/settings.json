@@ -6,6 +6,7 @@
     "telemetry.enableCrashReporter": false,
 
     "workbench.colorTheme": "Base16 Dark Ashes",
+    "workbench.sideBar.location": "right",
 
     "window.zoomLevel": 0,
     "window.restoreFullscreen": false,
