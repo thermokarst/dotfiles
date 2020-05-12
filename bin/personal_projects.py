@@ -1,0 +1,5 @@
+PROJECTS = {
+    'thermokarst': [
+        'elixir-class',
+    ],
+}

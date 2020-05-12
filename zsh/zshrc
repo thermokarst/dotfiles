@@ -15,16 +15,11 @@ if [[ -s "/opt/miniconda3/etc/profile.d/conda.sh" ]]; then
 fi
 
 # shortcuts
-alias mailserver="sudo python -m smtpd -n -c DebuggingServer localhost:25"
-alias mongod="mongod --config /usr/local/etc/mongod.conf"
-alias venv="source venv/bin/activate"
-alias devenv="deactivate"
 alias q="conda activate q2dev"
 alias i="ipython3"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # Backup shortcuts (borrowed parts from https://github.com/laurent22/rsync-time-backup
 function prune_backups() {
@@ -71,7 +66,4 @@ function back_things_up() {
     # TODO: once confident pruning is working well, add that in here
 }
 
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+ eval "$(gh completion -s zsh)"

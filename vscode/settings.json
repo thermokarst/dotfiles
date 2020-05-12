@@ -6,9 +6,22 @@
     "telemetry.enableCrashReporter": false,
 
     "workbench.colorTheme": "Base16 Dark Ashes",
+    "workbench.sideBar.location": "right",
 
     "window.zoomLevel": 0,
-    "window.restoreFullscreen": true,
+    "window.restoreFullscreen": false,
 
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+
+    "git.confirmSync": false,
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "thermokarst",
+        "qiime2"
+    ],
+    "[elixir]": {
+       "editor.tabSize": 2,
+       "editor.formatOnSave": true,
+    },
 }
