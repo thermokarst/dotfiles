@@ -88,3 +88,6 @@ path=(
 )
 
 export -U PATH
+
+export CONDA_ENVS_PATH=$HOME/.conda/envs:/opt/miniconda3/envs
+export CONDA_PKGS_DIRS=$HOME/.conda/pkgs
