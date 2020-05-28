@@ -27,7 +27,6 @@ PROJECTS = {
         'q2-longitudinal',
         'q2-metadata',
         'q2-mystery-stew',
-        'q2-phylogenomics',
         'q2-phylogeny',
         'q2-quality-control',
         'q2-quality-filter',
@@ -54,6 +53,8 @@ PROJECTS = {
     'caporaso-lab': [
         'caporaso-lab.github.io',
         'pretrained-feature-classifiers',
+        'q2-phylogenomics',
+        'genome-sampler',
     ],
 
     'gregcaporaso': [
