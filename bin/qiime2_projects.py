@@ -43,6 +43,7 @@ PROJECTS = {
         'q2view',
         'qiime2',
         'qiime2.github.io',
+        'static-site-infrastructure',
         'template-repo',
         'view.qiime2.org',
         'vm-playbooks',

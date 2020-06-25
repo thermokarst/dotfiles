@@ -24,4 +24,8 @@
        "editor.tabSize": 2,
        "editor.formatOnSave": true,
     },
+    "python.condaPath": "/opt/miniconda3/bin/conda",
+    "python.defaultInterpreterPath": "~/.conda/envs/q2dev/bin/python",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.languageServer": "Microsoft",
 }

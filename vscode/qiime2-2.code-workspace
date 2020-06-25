@@ -225,6 +225,10 @@
             "path": "/Users/matthew/projects/qiime2/scikit-bio"
         },
         {
+            "name": "static-site-infrastructure",
+            "path": "/Users/matthew/projects/qiime2/static-site-infrastructure"
+        },
+        {
             "name": "template-repo",
             "path": "/Users/matthew/projects/qiime2/template-repo"
         },
