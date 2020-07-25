@@ -14,7 +14,6 @@ $ ./install
 $ curl https://nixos.org/nix/install | sh
 $ source ~/.zshrc
 $ nix-env -i \
-  alacritty \
   docker \
   git \
   htop \
