@@ -21,10 +21,14 @@ $ nix-env -i \
   reattach-to-user-namespace \
   silver-searcher \
   tmux \
+  universal-ctags \
   vim \
   wget \
   xz
 $ base16_ashes
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 $ code --install-extension AndrsDC.base16-themes
 $ code --install-extension ecmel.vscode-html-css
 $ code --install-extension formulahendry.auto-close-tag

@@ -17,6 +17,7 @@
     ~/.gitignore_global: git/gitignore_global
     ~/.npmrc: npmrc
     ~/.psqlrc: psqlrc
+    ~/.vimrc: vimrc
     ~/.zpreztorc: zsh/zpreztorc
     ~/.zlogin: zsh/zlogin
     ~/.zlogout: zsh/zlogout
