@@ -26,6 +26,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 set expandtab
+set updatetime=200
 
 nmap <leader>j :bnext<CR>
 nmap <leader>k :bprevious<CR>
