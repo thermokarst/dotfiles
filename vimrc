@@ -28,8 +28,10 @@ set writebackup
 set expandtab
 set updatetime=200
 
-nmap <leader>j :bnext<CR>
-nmap <leader>k :bprevious<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 
 call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
