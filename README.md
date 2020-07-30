@@ -14,12 +14,14 @@ $ ./install
 $ curl https://nixos.org/nix/install | sh
 $ source ~/.zshrc
 $ nix-env -i \
+  alacritty \
   docker \
   git \
   htop \
   postgresql \
   reattach-to-user-namespace \
   silver-searcher \
+  syncthing \
   tmux \
   universal-ctags \
   vim \
