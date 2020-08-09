@@ -20,6 +20,9 @@ alias i="ipython3"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+  source $HOME/.nix-profile/etc/profile.d/nix.sh;
+fi
 
 # Backup shortcuts (borrowed parts from https://github.com/laurent22/rsync-time-backup
 function prune_backups() {

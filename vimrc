@@ -36,7 +36,6 @@ nnoremap <silent> ]B :blast<CR>
 call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'chriskempson/base16-vim'
-  Plug 'ludovicchabant/vim-gutentags'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-vinegar'
@@ -48,9 +47,6 @@ call plug#end()
 " for Plug 'chriskempson/base16-vim'
 let base16colorspace=256
 source ~/.vimrc_background
-
-" for Plug 'ludovicchabant/vim-gutentags'
-let g:gutentags_cache_dir = '~/.gutentags_cache'
 
 " for Plug 'ntpeters/vim-better-whitespace'
 let g:better_whitespace_enabled=1
