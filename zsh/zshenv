@@ -86,6 +86,9 @@ path=(
   $HOME/.yarn/bin
   $HOME/.config/yarn/global/node_modules/.bin
 
+  # rust
+  $HOME/.cargo/bin
+
   # misc apps
   /Applications/Postgres.app/Contents/Versions/12/bin/
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
