@@ -38,3 +38,6 @@
     ~/qiime2-3.code-workspace: vscode/qiime2-3.code-workspace
     ~/mds.code-workspace: vscode/mds.code-workspace
     ~/personal.code-workspace: vscode/personal.code-workspace
+    ~/.config/kak/kakrc:
+      create: true
+      path: kakrc
