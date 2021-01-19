@@ -90,7 +90,7 @@ path=(
   $HOME/.cargo/bin
 
   # misc apps
-  /Applications/Postgres.app/Contents/Versions/12/bin/
+  /Applications/Postgres.app/Contents/Versions/latest/bin
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
 )
 
@@ -98,3 +98,5 @@ export -U PATH
 
 export CONDA_ENVS_PATH=$HOME/.conda/envs:/opt/miniconda3/envs
 export CONDA_PKGS_DIRS=$HOME/.conda/pkgs
+
+fignore=(Desktop Download Documents)

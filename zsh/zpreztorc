@@ -132,6 +132,8 @@ zstyle ':prezto:module:prompt' theme 'peepcode'
 
 # Auto set the tab and window titles.
 zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':completion:*:*' ignored-patterns 'Desktop' 'Downloads' 'Documents' \
+  'Library' 'Movies' 'Music' 'Pictures' 'Public'
 
 #
 # Tmux

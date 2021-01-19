@@ -6,10 +6,8 @@
   - ~/projects/qiime2/data/moving-pictures
   - ~/projects/mds
   - ~/projects/personal
-
-- shell:
-  - python3 bin/generate_vscode_workspaces.py
-  - python3 bin/bootstrap_git_repos.py
+  - ~/desk
+  - ~/files
 
 - link:
     ~/.tmux.conf: tmux.conf

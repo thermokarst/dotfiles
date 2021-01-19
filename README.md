@@ -10,31 +10,68 @@ $ ./install
 $ sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
 $ source ~/.zshrc
 $ nix-env -i \
-  alacritty \
-  cmus \
-  docker \
+  coreutils \
   elixir \
+  ffmpeg \
   git \
+  heroku \
   htop \
+  kakoune \
   nodejs \
-  postgresql \
+  packer \
   reattach-to-user-namespace \
   silver-searcher \
-  syncthing \
+  sslmate \
   tmux \
+  tree \
   vim \
+  watch \
   wget \
-  xz \
-  yarn
+  xz
 $ base16_ashes
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
- wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+$ vim +PlugInstall
+$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 $ sudo sh Miniconda3-latest-MacOSX-x86_64.sh -p /opt/miniconda3 -b
 $ sudo conda update conda
 $ wget https://raw.githubusercontent.com/qiime2/environment-files/master/latest/staging/qiime2-latest-py36-osx-conda.yml
 $ conda env create -n q2dev --file qiime2-latest-py36-osx-conda.yml
+$ git clone <some private repo> # this will bootstrap the macos keychain
+$ python3 bin/bootstrap_git_repos.py
+$ sudo rm ~/Desktop ~/Downloads
+$ ln -s ~/desk ~/Desktop
+$ ln -s ~/Desktop ~/Downloads
+$ chflags hidden ~/Documents ~/Library ~/Movies ~/Music ~/Pictures ~/Public
+$ chflags -h hidden ~/Desktop ~/Downloads
+$ chflags nohidden desk
 ```
+
+## todos
+
+- rework git bootstrap script
+- add in neuron install
+- cmus won't install
+
+## manual install/setup
+
+- anonymous pro
+- docker
+- firefox
+- freedom
+- iterm2
+- postgres.app
+- printer drivers
+- rust
+- slack
+- ssh keys
+- steermouse
+- syncthing
+- thunderbird
+- virtualbox
+- vscode
+- wakatime key
+- zoom
 
 ## optional vscode extensions
 

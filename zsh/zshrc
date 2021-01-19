@@ -17,6 +17,7 @@ fi
 # shortcuts
 alias q="conda activate q2dev"
 alias i="ipython3"
+alias ls='ls -I Desktop -I Documents -I Downloads -I Library -I Movies -I Music -I Pictures -I Public'
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
