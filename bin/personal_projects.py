@@ -1,5 +1,0 @@
-PROJECTS = {
-    'thermokarst': [
-        'elixir-class',
-    ],
-}

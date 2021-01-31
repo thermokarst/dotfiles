@@ -34,6 +34,8 @@ $ sudo sh Miniconda3-latest-MacOSX-x86_64.sh -p /opt/miniconda3 -b
 $ sudo conda update conda
 $ wget https://raw.githubusercontent.com/qiime2/environment-files/master/latest/staging/qiime2-latest-py36-osx-conda.yml
 $ conda env create -n q2dev --file qiime2-latest-py36-osx-conda.yml
+$ conda env create -n dotfiles -c conda-forge pygit2
+$ conda run -n dotfiles python ~/.dotfiles/bin/sync_git_repos.py ~/.dotfiles/repos.ini
 ```
 
 ## optional vscode extensions

@@ -3,12 +3,11 @@
 
 - create:
   - ~/projects/qiime2
-  - ~/projects/qiime2/data/moving-pictures
+  - ~/projects/qiime2/data/
   - ~/projects/mds
   - ~/projects/personal
 
 - shell:
-  - python3 bin/generate_vscode_workspaces.py
   - python3 bin/bootstrap_git_repos.py
 
 - link:
@@ -33,11 +32,6 @@
     ~/Library/Application Support/Code/User/tasks.json:
       create: true
       path: vscode/tasks.json
-    ~/qiime2-1.code-workspace: vscode/qiime2-1.code-workspace
-    ~/qiime2-2.code-workspace: vscode/qiime2-2.code-workspace
-    ~/qiime2-3.code-workspace: vscode/qiime2-3.code-workspace
-    ~/mds.code-workspace: vscode/mds.code-workspace
-    ~/personal.code-workspace: vscode/personal.code-workspace
     ~/.config/kak/kakrc:
       create: true
       path: kakrc
