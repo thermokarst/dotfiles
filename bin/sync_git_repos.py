@@ -43,20 +43,15 @@ def sync_workspace(workspace_fp, repos, remote_host, remote_name, callbacks,
         init_repo(repo, repo_fp, remote, remote_name, callbacks, github_peers)
 
 
-def setup_callbacks():
-    pub_fp = os.path.expanduser('~/.ssh/id_ecdsa.pub')
-    priv_fp = os.path.expanduser('~/.ssh/id_ecdsa')
-    keypair = pygit2.Keypair('git', pub_fp, priv_fp, '')
-    callbacks = pygit2.RemoteCallbacks(credentials=keypair)
-    return callbacks
-
-
 if __name__ == '__main__':
     ini_fp = sys.argv[1]
     cfg = configparser.ConfigParser()
     cfg.read(ini_fp)
 
-    callbacks = setup_callbacks()
+    pub_fp = os.path.expanduser('~/.ssh/id_ecdsa.pub')
+    priv_fp = os.path.expanduser('~/.ssh/id_ecdsa')
+    keypair = pygit2.Keypair('git', pub_fp, priv_fp, '')
+    callbacks = pygit2.RemoteCallbacks(credentials=keypair)
 
     for section in cfg.sections():
         workspace_fp = cfg[section]['workspace']
@@ -64,12 +59,14 @@ if __name__ == '__main__':
 
         repos = cfg[section]['repos'].split(',')
         repos = [r.strip() for r in repos]
+        if '' in repos:
+            repos.remove('')
         remote_host = cfg[section]['remote_host']
         remote_name = cfg[section]['remote_name']
 
         github_peers = cfg[section]['github_peers'].split(',')
-        if github_peers == ['']:
-            github_peers = []
+        if '' in github_peers:
+            github_peers.remove('')
 
         sync_workspace(workspace_fp, repos, remote_host,
                        remote_name, callbacks, github_peers)

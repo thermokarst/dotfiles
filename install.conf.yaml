@@ -7,9 +7,6 @@
   - ~/projects/mds
   - ~/projects/personal
 
-- shell:
-  - python3 bin/bootstrap_git_repos.py
-
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: git/gitconfig
