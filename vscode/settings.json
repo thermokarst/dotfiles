@@ -7,8 +7,6 @@
 
     "workbench.colorTheme": "Base16 Dark Ashes",
     "workbench.sideBar.location": "right",
-
-    "window.zoomLevel": 0,
     "window.restoreFullscreen": false,
 
     "python.jediEnabled": false,
@@ -22,11 +20,11 @@
     ],
     "[elixir]": {
        "editor.tabSize": 2,
-       "editor.formatOnSave": true,
+       "editor.formatOnSave": true
     },
     "python.condaPath": "/opt/miniconda3/bin/conda",
     "python.defaultInterpreterPath": "~/.conda/envs/q2dev/bin/python",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.languageServer": "Microsoft",
-    "git.enabled": false,
+    "git.enabled": false
 }
