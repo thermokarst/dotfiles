@@ -15,6 +15,7 @@ set hidden
 set incsearch
 set ruler
 set wildmenu
+set wildmode=full
 set number
 set list
 set listchars=tab:▸\ ,extends:>,precedes:<,trail:~
@@ -27,6 +28,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 set expandtab
 set updatetime=200
+set history=250
 
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
