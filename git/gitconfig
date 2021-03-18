@@ -48,8 +48,6 @@
     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
-[push]
-    default = upstream
 [credential]
     helper = osxkeychain
 [pull]
@@ -57,7 +55,7 @@
 [init]
     defaultBranch = main
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
