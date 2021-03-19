@@ -44,6 +44,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'wakatime/vim-wakatime'
+  Plug 'vimwiki/vimwiki'
+  Plug 'mattn/calendar-vim'
 call plug#end()
 
 " for Plug 'chriskempson/base16-vim'
