@@ -63,3 +63,17 @@ let g:airline#extensions#tabline#fnamemod=':t'
 
 " for Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='base16'
+
+" vimwiki
+let notes_wiki = {}
+let notes_wiki.path = '/Users/matthew/projects/personal/notes'
+
+let weeklies_wiki = {}
+let weeklies_wiki.path = '/Users/matthew/projects/personal/notes/weeklies'
+let weeklies_wiki.syntax = 'markdown'
+let weeklies_wiki.ext = '.md'
+
+let pitches_wiki = {}
+let pitches_wiki.path = '/Users/matthew/projects/personal/notes/pitches'
+
+let g:vimwiki_list = [notes_wiki, weeklies_wiki, pitches_wiki]
