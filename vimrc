@@ -38,14 +38,14 @@ nnoremap <silent> ]B :blast<CR>
 call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'chriskempson/base16-vim'
+  Plug 'mattn/calendar-vim'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-vinegar'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'wakatime/vim-wakatime'
   Plug 'vimwiki/vimwiki'
-  Plug 'mattn/calendar-vim'
+  Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " for Plug 'chriskempson/base16-vim'
