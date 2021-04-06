@@ -29,6 +29,7 @@ set writebackup
 set expandtab
 set updatetime=200
 set history=250
+set hlsearch
 
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
