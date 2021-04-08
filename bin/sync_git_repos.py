@@ -18,6 +18,10 @@ def init_repo(repo_name, repo_fp, remote, remote_name, callbacks,
         print('already cloned %s' % remote)
 
         repo = pygit2.Repository(repo)
+        try:
+            repo.remotes[remote_name]
+        except:
+            repo.remotes.create(remote_name, remote)
 
     for peer in github_peers:
         url = 'ssh://git@github.com/%s/%s' % (peer, repo_name)
