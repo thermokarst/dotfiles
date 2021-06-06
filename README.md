@@ -1,14 +1,19 @@
 # dotfiles
 
 ```bash
-$ git clone --origin thermokart ssh://git@pingo.thermokar.st:dotfiles ~/.dotfiles
+$ git clone --origin pingo ssh://git@pingo.thermokar.st/dotfiles ~/.dotfiles
 $ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 $ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 $ cd ~/.dotfiles
 $ ./install
 $ source ~/.zshrc
-$ sudo port install \
+# At the time of this commit, cmus depends on mp4v2 - the latest version
+# (ae4bd4f26c27327c8d188e127022d9231f8c7d4b) doesn't appear to be linking
+# correctly, so I had to manually install an older version.
+$ sudo -s
+$ yes | port install \
     ImageMagick \
+    cargo \
     cmus \
     curl \
     git \
@@ -16,7 +21,6 @@ $ sudo port install \
     htop \
     nodejs16 \
     pass \
-    pinetry-mac \
     syncthing-macos \
     the_silver_searcher \
     tmux \
@@ -28,18 +32,20 @@ $ sudo port install \
 $ base16_ashes
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ vim +PlugInstall
 $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 $ sudo sh Miniconda3-latest-MacOSX-x86_64.sh -p /opt/miniconda3 -b
 $ sudo conda update conda
 $ wget https://raw.githubusercontent.com/qiime2/environment-files/master/latest/staging/qiime2-latest-py38-osx-conda.yml
 $ conda env create -n q2dev --file qiime2-latest-py38-osx-conda.yml
-$ conda env create -n dotfiles -c conda-forge pygit2
+$ conda create -n dotfiles -c conda-forge pygit2
 $ conda run -n dotfiles python ~/.dotfiles/bin/sync_git_repos.py ~/.dotfiles/repos.ini
 ```
 
 ## manual apps
 
 - chrome
+- cisco anyconnect
 - docker desktop
 - firefox
 - garageband
@@ -48,10 +54,14 @@ $ conda run -n dotfiles python ~/.dotfiles/bin/sync_git_repos.py ~/.dotfiles/rep
 - melodics
 - passff-host
 - postgres.app
+- renoise
+- signal
+- slack
 - steermouse
 - thunderbird
 - virtualbox
 - vscode
+- xcode
 - zoom
 
 ## optional vscode extensions

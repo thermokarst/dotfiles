@@ -74,10 +74,14 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $path
-
   # miniconda
   /opt/miniconda3/bin
+
+  # macports
+  /opt/local/bin
+  /opt/local/sbin
+
+  $path
 
   # npm
   $HOME/.npm-packages/bin
