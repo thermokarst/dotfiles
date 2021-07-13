@@ -26,5 +26,6 @@
     "python.defaultInterpreterPath": "~/.conda/envs/q2dev/bin/python",
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.languageServer": "Microsoft",
-    "liveshare.authenticationProvider": "GitHub"
+    "liveshare.authenticationProvider": "GitHub",
+    "editor.inlineSuggest.enabled": true
 }
