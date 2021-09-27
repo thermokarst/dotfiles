@@ -32,3 +32,6 @@
     ~/.config/kak/kakrc:
       create: true
       path: kakrc
+    ~/.config/nvim/init.vim:
+      create: true
+      path: nvim_init.vim
