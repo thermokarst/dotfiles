@@ -17,6 +17,11 @@ $ cd ~/.dotfiles
 $ ./install
 $ source ~/.zshrc
 $ base16_ashes
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ git clone ssh://git@pingo.thermokar.st/gwar ~/gwar
+$ cd gwar
+$ cargo build --release
+$ ./target/release/gwar ~/.dotfiles/repos.toml
 $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 $ sudo sh Miniconda3-latest-Linux-x86_64.sh -p /opt/miniconda3 -b
 $ sudo conda update conda
