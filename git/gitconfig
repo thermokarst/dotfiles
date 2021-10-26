@@ -2,8 +2,7 @@
     name = Matthew Dillon
     email = matthewrdillon@gmail.com
 [core]
-    editor = vim
-    excludesfile = /Users/matthew/.gitignore_global
+    editor = nvim
 [color]
     diff = auto
     status = auto

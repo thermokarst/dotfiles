@@ -1,5 +1,31 @@
 # dotfiles
 
+## opensuse tumbleweed
+
+```bash
+$ sudo visudo  # add /opt/miniconda3/bin to secure_paths
+$ sudo zypper install git libopenssl-1_1-devel tree zsh ripgrep
+$ sudo zypper install -t pattern devel_C_C++
+$ sudo chsh -s $(which zsh)
+$ sudo hostname rattusrattus
+$ sudo systemd-tmpfiles --create
+$ sudo echo "[interop]\nappendWindowsPath = false" > /etc/wsl.conf
+$ git clone --origin pingo ssh://git@pingo.thermokar.st/dotfiles ~/.dotfiles
+$ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+$ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+$ cd ~/.dotfiles
+$ ./install
+$ source ~/.zshrc
+$ base16_ashes
+$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+$ sudo sh Miniconda3-latest-Linux-x86_64.sh -p /opt/miniconda3 -b
+$ sudo conda update conda
+$ wget https://raw.githubusercontent.com/qiime2/environment-files/master/latest/staging/qiime2-latest-py38-linux-conda.yml
+$ conda env create -n q2dev --file qiime2-latest-py38-linux-conda.yml
+```
+
+## macos
+
 ```bash
 $ wget -O gwar https://github.com/thermokarst/gwar/releases/download/0.0.1/gwar-macos
 $ chmod +x gwar

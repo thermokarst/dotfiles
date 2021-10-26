@@ -1,6 +1,6 @@
 # personal
 [[workspace]]
-path = "$HOME/Desktop/projects/personal"
+path = "$HOME/projects/personal"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
@@ -19,7 +19,7 @@ remotes = []
 
 # personal-dokku
 [[workspace]]
-path = "$HOME/Desktop/projects/personal"
+path = "$HOME/projects/personal"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
@@ -35,7 +35,7 @@ remotes = [
 
 # mds
 [[workspace]]
-path = "$HOME/Desktop/projects/mds"
+path = "$HOME/projects/mds"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
@@ -55,7 +55,7 @@ remotes = []
 
 # github-thermokarst-personal
 [[workspace]]
-path = "$HOME/Desktop/projects/personal"
+path = "$HOME/projects/personal"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/thermokarst"
 origin.name = "thermokarst"
@@ -66,7 +66,7 @@ remotes = []
 
 # github-thermokarst-qiime2
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/thermokarst"
 origin.name = "thermokarst"
@@ -78,7 +78,7 @@ remotes = []
 
 # github-thermokarst-forks-qiime2
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/qiime2"
 origin.name = "qiime2"
@@ -93,6 +93,7 @@ repos = [
   "environment-files",
   "library",
   "logos",
+  "package-integration",
   "paper1",
   "paper2",
   "q2-alignment",
@@ -150,7 +151,7 @@ remotes = [
 
 # github-thermokarst-forks-caporaso-lab
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/caporaso-lab"
 origin.name = "caporaso-lab"
@@ -169,7 +170,7 @@ remotes = [
 
 # github-thermokarst-forks-biocore
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/biocore"
 origin.name = "biocore"
@@ -186,7 +187,7 @@ remotes = [
 
 # github-thermokarst-forks-bokulich-lab
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/bokulich-lab"
 origin.name = "bokulich-lab"
@@ -200,7 +201,7 @@ remotes = [
 
 # github-thermokarst-forks-conda-forge
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/conda-forge"
 origin.name = "conda-forge"
@@ -215,7 +216,7 @@ remotes = [
 
 # github-gregcaporaso
 [[workspace]]
-path = "$HOME/Desktop/projects/qiime2"
+path = "$HOME/projects/qiime2"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/gregcaporaso"
 origin.name = "gregcaporaso"

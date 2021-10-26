@@ -10,7 +10,9 @@
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore_global
+    ~/.config/git/ignore:
+      create: true
+      path: git/gitignore_global
     ~/.npmrc: npmrc
     ~/.psqlrc: psqlrc
     ~/.vimrc: vimrc
@@ -34,4 +36,13 @@
       path: kakrc
     ~/.config/nvim/init.vim:
       create: true
-      path: nvim_init.vim
+      path: nvim/init.vim
+    ~/.config/nvim/init.vim:
+      create: true
+      path: nvim/init.vim
+    ~/.config/nvim/lua/plugins.lua:
+      create: true
+      path: nvim/plugins.lua
+    ~/bin/safe-reattach-to-user-namespace:
+      create: true
+      path: safe-reattach-to-user-namespace.sh
