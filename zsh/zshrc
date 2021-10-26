@@ -1,29 +1,24 @@
 # Matthew Dillon
 # matthewrdillon@gmail.com
-#
-# source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
 
-if [[ -s "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]]; then
-  source $HOME/.nix-profile/etc/profile.d/nix.sh
-fi
+srcs=(
+  "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+  "/opt/miniconda3/etc/profile.d/conda.sh"
+  "$HOME/.cargo/env"
+)
 
-if [[ -s "/opt/miniconda3/etc/profile.d/conda.sh" ]]; then
-  source /opt/miniconda3/etc/profile.d/conda.sh
-fi
-
-source "$HOME/.cargo/env"
-
-# shortcuts
-alias q="conda activate q2dev"
-alias i="ipython3"
-alias greg="grep"
-alias vim="nvim"
+for fp in $srcs; do
+  if [[ -s "$fp" ]]; then
+    source "$fp"
+  fi
+done
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+alias q="conda activate q2dev"
+alias i="ipython3"
+alias vim="nvim"
 
 # Backup shortcuts (borrowed parts from https://github.com/laurent22/rsync-time-backup
 function prune_backups() {

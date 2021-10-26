@@ -1,41 +1,19 @@
-#
-# Defines environment variables.
-#
-
-#
-# Nix
-#
-
-export NIX_IGNORE_SYMLINK_STORE=1
-
-#
 # Browser
-#
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-#
 # Editors
-#
-
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
-#
 # Language
-#
-
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
-#
 # Less
-#
-
 # Set the default Less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
@@ -46,10 +24,7 @@ if (( $+commands[lesspipe.sh] )); then
   export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
 fi
 
-#
 # Temporary Files
-#
-
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$USER"
   mkdir -p -m 700 "$TMPDIR"
@@ -59,29 +34,19 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+# Necessary for tmux on WSL, shouldn't impact macos
+export TMUX_TMPDIR='/tmp'
 
-#
 # Paths
-#
-
 typeset -gU cdpath fpath mailpath path
 
-# Set the the list of directories that cd searches.
-# cdpath=(
-#   .
-#   $cdpath
-# )
-
-# Set the list of directories that Zsh searches for programs.
-path=(
+check_paths=(
   # miniconda
   /opt/miniconda3/bin
 
   # macports
   /opt/local/bin
   /opt/local/sbin
-
-  $path
 
   # npm
   $HOME/.npm-packages/bin
@@ -98,7 +63,12 @@ path=(
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
 )
 
-export -U PATH
+for fp in $check_paths; do
+  if [[ -s "$fp" ]]; then
+    path+=("$fp")
+  fi
+done
 
+export -U PATH
 export CONDA_ENVS_PATH=$HOME/.conda/envs:/opt/miniconda3/envs
 export CONDA_PKGS_DIRS=$HOME/.conda/pkgs
