@@ -58,6 +58,9 @@ check_paths=(
   # rust
   $HOME/.cargo/bin
 
+  # WSL
+  /mnt/c/windows
+
   # misc apps
   /Applications/Postgres.app/Contents/Versions/latest/bin/
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
