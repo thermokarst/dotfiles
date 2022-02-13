@@ -1,5 +1,29 @@
 # dotfiles
 
+## wslg ubuntu
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install nvim tmux ripgrep zsh tree git build-essential libssl-dev pkg-config
+sudo hostname $HOSTNAME
+chsh -s $(which zsh)
+sudo echo "[interop]\nappendWindowsPath = false" > /etc/wsl.conf
+git clone --origin pingo ssh://git@pingo.thermokar.st/dotfiles ~/.dotfiles
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+cd ~/.dotfiles
+./install
+source ~/.zshrc
+base16_ashes
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+git clone ssh://git@pingo.thermokar.st/gwar ~/gwar
+cd ~/gwar
+cargo --build --release
+./target/release/gwar ~/.dotfiles/$REPOS.toml
+cd ~/ && rm -rf ~/gwar
+```
+
 ## opensuse tumbleweed
 
 ```bash
