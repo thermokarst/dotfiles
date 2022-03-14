@@ -10,34 +10,13 @@ end
 
 return require('packer').startup(function()
   -----------------------------------------------------------------------------
-  use 'wbthomason/packer.nvim'
+  use { 'wbthomason/packer.nvim' }
 
   -----------------------------------------------------------------------------
-  use 'wakatime/vim-wakatime'
+  use { 'wakatime/vim-wakatime' }
 
   -----------------------------------------------------------------------------
-  use 'calviken/vim-gdscript3'
-
-  -----------------------------------------------------------------------------
-  use {
-    'neovim/nvim-lspconfig',
-    config = function()
-      lspconfig = require('lspconfig')
-
-      lspconfig.pyright.setup({
-        settings = {
-          python = {
-            venvPath = "~/.conda/envs",
-            analysis = {
-              useLibraryCodeForTypes = true,
-            }
-          }
-        }
-      })
-
-      lspconfig.rust_analyzer.setup({})
-      end,
-  }
+  use { 'habamax/vim-godot' }
 
   -----------------------------------------------------------------------------
   use {
@@ -67,10 +46,10 @@ return require('packer').startup(function()
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'hrsh7th/cmp-vsnip', after = "nvim-cmp" },
-      { 'hrsh7th/cmp-nvim-lsp', after = "nvim-cmp" },
-      { 'hrsh7th/cmp-buffer', after = "nvim-cmp" },
-      { 'hrsh7th/vim-vsnip', after = "nvim-cmp" },
+      { 'hrsh7th/cmp-vsnip', after = 'nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' },
+      { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
+      { 'hrsh7th/vim-vsnip', after = 'nvim-cmp' },
     },
     config = function()
       local cmp = require('cmp')
@@ -98,6 +77,38 @@ return require('packer').startup(function()
 
   -----------------------------------------------------------------------------
   use {
+    'neovim/nvim-lspconfig',
+    after = 'nvim-cmp',
+    config = function()
+      lspconfig = require('lspconfig')
+
+      lspconfig.pyright.setup({
+        settings = {
+          python = {
+            venvPath = "~/.conda/envs",
+            analysis = {
+              useLibraryCodeForTypes = true,
+            }
+          }
+        }
+      })
+
+      lspconfig.rust_analyzer.setup({})
+
+      local cmp = require('cmp_nvim_lsp')
+      local gd_capabilities = cmp.update_capabilities(
+        vim.lsp.protocol.make_client_capabilities()
+      )
+      lspconfig.gdscript.setup({
+        capabilities = gd_capabilities,
+        cmd = { 'nc', '127.0.0.1', '6008' },
+      })
+
+      end,
+  }
+
+  -----------------------------------------------------------------------------
+  use {
     'lewis6991/gitsigns.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } },
     config = function()
@@ -108,7 +119,9 @@ return require('packer').startup(function()
   -----------------------------------------------------------------------------
   use {
     'simrat39/rust-tools.nvim',
+    after = 'nvim-lspconfig',
     requires = {
+      { 'neovim/nvim-lspconfig' },
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' },
     },
@@ -124,7 +137,7 @@ return require('packer').startup(function()
     config = function()
       require('sidebar-nvim').setup({
         side = 'right',
-        sections = { 'datetime', 'git-status', 'lsp-diagnostics', 'todos' }
+        sections = { 'datetime', 'git', 'diagnostics', 'todos' }
       })
     end,
   }

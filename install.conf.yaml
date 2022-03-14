@@ -36,6 +36,8 @@
     ~/.config/nvim/lua/plugins.lua:
       create: true
       path: nvim/plugins.lua
+    ~/.config/nvim/ftplugin:
+      path: nvim/ftplugin
     ~/bin/safe-reattach-to-user-namespace:
       create: true
       path: safe-reattach-to-user-namespace.sh
