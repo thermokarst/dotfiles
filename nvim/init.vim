@@ -16,10 +16,11 @@ set.backup = true
 
 set.writebackup = true
 set.list = true
-set.listchars = { trail = '~', tab = '>=' }
+set.listchars = { trail = '~', tab = '>.' }
 set.mouse = 'a'
 set.completeopt = { 'menu', 'menuone', 'noselect' }
 set.termguicolors = true
+set.tabstop = 4
 
 require('plugins')
 EOF

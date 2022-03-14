@@ -16,6 +16,9 @@ return require('packer').startup(function()
   use 'wakatime/vim-wakatime'
 
   -----------------------------------------------------------------------------
+  use 'calviken/vim-gdscript3'
+
+  -----------------------------------------------------------------------------
   use {
     'neovim/nvim-lspconfig',
     config = function()

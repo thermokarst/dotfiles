@@ -26,6 +26,7 @@ origin.name = "pingo"
 repos = [
   "akdillon",
   "planner",
+  # dokku app name is thermokarst, not thermokar.st
   "thermokar.st",
   "zettel",
 ]
