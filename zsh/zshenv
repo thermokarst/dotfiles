@@ -64,6 +64,9 @@ check_paths=(
   # misc apps
   /Applications/Postgres.app/Contents/Versions/latest/bin/
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/
+
+  # home
+  $HOME/bin
 )
 
 for fp in $check_paths; do
