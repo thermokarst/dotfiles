@@ -35,7 +35,9 @@ return require('packer').startup(function()
       { 'kyazdani42/nvim-web-devicons' },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '-', '<cmd>Telescope find_files<CR>', { noremap = true })
+      vim.api.nvim_set_keymap('n', '-',
+        ':Telescope find_files find_command=rg,--ignore,--ignore-case,--hidden,--files<CR>',
+        { noremap = true })
     end,
   }
 

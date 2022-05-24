@@ -15,6 +15,7 @@
       path: git/gitignore_global
     ~/.npmrc: npmrc
     ~/.psqlrc: psqlrc
+    ~/.ripgreprc: ripgreprc
     ~/.zpreztorc: zsh/zpreztorc
     ~/.zlogin: zsh/zlogin
     ~/.zlogout: zsh/zlogout
