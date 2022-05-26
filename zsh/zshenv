@@ -67,6 +67,9 @@ check_paths=(
 
   # home
   $HOME/bin
+
+  # go
+  /usr/local/go/bin
 )
 
 for fp in $check_paths; do
