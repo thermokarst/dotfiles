@@ -60,6 +60,7 @@ check_paths=(
 
   # WSL
   /mnt/c/windows
+  /mnt/c/windows/system32
 
   # misc apps
   /Applications/Postgres.app/Contents/Versions/latest/bin/
