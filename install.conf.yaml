@@ -2,12 +2,12 @@
   - '~'
 
 - create:
-  - ~/projects/qiime2
-  - ~/projects/qiime2/data/
   - ~/projects/mds
   - ~/projects/personal
+  - ~/.config/mpd/playlists
 
 - link:
+    ~/.config/mpd/mpd.conf: mpd.conf
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: git/gitconfig
     ~/.config/git/ignore:

@@ -9,3 +9,6 @@
     zcompile "$zcompdump"
   fi
 } &!
+
+# this seems like the easiest way to get a wsl startup script to work
+2>/dev/null 1>/dev/null mpd

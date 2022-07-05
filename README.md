@@ -5,7 +5,7 @@
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt install neovim tmux ripgrep zsh tree git build-essential libssl-dev pkg-config
+sudo apt install neovim tmux ripgrep zsh tree git build-essential libssl-dev pkg-config mpd
 sudo hostname $HOSTNAME
 chsh -s $(which zsh)
 sudo echo "[interop]\nappendWindowsPath = false" > /etc/wsl.conf
@@ -33,6 +33,7 @@ cd ~/ && rm -rf ~/gwar
 - garageband
 - iterm2
 - libreoffice
+- logseq
 - melodics
 - passff-host
 - postgres.app
