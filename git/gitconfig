@@ -61,3 +61,6 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[safe]
+	directory = %(prefix)///wsl.localhost/Ubuntu/home/matthew/projects/personal/notes
+	directory = //wsl.localhost/Ubuntu/home/matthew/projects/personal/notes
