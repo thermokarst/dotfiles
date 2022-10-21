@@ -19,6 +19,9 @@ return require('packer').startup(function()
   use { 'habamax/vim-godot' }
 
   -----------------------------------------------------------------------------
+  use { 'Bakudankun/PICO-8.vim' }
+
+  -----------------------------------------------------------------------------
   use {
     'chriskempson/base16-vim',
     config = function()

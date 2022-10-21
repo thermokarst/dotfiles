@@ -68,3 +68,12 @@ function back_things_up() {
 function devlog() {
   vim -c 'Goyo' '+normal Go' +startinsert ~/projects/personal/devlog/logs/$(date '+%Y-%m-%d').gmi
 }
+
+# NOTE: this might need a mapped network drive to work (e.g. Z:\)
+function cmd() {
+  CMD=$1
+  shift;
+  ARGS=$@
+  WIN_PWD=$(wslpath -w ${PWD})
+  cmd.exe /c "pushd ${WIN_PWD} && ${CMD} ${ARGS}"
+}
