@@ -2,7 +2,7 @@
     name = Matthew Dillon
     email = matthewrdillon@gmail.com
 [core]
-    editor = nvim
+    editor = hx
 [color]
     diff = auto
     status = auto
