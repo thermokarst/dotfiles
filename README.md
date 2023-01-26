@@ -8,7 +8,7 @@ sudo apt upgrade
 sudo apt install neovim tmux ripgrep zsh tree git build-essential libssl-dev pkg-config mpd
 sudo hostname $HOSTNAME
 chsh -s $(which zsh)
-sudo echo "[interop]\nappendWindowsPath = false" > /etc/wsl.conf
+sudo echo "[interop]\nappendWindowsPath = false\n\n[boot]\nsystemd = true" > /etc/wsl.conf
 git clone --origin pingo ssh://git@pingo.thermokar.st/dotfiles ~/.dotfiles
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
