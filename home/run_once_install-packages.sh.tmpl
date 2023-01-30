@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "devterm" }}
+{{ if eq .chezmoi.hostname "devterm" -}}
 #!/bin/sh
 sudo apt install \
   ripgrep \
@@ -10,4 +10,4 @@ sudo apt install \
   tree \
   libssl-dev \
   git
-{{- end }}
+{{ end }}
