@@ -1,0 +1,13 @@
+{{- if eq .chezmoi.hostname "devterm" }}
+#!/bin/sh
+sudo apt install \
+  ripgrep \
+  brightnessctl \
+  lynx \
+  libncurses-dev \
+  zsh \
+  tmux \
+  tree \
+  libssl-dev \
+  git
+{{- end }}
