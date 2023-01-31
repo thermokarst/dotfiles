@@ -23,7 +23,7 @@ function battery() {
 }
 
 function battery_percentage() {
-  battery | grep 'percentage' | awk '{print $2'}'
+  battery | grep 'percentage' | awk '{print $2}'
 }
 
 function battery_time_to_empty() {
