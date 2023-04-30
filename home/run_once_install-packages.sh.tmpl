@@ -1,14 +1,25 @@
 {{ if eq .chezmoi.hostname "devterm" -}}
 #!/bin/sh
 sudo apt install \
-  ripgrep \
   brightnessctl \
-  lynx \
+  git \
   libncurses-dev \
-  zsh \
+  libssl-dev \
+  lynx \
+  ripgrep \
   tmux \
   tree \
-  libssl-dev \
-  git \
+  zsh \
   -y
+{{ end }}
+{{ if eq .chemoi.hostname "rattusrattus" -}}
+#!/bin/sh
+sudo port install \
+  git \
+  helix \
+  ripgrep \
+  tmux \
+  tree \
+  zellij \
+  zsh
 {{ end }}
