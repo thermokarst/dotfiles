@@ -1,6 +1,6 @@
 # dotfiles
 
-set the fqdn (this is necessary for some of the host-specific chezmoi config):
+1) set the fqdn (this is necessary for some of the host-specific chezmoi config):
 
 ```bash
 # debian
@@ -13,7 +13,7 @@ sudo scutil --set ComputerName $MY_HOSTNAME
 dscacheutil -flushcache  # maybe reboot, too?
 ```
 
-set the shell:
+2) set the shell:
 
 ```bash
 # debian
@@ -23,16 +23,20 @@ chsh -s $(which zsh)
 sudo chpass -s '/opt/local/bin/zsh' $USER
 ```
 
-set up the package manager:
+3) set up the package manager:
 
 ```bash
+# debian - nothing to do here
+
+# macos
 xcode-select --install
-# grab the pkg installer from: https://www.macports.org/install.php
+# download the pkg installer from: https://www.macports.org
+# TODO: is there a reasonable unattended install workflow for macports?
 ```
 
-patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads)
+4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads). size 16 or 17, no anti-aliasing
 
-bootstrap chezmoi:
+5) bootstrap chezmoi:
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- \
@@ -40,4 +44,12 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
   git://pingo.thermokar.st/dotfiles \
   --apply \
   --guess-repo-url=false
+```
+
+6) install miniconda:
+
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+chmod +x Miniconda3-latest-MacOSX-arm64.sh
+sudo ./Miniconda3-latest-MacOSX-arm64.sh -b -u -p /opt/miniconda3
 ```

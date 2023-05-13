@@ -9,10 +9,10 @@ sudo apt install \
   ripgrep \
   tmux \
   tree \
+  wget \
   zsh \
   -y
-{{ end }}
-{{ if eq .chezmoi.hostname "rattusrattus" -}}
+{{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 sudo port install \
   git \
@@ -20,6 +20,7 @@ sudo port install \
   ripgrep \
   tmux \
   tree \
+  wget \
   zellij \
   zsh
 {{ end }}
