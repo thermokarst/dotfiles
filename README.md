@@ -13,14 +13,11 @@ sudo scutil --set ComputerName $MY_HOSTNAME
 dscacheutil -flushcache  # maybe reboot, too?
 ```
 
-2) set the shell:
+2) set the shell (linux-only):
 
 ```bash
 # debian
 chsh -s $(which zsh)
-
-# macos
-sudo chpass -s '/opt/local/bin/zsh' $USER
 ```
 
 3) set up the package manager:
@@ -46,7 +43,14 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
   --guess-repo-url=false
 ```
 
-6) install miniconda:
+6) set the shell (mac-only):
+
+```bash
+# macos
+sudo chpass -s '/opt/local/bin/zsh' $USER
+```
+
+7) install miniconda:
 
 ```bash
 # debian
@@ -60,7 +64,8 @@ chmod +x miniconda.sh
 sudo ./miniconda.sh -b -u -p /opt/miniconda3
 ```
 
-7) set up non-automated software and tools:
+8) set up non-automated software and tools:
 
 - steermouse (license in email): btn4==fwd, btn5==bck
 - rust (don't use a package manager for this)
+- gwar (`git clone ssh://git@pingo.thermokar.st/gwar && cd gwar && cargo build --release && cp target/release/gwar ~/bin`)
