@@ -49,7 +49,17 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
 6) install miniconda:
 
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
-chmod +x Miniconda3-latest-MacOSX-arm64.sh
-sudo ./Miniconda3-latest-MacOSX-arm64.sh -b -u -p /opt/miniconda3
+# debian
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+
+# macos
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -O miniconda.sh
+
+# then, for either os:
+chmod +x miniconda.sh
+sudo ./miniconda.sh -b -u -p /opt/miniconda3
 ```
+
+7) set up software:
+
+- steermouse (license in email): btn4==fwd, btn5==bck
