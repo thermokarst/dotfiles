@@ -60,6 +60,7 @@ chmod +x miniconda.sh
 sudo ./miniconda.sh -b -u -p /opt/miniconda3
 ```
 
-7) set up software:
+7) set up non-automated software and tools:
 
 - steermouse (license in email): btn4==fwd, btn5==bck
+- rust (don't use a package manager for this)
