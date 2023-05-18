@@ -16,6 +16,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         source "$BASE16_SHELL/profile_helper.sh"
 
 alias i="ipython3"
+alias colima_start="colima start --vm-type vz --mount-type virtiofs"
 
 {{- if eq .chezmoi.hostname "devterm" }}
 function battery() {
