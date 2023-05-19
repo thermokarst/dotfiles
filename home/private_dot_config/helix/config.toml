@@ -1,4 +1,5 @@
-theme = "base16_default"
-
 [editor]
-true-color = true
+theme = "meliora"
+
+[editor.file-picker]
+hidden = false
