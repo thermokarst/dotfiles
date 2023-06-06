@@ -68,4 +68,5 @@ sudo ./miniconda.sh -b -u -p /opt/miniconda3
 
 - steermouse (license in email): btn4==fwd, btn5==bck
 - rust (don't use a package manager for this)
+  - rust-analyzer (`rustup component add rust-analyzer`)
 - gwar (`git clone ssh://git@pingo.thermokar.st/gwar && cd gwar && cargo build --release && cp target/release/gwar ~/bin`)
