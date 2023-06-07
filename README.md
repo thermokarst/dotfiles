@@ -33,7 +33,9 @@ xcode-select --install
 
 4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads). size 16 or 17, no anti-aliasing
 
-5) bootstrap chezmoi:
+5) install `age` private key from password manager into `~/.key.txt`
+
+6) bootstrap chezmoi:
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- \
@@ -43,14 +45,14 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
   --guess-repo-url=false
 ```
 
-6) set the shell (mac-only):
+7) set the shell (mac-only):
 
 ```bash
 # macos
 sudo chpass -s '/opt/local/bin/zsh' $USER
 ```
 
-7) install miniconda:
+8) install miniconda:
 
 ```bash
 # debian
@@ -64,9 +66,12 @@ chmod +x miniconda.sh
 sudo ./miniconda.sh -b -u -p /opt/miniconda3
 ```
 
-8) set up non-automated software and tools:
+9) set up non-automated software and tools:
 
 - steermouse (license in email): btn4==fwd, btn5==bck
+- logitech control center
+- lunar
+- magnet
 - rust (don't use a package manager for this)
   - rust-analyzer (`rustup component add rust-analyzer`)
 - gwar (`git clone ssh://git@pingo.thermokar.st/gwar && cd gwar && cargo build --release && cp target/release/gwar ~/bin`)
