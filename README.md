@@ -5,6 +5,7 @@
 ```bash
 # debian
 sudo hostnamectl set-hostname $MY_HOSTNAME.local
+# or edit /etc/hostname on wsl, since no systemd
 
 # macos
 sudo scutil --set HostName $MY_HOSTNAME.local
@@ -13,22 +14,23 @@ sudo scutil --set ComputerName $MY_HOSTNAME
 dscacheutil -flushcache  # maybe reboot, too?
 ```
 
-2) set the shell (linux-only):
+2) set up the package manager and bootstrap dependencies:
 
 ```bash
 # debian
-chsh -s $(which zsh)
-```
-
-3) set up the package manager:
-
-```bash
-# debian - nothing to do here
+sudo apt install curl zsh git
 
 # macos
 xcode-select --install
 # download the pkg installer from: https://www.macports.org
 # TODO: is there a reasonable unattended install workflow for macports?
+```
+
+3) set the shell (linux-only):
+
+```bash
+# debian
+chsh -s $(which zsh)
 ```
 
 4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads). size 16 or 17, no anti-aliasing

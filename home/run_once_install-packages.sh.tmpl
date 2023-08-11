@@ -27,4 +27,16 @@ sudo port install \
   wget \
   zellij \
   zsh
+{{ else if eq .chezmoi.hostname "spleen" -}}
+#!/bin/sh
+sudo apt install \
+  ripgrep \
+  tmux \
+  tree \
+  wget \
+  -y
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /rustup.sh && chmod u+x /rustup.sh && /rustup.sh -y
+git clone https://github.com/helix-editor/helix.git /helix
+export PATH=$PATH:$HOME/.cargo/bin && cargo install --path helix-term && hx --grammar fetch && hx --grammar build
 {{ end }}
