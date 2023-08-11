@@ -27,16 +27,18 @@ sudo port install \
   wget \
   zellij \
   zsh
-{{ else if eq .chezmoi.hostname "spleen" -}}
+{{ else if eq .chezmoi.hostname "DESKTOP-R0KQMF4" -}}
 #!/bin/sh
+sudo apt update
 sudo apt install \
+  clang \
   ripgrep \
   tmux \
   tree \
   wget \
   -y
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /rustup.sh && chmod u+x /rustup.sh && /rustup.sh -y
-git clone https://github.com/helix-editor/helix.git /helix
-export PATH=$PATH:$HOME/.cargo/bin && cargo install --path helix-term && hx --grammar fetch && hx --grammar build
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /tmp/rustup.sh && chmod u+x /tmp/rustup.sh && /tmp/rustup.sh -y && rustup update stable
+git clone https://github.com/helix-editor/helix.git --branch 23.05 /tmp/helix
+export PATH=$PATH:$HOME/.cargo/bin && cd /tmp/helix && cargo install --path helix-term --locked && hx --grammar fetch && hx --grammar build
 {{ end }}
