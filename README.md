@@ -5,7 +5,7 @@
 ```bash
 # debian
 sudo hostnamectl set-hostname $MY_HOSTNAME.local
-# or edit /etc/hostname on wsl, since no systemd
+# or don't worry about it on WSL machines
 
 # macos
 sudo scutil --set HostName $MY_HOSTNAME.local
@@ -18,6 +18,7 @@ dscacheutil -flushcache  # maybe reboot, too?
 
 ```bash
 # debian
+sudo apt update
 sudo apt install curl zsh git
 
 # macos
@@ -33,7 +34,9 @@ xcode-select --install
 chsh -s $(which zsh)
 ```
 
-4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads). size 16 or 17, no anti-aliasing
+4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads).
+  - wsl: size 11
+  - macos: size 16 or 17, no anti-aliasing
 
 5) install `age` private key from password manager into `~/.key.txt`
 
