@@ -2,7 +2,7 @@ srcs=(
   "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
   "/opt/miniconda3/etc/profile.d/conda.sh"
   "$HOME/.cargo/env"
-  {{ if eq .chezmoi.os "darwin" -}}
+  {{ if eq .chezmoi.hostname "rattusrattus" -}}
   "$HOME/.zshemulateenergy"
   {{- end }}
 )
@@ -20,7 +20,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 alias i="ipython3"
 
-{{ if eq .chezmoi.os "darwin" -}}
+{{ if eq .chezmoi.hostname "rattusrattus" -}}
 alias colima_start="colima start --vm-type vz --mount-type virtiofs"
 {{- end }}
 

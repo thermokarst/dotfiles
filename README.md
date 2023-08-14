@@ -1,11 +1,19 @@
 # dotfiles
 
+## hostnames
+
+- `rattusrattus`: macbook
+- `yersiniapestis`: wsl (debian)
+- `devterm`: devterm (debian)
+
 1) set the fqdn (this is necessary for some of the host-specific chezmoi config):
 
 ```bash
-# debian
+# debian standalone
 sudo hostnamectl set-hostname $MY_HOSTNAME.local
-# or don't worry about it on WSL machines
+
+# debian wsl
+echo "[network]\nhostname = $MY_HOSTNAME" | sudo tee -a /etc/wsl.conf
 
 # macos
 sudo scutil --set HostName $MY_HOSTNAME.local
@@ -27,11 +35,14 @@ xcode-select --install
 # TODO: is there a reasonable unattended install workflow for macports?
 ```
 
-3) set the shell (linux-only):
+3) set the initial shell:
 
 ```bash
 # debian
 chsh -s $(which zsh)
+
+# macos
+# NA
 ```
 
 4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads).
@@ -50,9 +61,12 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
   --guess-repo-url=false
 ```
 
-7) set the shell (mac-only):
+7) set the new shell (in case installing from 3rd-party package manager):
 
 ```bash
+# debian
+# NA
+
 # macos
 sudo chpass -s '/opt/local/bin/zsh' $USER
 ```

@@ -12,7 +12,7 @@ sudo apt install \
   wget \
   zsh \
   -y
-{{ else if eq .chezmoi.os "darwin" -}}
+{{ else if eq .chezmoi.hostname "rattusrattus" -}}
 #!/bin/sh
 sudo port install \
   colima \
@@ -27,7 +27,7 @@ sudo port install \
   wget \
   zellij \
   zsh
-{{ else if eq .chezmoi.hostname "DESKTOP-R0KQMF4" -}}
+{{ else if eq .chezmoi.hostname "yersiniapestis" -}}
 #!/bin/sh
 sudo apt update
 sudo apt install \
@@ -42,5 +42,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /tmp/rustup.sh && c
 git clone https://github.com/helix-editor/helix.git --branch 23.05 $HOME/.src/helix
 export PATH=$PATH:$HOME/.cargo/bin && cd $HOME/.src/helix && cargo install --path helix-term --locked && hx --grammar fetch && hx --grammar build
 
-git clone ssh://git@pingo.thermokar.st/gwar $HOME/.src/gwar && cd $HOME/.src/gwar && cargo build --release && cp target/release/gwar ~/bin
+# git clone ssh://git@pingo.thermokar.st/gwar $HOME/.src/gwar && cd $HOME/.src/gwar && cargo build --release && cp target/release/gwar ~/bin
 {{ end }}
