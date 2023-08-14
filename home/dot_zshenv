@@ -57,6 +57,7 @@ check_paths=(
 
   # rust
   $HOME/.cargo/bin
+  $HOME/.cargo/env
 
   # WSL
   # /mnt/c/windows

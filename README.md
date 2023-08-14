@@ -6,6 +6,8 @@
 - `yersiniapestis`: wsl (debian)
 - `devterm`: devterm (debian)
 
+## steps
+
 1) set the fqdn (this is necessary for some of the host-specific chezmoi config):
 
 ```bash
