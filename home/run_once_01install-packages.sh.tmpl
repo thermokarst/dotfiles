@@ -1,0 +1,47 @@
+#!/bin/sh
+
+set -e
+
+{{ if eq .chezmoi.hostname "devterm" -}}
+sudo apt install \
+  brightnessctl \
+  git \
+  libncurses-dev \
+  libssl-dev \
+  lynx \
+  ripgrep \
+  tmux \
+  tree \
+  wget \
+  zsh \
+  -y
+
+{{ else if eq .chezmoi.hostname "rattusrattus" -}}
+sudo port install \
+  colima \
+  curl \
+  docker \
+  docker-compose \
+  git \
+  helix \
+  ripgrep \
+  tmux \
+  tree \
+  wget \
+  zellij \
+  zsh
+
+{{ else if eq .chezmoi.hostname "yersiniapestis" -}}
+sudo apt update
+sudo apt install \
+  build-essential \
+  clang \
+  libssl-dev \
+  pkg-config \
+  ripgrep \
+  tmux \
+  tree \
+  wget \
+  -y
+
+{{ end }}

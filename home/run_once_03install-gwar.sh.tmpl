@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+if [ ! -d $HOME/.src/gwar ] ; then
+  git clone ssh://git@pingo.thermokar.st/gwar $HOME/.src/gwar
+fi
+
+cd $HOME/.src/gwar
+cargo build --release
+cp target/release/gwar ~/bin
