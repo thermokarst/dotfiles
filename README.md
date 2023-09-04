@@ -21,10 +21,12 @@ echo -e "[network]\nhostname = $MY_HOSTNAME" | sudo tee -a /etc/wsl.conf
 sudo scutil --set HostName $MY_HOSTNAME.local
 sudo scutil --set LocalHostName $MY_HOSTNAME
 sudo scutil --set ComputerName $MY_HOSTNAME
-dscacheutil -flushcache  # maybe reboot, too?
+dscacheutil -flushcache
 ```
 
-(2) set up the package manager and bootstrap dependencies:
+(2) reboot
+
+(3) set up the package manager and bootstrap dependencies:
 
 ```bash
 # debian
@@ -37,7 +39,7 @@ xcode-select --install
 # TODO: is there a reasonable unattended install workflow for macports?
 ```
 
-(3) set the initial shell:
+(4) set the initial shell:
 
 ```bash
 # debian
@@ -47,13 +49,13 @@ chsh -s $(which zsh)
 # NA
 ```
 
-(4) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads).
+(5) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads).
   - wsl: size 11
   - macos: size 16 or 17, no anti-aliasing
 
-(5) install `age` private key from password manager into `~/.key.txt`
+(6) install `age` private key from password manager into `~/.key.txt`
 
-(6) bootstrap chezmoi:
+(7) bootstrap chezmoi:
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- \
@@ -63,7 +65,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
   --guess-repo-url=false
 ```
 
-(7) set the new shell (in case installing from 3rd-party package manager):
+(8) set the new shell (in case installing from 3rd-party package manager):
 
 ```bash
 # debian
@@ -73,7 +75,16 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
 sudo chpass -s '/opt/local/bin/zsh' $USER
 ```
 
-(8) install miniconda:
+(9) restart shell
+
+(10) grab project source
+
+```bash
+ssh -T git@github.com
+gwar ~/.local/share/chezmoi/data/personal.toml
+```
+
+(11) install miniconda:
 
 ```bash
 # debian
@@ -87,7 +98,7 @@ chmod +x miniconda.sh
 sudo ./miniconda.sh -b -u -p /opt/miniconda3
 ```
 
-(9) set up non-automated software and tools:
+(12) set up non-automated software and tools:
 
 - steermouse (license in email): btn4==fwd, btn5==bck
 - logitech control center
