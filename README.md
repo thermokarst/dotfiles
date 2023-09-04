@@ -15,7 +15,7 @@
 sudo hostnamectl set-hostname $MY_HOSTNAME.local
 
 # debian wsl
-echo "[network]\nhostname = $MY_HOSTNAME" | sudo tee -a /etc/wsl.conf
+echo -e "[network]\nhostname = $MY_HOSTNAME" | sudo tee -a /etc/wsl.conf
 
 # macos
 sudo scutil --set HostName $MY_HOSTNAME.local

@@ -2,7 +2,8 @@
 
 set -e
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /tmp/rustup.sh && \
-  chmod u+x /tmp/rustup.sh && \
-  /tmp/rustup.sh -y && \
-  rustup update stable
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /tmp/rustup.sh
+chmod u+x /tmp/rustup.sh
+/tmp/rustup.sh -y --no-modify-path
+source $HOME/.cargo/env
+rustup update stable
