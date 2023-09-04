@@ -7,5 +7,7 @@ if [ ! -d $HOME/.src/gwar ] ; then
 fi
 
 cd $HOME/.src/gwar
+# belt-and-suspenders
+. $HOME/.cargo/env
 cargo build --release
 cp target/release/gwar ~/bin
