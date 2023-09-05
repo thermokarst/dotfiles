@@ -1,4 +1,7 @@
 theme = "base16_default"
 
+[editor]
+true-color = true
+
 [editor.file-picker]
 hidden = false
