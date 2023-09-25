@@ -21,7 +21,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 alias i="ipython3"
 
 {{ if eq .chezmoi.hostname "rattusrattus" -}}
-alias colima_start="colima start --memory 4 --vm-type vz --mount-type virtiofs"
+alias colima_start="colima start --memory 4 --vm-type vz --mount-type virtiofs --dns 8.8.8.8 --dns 8.8.4.4"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "devterm" }}
