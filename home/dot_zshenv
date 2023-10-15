@@ -80,5 +80,4 @@ export -U PATH
 export CONDA_ENVS_PATH=$HOME/.conda/envs:/opt/miniconda3/envs
 export CONDA_PKGS_DIRS=$HOME/.conda/pkgs
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 
