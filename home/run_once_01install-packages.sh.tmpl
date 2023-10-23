@@ -18,17 +18,13 @@ sudo apt install \
 
 {{ else if eq .chezmoi.hostname "rattusrattus" -}}
 sudo port install \
-  colima \
   curl \
-  docker \
-  docker-compose \
   git \
   helix \
   ripgrep \
   tmux \
   tree \
   wget \
-  zellij \
   zsh
 
 {{ else if eq .chezmoi.hostname "yersiniapestis" -}}
