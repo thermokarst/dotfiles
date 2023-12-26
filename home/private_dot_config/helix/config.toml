@@ -2,6 +2,7 @@ theme = "base16_default"
 
 [editor]
 true-color = true
+insert-final-newline = false
 
 [editor.file-picker]
 hidden = false
