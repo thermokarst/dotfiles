@@ -1,8 +1,24 @@
+[include]
+    path = /opt/local/share/git-delta/themes.gitconfig
+
 [user]
     name = Matthew Dillon
     email = matthewrdillon@gmail.com
 [core]
     editor = hx
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = chameleon
+    navigate = true
+    light = false
+    side-by-side = true
+    true-color = always
+    colorMoved = default
+    syntax-theme = base16
+[diff]
+    colorMoved = default
 [color]
     diff = auto
     status = auto
@@ -13,12 +29,9 @@
     auto = 1
 [merge]
     summary = true
-    tool = vimdiff
     conflictstyle = diff3
     prompt = false
 [alias]
-    unstage = reset HEAD
-    uncommit = reset --soft HEAD^
     # http://stackoverflow.com/a/9074343
     lg1 = log \
         --graph \
@@ -37,30 +50,15 @@
     a = add
     c = commit --verbose
     ca = commit -a --verbose
-    m = commit --amend --verbose
     d = diff
-    dc = diff --cached
     s = status -s
-    # TODO: drop when ready
-    # co = checkout
-    # cob = checkout -b
     sw = switch
     swc = switch -c
     # list branches sorted by last modified
     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
-# [credential]
-#     helper = osxkeychain
 [pull]
     rebase = true
 [init]
     defaultBranch = main
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
-[safe]
-	directory = %(prefix)///wsl.localhost/Ubuntu/home/matthew/projects/personal/notes
-	directory = //wsl.localhost/Ubuntu/home/matthew/projects/personal/notes
