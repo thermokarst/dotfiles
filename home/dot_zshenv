@@ -41,8 +41,8 @@ export TMUX_TMPDIR='/tmp'
 typeset -gU cdpath fpath mailpath path
 
 check_paths=(
-  # miniconda
-  /opt/miniconda3/bin
+  # conda and friends
+  /opt/miniforge3/bin
 
   # macports
   /opt/local/bin
@@ -77,7 +77,5 @@ for fp in $check_paths; do
 done
 
 export -U PATH
-export CONDA_ENVS_PATH=$HOME/.conda/envs:/opt/miniconda3/envs
-export CONDA_PKGS_DIRS=$HOME/.conda/pkgs
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 

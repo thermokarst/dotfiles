@@ -47,11 +47,10 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
 
 srcs=(
-  "/opt/miniconda3/etc/profile.d/conda.sh"
+  "/opt/miniforge3/etc/profile.d/conda.sh"
+  "/opt/miniforge3/etc/profile.d/mamba.sh"
   "$HOME/.cargo/env"
-  {{ if eq .chezmoi.hostname "rattusrattus" -}}
   "$HOME/.zshemulateenergy"
-  {{- end }}
 )
 
 for fp in $srcs; do
