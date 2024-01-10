@@ -60,6 +60,7 @@ for fp in $srcs; do
 done
 
 alias i="ipython3"
+alias devlog="cd ~/projects/personal/devlog && hx logs/$(date '+%Y-%m-%d').gmi && cd -"
 
 {{ if eq .chezmoi.hostname "rattusrattus" -}}
 alias colima_start="colima start --memory 8 --vm-type vz --mount-type virtiofs --dns 8.8.8.8 --dns 8.8.4.4"
