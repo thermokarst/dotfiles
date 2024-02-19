@@ -1,9 +1,0 @@
-#!/bin/sh
-
-git clone https://github.com/helix-editor/helix.git --branch 23.05 $HOME/.src/helix
-export PATH=$PATH:$HOME/.cargo/bin
-cd $HOME/.src/helix
-cargo install --path helix-term --locked
-ln -s $PWD/runtime ~/.config/helix/runtime
-hx --grammar fetch
-hx --grammar build

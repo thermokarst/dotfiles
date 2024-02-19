@@ -44,6 +44,10 @@ check_paths=(
   # conda and friends
   /opt/miniforge3/bin
 
+  # rust
+  $HOME/.cargo/bin
+  $HOME/.cargo/env
+
   # macports
   /opt/local/bin
   /opt/local/sbin
@@ -54,10 +58,6 @@ check_paths=(
   # yarn
   $HOME/.yarn/bin
   $HOME/.config/yarn/global/node_modules/.bin
-
-  # rust
-  $HOME/.cargo/bin
-  $HOME/.cargo/env
 
   # WSL
   # /mnt/c/windows
