@@ -1,0 +1,21 @@
+[user]
+name = "Matthew Ryan Dillon"
+email = "matthewrdillon@gmail.com"
+
+[git]
+push-branch-prefix = "thermokarst/jj-"
+
+[revsets]
+log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branchesandheads)"
+
+[revset-aliases]
+'bases' = 'main'
+'downstream(x,y)' = '(x::y) & y'
+'branches' = 'downstream(trunk(), branches()) & mine()'
+'branchesandheads' = 'branches | (heads(trunk()::) & mine())'
+'curbranch' = 'latest(branches::@- & branches)'
+'nextbranch' = 'roots(@:: & branchesandheads)'
+
+[ui]
+default-command = ["log", "--reversed"]
+diff.format = "git"
