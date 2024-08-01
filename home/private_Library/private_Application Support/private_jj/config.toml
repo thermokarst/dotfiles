@@ -18,4 +18,19 @@ log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branc
 
 [ui]
 default-command = ["log", "--reversed"]
-diff.format = "git"
+pager = "delta"
+
+[ui.diff]
+format = "git"
+
+[merge-tools.delta]
+diff-args = [
+  "--color-only",
+  "--features", "chameleon",
+  "--navigate",
+  "--dark",
+  "--side-by-side",
+  "--true-color", "always",
+  "--syntax-theme", "base16",
+  "$left", "$right",
+]
