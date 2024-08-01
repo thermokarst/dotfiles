@@ -12,6 +12,7 @@ repos = [
   "gitolite-admin",
   "gpx-web-utils",
   "gwar",
+  "leaving-hope",
   "notes",
   "pingo",
   "rlox",
