@@ -6,3 +6,6 @@ insert-final-newline = false
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+C-r = ":reload-all"
