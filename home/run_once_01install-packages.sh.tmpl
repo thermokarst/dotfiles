@@ -18,13 +18,22 @@ sudo apt install \
 
 {{ else if eq .chezmoi.hostname "rattusrattus" -}}
 sudo port install \
+  cmus \
   curl \
+  fzf \
   git \
+  git-delta \
   helix \
+  jujutsu \
+  kitty \
   ripgrep \
   tmux \
   tree \
+  watch \
   wget \
+  xz \
+  zellij \
+  zk \
   zsh
 
 {{ else if eq .chezmoi.hostname "yersiniapestis" -}}
