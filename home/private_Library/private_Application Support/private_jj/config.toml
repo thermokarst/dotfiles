@@ -15,9 +15,10 @@ log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branc
 'branchesandheads' = 'branches | (heads(trunk()::) & mine())'
 'curbranch' = 'latest(branches::@- & branches)'
 'nextbranch' = 'roots(@:: & branchesandheads)'
+'stack' = 'bases..@'
 
 [ui]
-default-command = ["log", "--reversed"]
+default-command = ["log"]
 pager = "delta"
 
 [ui.diff]
