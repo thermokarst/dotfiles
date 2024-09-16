@@ -1,0 +1,3 @@
+# {{ title }}
+
+{{ format-date now }}

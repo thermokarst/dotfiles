@@ -1,0 +1,29 @@
+[notebook]
+dir = "~/notebook"
+
+[note]
+language = "en"
+default-title = "untitled"
+filename = "{{id}}-{{slug title}}"
+extension = "md"
+template = "default.md"
+id-charset = "alphanum"
+id-length = 4
+id-case = "lower"
+
+[group.journal]
+paths = ["journal/daily"]
+
+[group.journal.note]
+filename = "{{format-date now}}"
+template = "daily.md"
+
+[lsp]
+
+[lsp.diagnostics]
+wiki-title = "hint"
+dead-link = "error"
+
+[alias]
+save = 'jj commit -m "$*"'
+daily = 'zk new "$ZK_NOTEBOOK_DIR/journal/daily"'

@@ -3,3 +3,16 @@ name = "rust"
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[language-server.zk]
+command = "zk"
+args = ["lsp"]
+
+
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "markdown"]
+roots = [".zk"]
+language-servers = ["zk"]
