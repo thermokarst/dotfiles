@@ -8,7 +8,7 @@ keybinds {
         bind "Ctrl g" { SwitchToMode "Normal"; }
     }
     resize {
-        bind "Ctrl n" { SwitchToMode "Normal"; }
+        // bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
         bind "k" "Up" { Resize "Increase Up"; }
