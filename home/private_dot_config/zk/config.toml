@@ -25,5 +25,8 @@ wiki-title = "hint"
 dead-link = "error"
 
 [alias]
-save = 'jj commit -m "$*"'
-daily = 'zk new "$ZK_NOTEBOOK_DIR/journal/daily"'
+save = 'jj desc -m "$*" && jj branch set main -r @ && jj new'
+sync = 'jj git fetch && jj git push'
+log = 'jj log -r ".."'
+diff = 'jj diff'
+daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
