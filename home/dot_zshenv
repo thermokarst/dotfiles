@@ -34,8 +34,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-# Necessary for tmux on WSL, shouldn't impact macos
-export TMUX_TMPDIR='/tmp'
 
 # Paths
 typeset -gU cdpath fpath mailpath path
@@ -78,4 +76,5 @@ done
 
 export -U PATH
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export XDG_CONFIG_HOME=$HOME/.config
 
