@@ -1,6 +1,10 @@
 [
   {
-    "name": "@work",
+    "name": "default",
+    "path": "/Users/matthew/notebook/emulate/work.klg"
+  },
+  {
+    "name": "work",
     "path": "/Users/matthew/notebook/emulate/work.klg"
   }
 ]
