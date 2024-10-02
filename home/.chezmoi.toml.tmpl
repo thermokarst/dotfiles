@@ -3,9 +3,13 @@
 {{-  $hostname := output "scutil" "--get" "ComputerName" | trim -}}
 {{- end -}}
 
+{{- $choices := list "wsl" "devterm" "personal" "work" -}}
+{{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $choices -}}
+
 encryption = "age"
 [age]
     identity = "~/.key.txt"
     recipient = "age1yd87u4ae86erpem2tynyl959ppc8a3jt4ztssykytzaklut6uvus5prt2t"
 [data]
     hostname = {{ $hostname | quote }}
+    hosttype = {{- $hosttype | quote -}}

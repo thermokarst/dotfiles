@@ -2,7 +2,7 @@
 
 set -e
 
-{{ if eq .chezmoi.hostname "devterm" -}}
+{{ if eq .hosttype "devterm" -}}
 sudo apt install \
   brightnessctl \
   git \
@@ -16,7 +16,7 @@ sudo apt install \
   zsh \
   -y
 
-{{ else if eq .chezmoi.hostname "rattusrattus" -}}
+{{ else if eq .chezmoi.os "darwin" -}}
 sudo port install \
   cmus \
   curl \
@@ -36,7 +36,7 @@ sudo port install \
   zk \
   zsh
 
-{{ else if eq .chezmoi.hostname "yersiniapestis" -}}
+{{ else if eq .hosttype "wsl" -}}
 sudo apt update
 sudo apt install \
   build-essential \
