@@ -1,6 +1,6 @@
 [user]
-name = "Matthew Ryan Dillon"
-email = "matthewrdillon@gmail.com"
+name = {{ .name | quote }}
+email = {{ .email | quote }}
 
 [git]
 push-branch-prefix = "thermokarst/jj-"
