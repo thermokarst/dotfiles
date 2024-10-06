@@ -3,19 +3,10 @@ name = {{ .name | quote }}
 email = {{ .email | quote }}
 
 [git]
-push-branch-prefix = "thermokarst/jj-"
-
-[revsets]
-log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branchesandheads)"
+push-bookmark-prefix = "thermokarst/jj-"
 
 [revset-aliases]
-'bases' = 'main'
-'downstream(x,y)' = '(x::y) & y'
-'branches' = 'downstream(trunk(), branches()) & mine()'
-'branchesandheads' = 'branches | (heads(trunk()::) & mine())'
-'curbranch' = 'latest(branches::@- & branches)'
-'nextbranch' = 'roots(@:: & branchesandheads)'
-'stack' = 'bases..@'
+'stack()' = 'main..@'
 
 [ui]
 default-command = ["log"]
