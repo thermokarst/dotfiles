@@ -66,6 +66,9 @@ check_paths=(
 
   # go
   /usr/local/go/bin
+
+  # pixi
+  $HOME/.pixi/bin
 )
 
 for fp in $check_paths; do
