@@ -49,5 +49,12 @@ sudo apt install \
   tree \
   wget \
   -y
+{{ end }}
 
+{{ if eq .hosttype "work" -}}
+sudo port install \
+  1password-cli \
+  docker-credential-helper-ecr \
+  jq \
+  shfmt
 {{ end }}
