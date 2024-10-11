@@ -107,4 +107,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 {{- end }}
 
+{{ if eq .hosttype "work" -}}
+eval "$(/opt/homebrew/bin/brew shellenv)"
+{{ end }}
 eval "$(direnv hook zsh)"

@@ -16,7 +16,7 @@ sudo apt install \
   zsh \
   -y
 
-{{ else if eq .chezmoi.os "darwin" -}}
+{{ else if eq .hosttype "personal" -}}
 sudo port install \
   cmus \
   curl \
@@ -52,15 +52,25 @@ sudo apt install \
 {{ end }}
 
 {{ if eq .hosttype "work" -}}
-sudo port install \
-  1password-cli \
-  docker-credential-helper-ecr \
-  gh \
-  jq \
-  k9s \
-  kind \
-  libmemcached \
-  saml2aws \
-  shfmt \
-  stern
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew install \
+  cmus \
+  curl \
+  direnv \
+  fzf \
+  git \
+  git-delta \
+  helix \
+  jj \
+  kitty \
+  ripgrep \
+  tmux \
+  tree \
+  watch \
+  wget \
+  xz \
+  zellij \
+  zk \
+  zsh
 {{ end }}

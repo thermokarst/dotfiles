@@ -1,6 +1,6 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-#: Fonts {{{
+#: Fonts
 
 #: kitty has very powerful font management. You can configure
 #: individual font faces and even specify special fonts for particular
@@ -246,9 +246,7 @@ font_size 15.0
 #: problem try setting text_fg_override_threshold to 0 to see if this
 #: is the cause of the problem.
 
-#: }}}
-
-#: Cursor customization {{{
+#: Cursor customization
 
 # cursor #cccccc
 
@@ -307,9 +305,7 @@ font_size 15.0
 #: Stop blinking cursor after the specified number of seconds of
 #: keyboard inactivity. Set to zero to never stop blinking.
 
-#: }}}
-
-#: Scrollback {{{
+#: Scrollback
 
 # scrollback_lines 2000
 
@@ -384,9 +380,7 @@ font_size 15.0
 #: platforms such as macOS and Wayland. Use negative numbers to change
 #: scroll direction.
 
-#: }}}
-
-#: Mouse {{{
+#: Mouse
 
 # mouse_hide_wait 3.0
 
@@ -540,7 +534,7 @@ font_size 15.0
 
 #: The default shape of the mouse pointer when dragging across text.
 
-#: Mouse actions {{{
+#: Mouse actions
 
 #: Mouse buttons can be mapped to perform arbitrary actions. The
 #: syntax is:
@@ -696,11 +690,7 @@ font_size 15.0
 #::  Requires shell integration
 #::  <https://sw.kovidgoyal.net/kitty/shell-integration/> to work.
 
-#: }}}
-
-#: }}}
-
-#: Performance tuning {{{
+#: Performance tuning
 
 # repaint_delay 10
 
@@ -730,9 +720,7 @@ font_size 15.0
 #: monitor. With a very high speed mouse/high keyboard repeat rate,
 #: you may notice some slight input latency. If so, set this to no.
 
-#: }}}
-
-#: Terminal bell {{{
+#: Terminal bell
 
 # enable_audio_bell yes
 
@@ -787,9 +775,7 @@ font_size 15.0
 #: be removed if Linux ever provides desktop-agnostic support for
 #: setting system sound themes.
 
-#: }}}
-
-#: Window layout {{{
+#: Window layout
 
 # remember_window_size  yes
 # initial_window_width  640
@@ -984,9 +970,7 @@ font_size 15.0
 #: want confirmation when closing individual windows, you can map the
 #: close_window_with_confirmation action.
 
-#: }}}
-
-#: Tab bar {{{
+#: Tab bar
 
 # tab_bar_edge bottom
 
@@ -1149,9 +1133,7 @@ font_size 15.0
 #: margins the default color is chosen to match the background color
 #: of the neighboring tab.
 
-#: }}}
-
-#: Color scheme {{{
+#: Color scheme
 
 # foreground #dddddd
 # background #000000
@@ -1248,7 +1230,7 @@ font_size 15.0
 #: to be used unchanged. Note that these colors can be overridden by
 #: the program running in the terminal.
 
-#: The color table {{{
+#: The color table
 
 #: The 256 terminal colors. There are 8 basic colors, each color has a
 #: dull and bright version, for the first 16 colors. You can set the
@@ -1318,13 +1300,9 @@ font_size 15.0
 
 #: Color for marks of type 3 (violet)
 
-#: }}}
+#: Advanced
 
-#: }}}
-
-#: Advanced {{{
-
-# shell .
+shell .
 
 #: The shell program to execute. The default value of . means to use
 #: whatever shell is set as the default shell for the current user.
@@ -1677,9 +1655,7 @@ clipboard_control write-clipboard write-primary no-append
 #: an "Actions" menu in the macOS global menubar. Sub-menus can be
 #: created by adding more levels separated by the :: characters.
 
-#: }}}
-
-#: OS specific tweaks {{{
+#: OS specific tweaks
 
 # wayland_titlebar_color system
 
@@ -1801,9 +1777,7 @@ macos_option_as_alt yes
 #: Changing this option by reloading the config is not supported, it
 #: will not have any effect.
 
-#: }}}
-
-#: Keyboard shortcuts {{{
+#: Keyboard shortcuts
 
 #: Keys are identified simply by their lowercase Unicode characters.
 #: For example: a for the A key, [ for the left square bracket key,
@@ -1869,7 +1843,7 @@ macos_option_as_alt yes
 #: cause all invocations of the hints kitten to have the --hints-
 #: offset=0 option applied.
 
-#: Clipboard {{{
+#: Clipboard
 
 #: Copy to clipboard
 
@@ -1909,9 +1883,7 @@ macos_option_as_alt yes
 
 #::      map kitty_mod+y new_window less @selection
 
-#: }}}
-
-#: Scrolling {{{
+#: Scrolling
 
 #: Scroll line up
 
@@ -2001,9 +1973,7 @@ macos_option_as_alt yes
 #::  Requires shell integration
 #::  <https://sw.kovidgoyal.net/kitty/shell-integration/> to work.
 
-#: }}}
-
-#: Window management {{{
+#: Window management
 
 #: New window
 
@@ -2140,9 +2110,7 @@ macos_option_as_alt yes
 
 #::  Works like focus_visible_window above, but swaps the window.
 
-#: }}}
-
-#: Tab management {{{
+#: Tab management
 
 #: Next tab
 
@@ -2197,9 +2165,7 @@ macos_option_as_alt yes
 #: rather than at the end of the tabs list, use::
 
 #:     map ctrl+t new_tab !neighbor [optional cmd to run]
-#: }}}
-
-#: Layout management {{{
+#: Layout management
 
 #: Next layout
 
@@ -2221,9 +2187,7 @@ macos_option_as_alt yes
 #: stack layout::
 
 #:     map ctrl+alt+z toggle_layout stack
-#: }}}
-
-#: Font sizes {{{
+#: Font sizes
 
 #: You can change the font size for all top-level kitty OS windows at
 #: a time or only the current one.
@@ -2258,9 +2222,7 @@ macos_option_as_alt yes
 #: size::
 
 #:     map kitty_mod+f6 change_font_size current 10.0
-#: }}}
-
-#: Select and act on visible text {{{
+#: Select and act on visible text
 
 #: Use the hints kitten to select text and either pass it to an
 #: external program or insert it into the terminal or copy it to the
@@ -2326,9 +2288,7 @@ macos_option_as_alt yes
 #: The hints kitten has many more modes of operation that you can map
 #: to different shortcuts. For a full description see hints kitten
 #: <https://sw.kovidgoyal.net/kitty/kittens/hints/>.
-#: }}}
-
-#: Miscellaneous {{{
+#: Miscellaneous
 
 #: Show documentation
 
@@ -2524,6 +2484,3 @@ macos_option_as_alt yes
 
 # map cmd+q quit
 
-#: }}}
-
-#: }}}
