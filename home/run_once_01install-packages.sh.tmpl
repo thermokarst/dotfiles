@@ -55,6 +55,7 @@ sudo apt install \
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install \
+  bzip2 \
   cmus \
   curl \
   direnv \
@@ -64,7 +65,12 @@ brew install \
   helix \
   jj \
   kitty \
+  libmemcached \
+  openssl@1.1 \
+  readline \
   ripgrep \
+  snappy \
+  sqlite \
   tmux \
   tree \
   watch \
@@ -72,5 +78,7 @@ brew install \
   xz \
   zellij \
   zk \
-  zsh
+  zlib \
+  zsh \
+  zstd
 {{ end }}
