@@ -52,33 +52,5 @@ sudo apt install \
 {{ end }}
 
 {{ if eq .hosttype "work" -}}
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-brew install \
-  bzip2 \
-  cmus \
-  curl \
-  direnv \
-  fzf \
-  git \
-  git-delta \
-  helix \
-  jj \
-  kitty \
-  libmemcached \
-  openssl@1.1 \
-  readline \
-  ripgrep \
-  snappy \
-  sqlite \
-  tmux \
-  tree \
-  watch \
-  wget \
-  xz \
-  zellij \
-  zk \
-  zlib \
-  zsh \
-  zstd
+  {{ join .chezmoi.sourceDir "encrypted_work_packages.age" | include | decrypt -}}
 {{ end }}

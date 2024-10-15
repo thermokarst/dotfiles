@@ -73,7 +73,7 @@ check_paths=(
   # homebrew
   /opt/homebrew/bin
 
-  {{ join .chezmoi.sourceDir "encrypted_work_paths.txt" | include | decrypt -}}
+  {{ join .chezmoi.sourceDir "encrypted_work_paths.age" | include | decrypt -}}
 )
 
 for fp in $check_paths; do
