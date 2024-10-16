@@ -25,7 +25,7 @@ wiki-title = "hint"
 dead-link = "error"
 
 [alias]
-save = 'jj desc -m "$*" && jj branch set main -r @ && jj new'
+save = 'jj desc -m "$*" && jj bookmark set main -r @ && jj new'
 sync = 'jj git fetch && jj git push'
 log = 'jj log -r ".."'
 diff = 'jj diff'
