@@ -8,6 +8,7 @@
 
 {{ $name := promptString "name" -}}
 {{ $email := promptString "email" -}}
+{{ $github := promptString "github" -}}
 
 encryption = "age"
 [age]
@@ -18,3 +19,4 @@ encryption = "age"
     hosttype = {{ $hosttype | quote }}
     name = {{ $name | quote }}
     email = {{ $email | quote }}
+    github = {{ $github | quote }}

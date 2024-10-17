@@ -3,7 +3,8 @@ name = {{ .name | quote }}
 email = {{ .email | quote }}
 
 [git]
-push-bookmark-prefix = "thermokarst/jj-"
+push-bookmark-prefix = "{{ .github }}/jj-"
+private-commits = "description(glob:'private:*')"
 
 [revset-aliases]
 'stack()' = 'main..@'
