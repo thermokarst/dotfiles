@@ -8,7 +8,6 @@ command = "clippy"
 command = "zk"
 args = ["lsp"]
 
-
 [[language]]
 name = "markdown"
 scope = "source.md"
@@ -16,3 +15,13 @@ injection-regex = "md|markdown"
 file-types = ["md", "markdown"]
 roots = [".zk"]
 language-servers = ["zk"]
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {}
+environment = { "PYENV_VERSION" = "pyright" }
+
+[[language]]
+name = "python"
+language-servers = ["pyright"]
