@@ -3,7 +3,7 @@ name = {{ .name | quote }}
 email = {{ .email | quote }}
 
 [git]
-push-bookmark-prefix = "{{ .github }}/jj-"
+push-bookmark-prefix = "202410_{{ .github }}_jj_"
 private-commits = "description(glob:'private:*')"
 
 [revset-aliases]
