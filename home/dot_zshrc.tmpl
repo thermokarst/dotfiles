@@ -116,3 +116,7 @@ eval "$(jj util completion zsh)"
 function reldate() {
     date -v "${1}" "+%Y-%m-%d"
 }
+
+function _zkhx() {
+    hx --hsplit tasks.xit ${1}
+}

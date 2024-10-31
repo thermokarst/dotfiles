@@ -30,3 +30,6 @@ sync = 'jj git fetch && jj git push'
 log = 'jj log -r ".."'
 diff = 'jj diff'
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
+
+[tool]
+editor = "hx --hsplit journal/tasks.xit"
