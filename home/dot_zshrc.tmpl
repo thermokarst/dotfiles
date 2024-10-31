@@ -111,6 +111,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ end }}
 eval "$(direnv hook zsh)"
+eval "$(jj util completion zsh)"
 
 function reldate() {
     date -v "${1}" "+%Y-%m-%d"
