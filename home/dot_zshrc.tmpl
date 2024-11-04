@@ -99,13 +99,7 @@ function brightness_min {
 }
 
 # ttyscheme
-{{- else }}
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        source "$BASE16_SHELL/profile_helper.sh"
-
-{{- end }}
+{{- end -}}
 
 {{ if eq .hosttype "work" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"

@@ -1,4 +1,4 @@
-theme = "base16_default"
+theme = "catppuccin_mocha"
 
 [editor]
 true-color = true
