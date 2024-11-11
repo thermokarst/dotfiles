@@ -21,7 +21,9 @@ keybinds clear-defaults=true {
         bind "d" { Detach; }
         bind "Space" { NextSwapLayout; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
-        bind "u" {
+    }
+    shared_except "locked" {
+        bind "Ctrl u" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
                 ignore_case true
