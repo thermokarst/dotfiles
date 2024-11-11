@@ -9,3 +9,6 @@ hidden = false
 
 [keys.normal]
 C-r = ":reload-all"
+
+[keys.normal.C-m]
+t = ":sh run_test_under_cursor"

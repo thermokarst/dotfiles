@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+set -e
+
+tmpfile=$(mktemp)
+zellij action dump-screen $tmpfile
+status_line=$(cat $tmpfile | rg -e "(?:NOR|INS|SEL)\s+[\x{2800}-\x{28FF}]*\s+(\S*)\s[^│]* (\d+):*.*" -o --replace '$1 $2')
+filename=$(echo $status_line | awk '{ print $1 }')
+escaped_filename=$(echo "$filename" | sed 's/[\/&]/\\&/g')
+line_number=$(echo $status_line | awk '{ print $2 }')
+extension="${filename##*.}"
+
+case "$extension" in
+  "py")
+    # this is pretty pytest-specific, but will probably be fine for the time being
+    test_runner=${PYTEST:-pytest}
+    cmd="get_python_function_at_position.py $filename $line_number | pytester.py - | sed 's/^/$test_runner /;s/$/ $escaped_filename/' | sh"
+    ;;
+  *)
+    echo "uh oh!"
+    exit 1
+    ;;
+esac
+
+full_cmd="echo \"running $cmd\" && $cmd"
+
+zellij action new-pane --direction down -- zsh -c "$full_cmd"
