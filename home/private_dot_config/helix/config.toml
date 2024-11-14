@@ -9,6 +9,7 @@ hidden = false
 
 [keys.normal]
 C-r = ":reload-all"
+C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
 
 [keys.normal.C-m]
 t = ":sh run_test_under_cursor"
