@@ -13,3 +13,4 @@ C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.co
 
 [keys.normal.C-m]
 t = ":sh run_test_under_cursor"
+j = ":sh zellij run -f -x 10% -y 10% --width 80% --height 80% -- jj diff"
