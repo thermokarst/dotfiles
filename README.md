@@ -32,11 +32,6 @@ dscacheutil -flushcache
 # debian
 sudo apt update
 sudo apt install curl zsh git
-
-# macos
-xcode-select --install
-# download the pkg installer from: https://www.macports.org
-# TODO: is there a reasonable unattended install workflow for macports?
 ```
 
 (4) set the initial shell:
@@ -49,9 +44,7 @@ chsh -s $(which zsh)
 # NA
 ```
 
-(5) install a patched font, [Anonymice Pro](https://www.nerdfonts.com/font-downloads).
-  - wsl: size 11
-  - macos: size 16 or 17, no anti-aliasing
+(5) https://typeof.net/Iosevka/
 
 (6) install `age` private key from password manager into `~/.key.txt`
 

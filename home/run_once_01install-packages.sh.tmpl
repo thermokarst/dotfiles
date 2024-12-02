@@ -17,7 +17,10 @@ sudo apt install \
   -y
 
 {{ else if eq .hosttype "personal" -}}
-sudo port install \
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+brew install \
+  bzip2 \
   cmus \
   curl \
   direnv \
@@ -25,17 +28,18 @@ sudo port install \
   git \
   git-delta \
   helix \
-  jujutsu \
+  jj \
   kitty \
   ripgrep \
-  tmux \
+  sqlite \
   tree \
   watch \
   wget \
   xz \
-  zellij \
   yazi \
+  zellij \
   zk \
+  zlib \
   zsh
 
 {{ else if eq .hosttype "wsl" -}}
