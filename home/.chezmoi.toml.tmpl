@@ -7,8 +7,10 @@
 {{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $choices -}}
 
 {{ $name := promptString "name" -}}
-{{ $email := promptString "email" -}}
-{{ $github := promptString "github" -}}
+{{ $email_personal := promptString "email_personal" -}}
+{{ $email_work := promptString "email_work" -}}
+{{ $github_personal := promptString "github_personal" -}}
+{{ $github_work := promptString "github_work" -}}
 
 encryption = "age"
 [age]
@@ -18,5 +20,7 @@ encryption = "age"
     hostname = {{ $hostname | quote }}
     hosttype = {{ $hosttype | quote }}
     name = {{ $name | quote }}
-    email = {{ $email | quote }}
-    github = {{ $github | quote }}
+    email_personal = {{ $email_personal | quote }}
+    email_work = {{ $email_work | quote }}
+    github_personal = {{ $github_personal | quote }}
+    github_work = {{ $github_work | quote }}

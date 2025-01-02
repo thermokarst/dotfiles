@@ -1,9 +1,9 @@
 [user]
 name = {{ .name | quote }}
-email = {{ .email | quote }}
+email = {{ .email_personal | quote }}
 
 [git]
-push-bookmark-prefix = "202501_{{ .github }}_jj_"
+push-bookmark-prefix = "{{ .github_personal }}_jj_"
 private-commits = "description(glob:'private:*')"
 
 [revset-aliases]
@@ -27,3 +27,10 @@ diff-args = [
   "--syntax-theme", "base16",
   "$left", "$right",
 ]
+
+[[--scope]]
+--when.repositories = ["~/Klaviyo"]
+[--scope.user]
+email = {{ .email_work | quote }}
+[--scope.git]
+push-bookmark-prefix = "202501_{{ .github_work }}_jj_"

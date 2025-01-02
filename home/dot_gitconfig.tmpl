@@ -1,9 +1,8 @@
 [include]
     path = /opt/local/share/git-delta/themes.gitconfig
-
 [user]
     name = {{ .name }}
-    email = {{ .email }}
+    email = {{ .email_personal }}
 [core]
     editor = hx
     pager = delta
@@ -62,3 +61,6 @@
     rebase = true
 [init]
     defaultBranch = main
+
+[includeIf "gitdir:~/Klaviyo/"]
+    path = ~/.gitconfig-work
