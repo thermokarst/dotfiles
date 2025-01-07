@@ -5,6 +5,7 @@ ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
 repos = [
+  "devlog",
   "dsort",
   "gitolite-admin",
   "gpx-web-utils",
