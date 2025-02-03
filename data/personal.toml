@@ -12,6 +12,7 @@ repos = [
   "gwar",
   "leaving-hope",
   "pingo",
+  "talent-plan",
 ]
 remotes = []
 
