@@ -7,9 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+
+  "assistant": {
+    "enable_experimental_live_diffs": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_family": "Iosevka Term Extralight",
+  "buffer_font_family": "Iosevka Term",
   "buffer_font_size": 14,
   "font_size": 14,
   "font_family": "Iosevka Term",
@@ -23,7 +36,30 @@
   "terminal": {
     "line_height": "standard"
   },
+
+  "auto_install_extensions": {
+    "html": true,
+    "toml": true,
+    "catppuccin": true
+  },
+
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"]
+    }
+  },
+
   "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    },
+
     "rust-analyzer": {
       "initialization_options": {
         "inlayHints": {
