@@ -42,7 +42,23 @@
   "auto_install_extensions": {
     "html": true,
     "toml": true,
-    "catppuccin": true
+    "catppuccin": true,
+    "make": true,
+    "dockerfile": true,
+    "sql": true,
+    "terraform": true,
+    "lua": true,
+    "log": true,
+    "docker-compose": true,
+    "csv": true,
+    "basher": true,
+    "proto": true,
+    "gdscript": true,
+    "jinja2": true,
+    "roc": true,
+    "gemini": true,
+    "graphviz": true,
+    "ssh-config": true
   },
 
   "languages": {
