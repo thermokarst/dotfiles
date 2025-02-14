@@ -11,6 +11,8 @@
     "dock": "left"
   },
 
+  "features": { "edit_prediction_provider": "zed" },
+
   "assistant": {
     "enable_experimental_live_diffs": true,
     "default_model": {
