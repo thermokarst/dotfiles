@@ -11,6 +11,7 @@ repos = [
     "gpx-web-utils",
     "gwar",
     "leaving-hope",
+    "mini-lsm",
     "pingo",
     "talent-plan",
 ]
