@@ -59,12 +59,7 @@ for fp in $srcs; do
   fi
 done
 
-alias i="ipython3"
-alias devlog="cd ~/projects/personal/devlog && hx logs/$(date '+%Y-%m-%d').gmi && cd -"
-
-{{ if eq .chezmoi.hostname "rattusrattus" -}}
-alias colima_start="colima start --memory 8 --vm-type vz --mount-type virtiofs --dns 8.8.8.8 --dns 8.8.4.4"
-{{- end }}
+alias devlog="cd ~/projects/personal/devlog && nvim logs/$(date '+%Y-%m-%d').gmi && cd -"
 
 {{- if eq .chezmoi.hostname "devterm" }}
 function battery() {
@@ -101,20 +96,20 @@ function brightness_min {
 # ttyscheme
 {{- end -}}
 
-{{ if eq .hosttype "work" -}}
+{{ if eq .hosttype "work" "personal" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
-{{ end }}
 eval "$(direnv hook zsh)"
 eval "$(jj util completion zsh)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+{{ end }}
 
 function reldate() {
     date -v "${1}" "+%Y-%m-%d"
 }
 
-function _zkhx() {
-    hx --hsplit tasks.xit ${1}
-}
-
 [ "$TERM" = "xterm-kitty" ] && alias ssh="TERM=xterm ssh"
 
 alias strip_jira="sed 's/\[\{0,1\}[a-zA-Z]*-[0-9]*\]\{0,1\}//g'"
+alias hx="echo 'oops! you meant nvim, right?'"
