@@ -5,14 +5,14 @@ ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
 repos = [
-  "devlog",
-  "dsort",
-  "gitolite-admin",
-  "gpx-web-utils",
-  "gwar",
-  "leaving-hope",
-  "pingo",
-  "talent-plan",
+    "devlog",
+    "dsort",
+    "gitolite-admin",
+    "gpx-web-utils",
+    "gwar",
+    "leaving-hope",
+    "pingo",
+    "talent-plan",
 ]
 remotes = []
 
@@ -23,15 +23,13 @@ ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
 repos = [
-  "akdillon",
-  "planner",
-  # dokku app name is thermokarst, not thermokar.st
-  "thermokar.st",
-  "zettel",
+    "akdillon",
+    "planner",
+    # dokku app name is thermokarst, not thermokar.st
+    "thermokar.st",
+    "zettel",
 ]
-remotes = [
-  { name = "dokku", base_addr = "ssh://dokku@pingo.thermokar.st" },
-]
+remotes = [{ name = "dokku", base_addr = "ssh://dokku@pingo.thermokar.st" }]
 
 # mds
 [[workspace]]
@@ -40,16 +38,16 @@ ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@pingo.thermokar.st"
 origin.name = "pingo"
 repos = [
-  "arctic_hibernators_schema",
-  "bactdb",
-  "bactdb_data",
-  "ccdb-api",
-  "ccdb-old",
-  "ccdb-web",
-  "drf_ember_pagination",
-  "hibernators",
-  "hibernators-web",
-  "hymenobacterdotinfo",
+    "arctic_hibernators_schema",
+    "bactdb",
+    "bactdb_data",
+    "ccdb-api",
+    "ccdb-old",
+    "ccdb-web",
+    "drf_ember_pagination",
+    "hibernators",
+    "hibernators-web",
+    "hymenobacterdotinfo",
 ]
 remotes = []
 
@@ -59,7 +57,5 @@ path = "$HOME/projects/personal"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@github.com/thermokarst"
 origin.name = "thermokarst"
-repos = [
-  "thermokarst",
-]
+repos = ["thermokarst"]
 remotes = []
