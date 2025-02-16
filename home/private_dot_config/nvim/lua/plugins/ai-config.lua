@@ -22,7 +22,4 @@ return {
       ft = { "markdown", "Avante" },
     },
   },
-  config = function()
-    vim.keymap.set({ "n", "v" }, "<leader>a", "", { desc = "+ai" })
-  end,
 }
