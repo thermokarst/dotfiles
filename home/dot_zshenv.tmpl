@@ -4,8 +4,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 # Editors
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='hx'
+export VISUAL='hx'
 export PAGER='less'
 
 # Language
@@ -65,6 +65,9 @@ check_paths=(
 
   # homebrew
   /opt/homebrew/bin
+
+  # uv
+  $HOME/.local/bin
 
   {{ join .chezmoi.sourceDir "encrypted_work_paths.age" | include | decrypt -}}
 )
