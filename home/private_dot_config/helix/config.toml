@@ -3,10 +3,6 @@ theme = "catppuccin_mocha"
 [editor]
 true-color = true
 insert-final-newline = false
-end-of-line-diagnostics = "hint"
-
-[editor.inline-diagnostics]
-cursor-line = "error"
 
 [editor.file-picker]
 hidden = false
