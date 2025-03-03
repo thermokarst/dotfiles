@@ -48,6 +48,9 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 22
 nvm use 22
 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv tool install --force --python python3.12 aider-chat@latest
+
 {{ else if eq .hosttype "wsl" -}}
 sudo apt update
 sudo apt install \

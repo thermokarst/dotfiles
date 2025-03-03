@@ -1,5 +1,8 @@
 {{- if ne .hosttype "work" }}
 .zshklaviyo
 {{- end }}
+{{- if ne .hosttype "personal" }}
+.zshprivate
+{{- end }}
 work_paths
 work_packages

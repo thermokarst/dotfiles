@@ -1,0 +1,11 @@
+cache-prompts: true
+
+user-input-color: "#a6e3a1"
+tool-output-color: "#89b4fa"
+tool-error-color: "#f38ba8"
+tool-warning-color: "#fab387"
+assistant-output-color: "#cba6f7"
+completion-menu-color: "#cdd6f4"
+completion-menu-bg-color: "#313244"
+completion-menu-current-color: "#f9e2af"
+completion-menu-current-bg-color: "#45475a"
