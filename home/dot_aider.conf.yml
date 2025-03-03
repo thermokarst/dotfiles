@@ -1,4 +1,6 @@
 cache-prompts: true
+gitignore: false
+auto-commits: false
 
 user-input-color: "#a6e3a1"
 tool-output-color: "#89b4fa"
