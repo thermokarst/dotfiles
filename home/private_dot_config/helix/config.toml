@@ -7,9 +7,8 @@ insert-final-newline = false
 [editor.file-picker]
 hidden = false
 
-[keys.normal]
-C-r = ":reload-all"
-C-y = ":sh zellij run -c -f -x 5% -y 5% --width 90% --height 90% -- bash ~/.config/helix/yazi-picker.sh open"
-
-[keys.normal.C-m]
+[keys.normal.space.m]
+r = ":reload-all"
+s = ":toggle-option soft-wrap.enable"
 t = ":sh run_test_under_cursor"
+y = ":sh zellij run -c -f -x 5% -y 5% --width 90% --height 90% -- bash ~/.config/helix/yazi-picker.sh open"
