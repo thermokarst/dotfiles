@@ -4,7 +4,7 @@ email = {{ .email_personal | quote }}
 
 [git]
 push-bookmark-prefix = "{{ .github_personal }}_jj_"
-private-commits = "description(glob:'private:*')"
+private-commits = "description(glob:'private:*') | bookmarks('merge')"
 
 [revset-aliases]
 'stack()' = 'main..@'
