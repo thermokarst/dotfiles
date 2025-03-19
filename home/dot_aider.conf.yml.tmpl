@@ -1,7 +1,17 @@
+{{ if eq .hosttype "personal" -}}
+model: ollama_chat/qwen2.5-coder:14b
+{{ else -}}
+model: ollama_chat/qwen2.5-coder:32b
+{{- end }}
+
 cache-prompts: true
 gitignore: false
 auto-commits: false
+watch-files: true
+subtree-only: true
+stream: false
 
+code-theme: "lightbulb"
 user-input-color: "#a6e3a1"
 tool-output-color: "#89b4fa"
 tool-error-color: "#f38ba8"
