@@ -2,7 +2,7 @@
 [[workspace]]
 path = "$HOME/projects/personal"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
-origin.base_addr = "ssh://git@pingo.thermokar.st"
+origin.base_addr = "ssh://git@git.thermokar.st/thermokarst"
 origin.name = "pingo"
 repos = [
     "devlog",
@@ -21,7 +21,7 @@ remotes = []
 [[workspace]]
 path = "$HOME/projects/personal"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
-origin.base_addr = "ssh://git@pingo.thermokar.st"
+origin.base_addr = "ssh://git@git.thermokar.st/thermokarst"
 origin.name = "pingo"
 repos = [
     "akdillon",
@@ -36,7 +36,7 @@ remotes = [{ name = "dokku", base_addr = "ssh://dokku@pingo.thermokar.st" }]
 [[workspace]]
 path = "$HOME/projects/mds"
 ssh_key_path = "$HOME/.ssh/id_ecdsa"
-origin.base_addr = "ssh://git@pingo.thermokar.st"
+origin.base_addr = "ssh://git@git.thermokar.st/thermokarst"
 origin.name = "pingo"
 repos = [
     "arctic_hibernators_schema",
