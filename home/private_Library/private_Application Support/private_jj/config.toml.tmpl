@@ -7,7 +7,8 @@ push-bookmark-prefix = "{{ .github_personal }}_jj_"
 private-commits = "description(glob:'private:*') | bookmarks('merge')"
 
 [revset-aliases]
-'stack()' = 'main..@'
+"stack()" = "trunk()..@"
+"immutable_heads()" = "builtin_immutable_heads() | (trunk().. & ~mine())"
 
 [ui]
 default-command = ["log"]
