@@ -62,14 +62,12 @@ done
 
 alias devlog="cd ~/projects/personal/devlog && hx logs/$(date '+%Y-%m-%d').gmi && cd -"
 
-{{ if eq .hosttype "work" "personal" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(direnv hook zsh)"
 eval "$(jj util completion zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-{{ end }}
 
 function reldate() {
     date -v "${1}" "+%Y-%m-%d"

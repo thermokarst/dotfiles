@@ -1,8 +1,10 @@
-{{- if ne .hosttype "work" }}
-.zshklaviyo
-{{- end }}
-{{- if ne .hosttype "personal" }}
+{{- if eq .hosttype "work" }}
 .zshprivate
 {{- end }}
-work_paths
-work_packages
+{{- if eq .hosttype "personal" }}
+.apprc
+.s2a_login
+.work_packages
+.work_paths
+.zshklaviyo
+{{- end }}

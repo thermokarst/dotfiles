@@ -2,22 +2,22 @@
 
 set -e
 
-{{ if eq .hosttype "personal" -}}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install \
+  age \
   bzip2 \
   cmus \
   curl \
   direnv \
   fzf \
+  gh \
   git \
   git-delta \
   glow \
   helix \
   jj \
   kitty \
-  neovim \
   nvm \
   ripgrep \
   sqlite \
@@ -28,8 +28,10 @@ brew install \
   yazi \
   zellij \
   zk \
-  zlib \
-  zsh
+  zlib
+
+brew install --cask \
+  kap
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
@@ -39,6 +41,10 @@ nvm use 22
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv tool install --force --python python3.12 aider-chat@latest
 
+{{ if eq .hosttype "personal" -}}
+brew install \
+  mingw64 \
+  pandoc
 {{ else if eq .hosttype "work" -}}
   {{ join .chezmoi.sourceDir "encrypted_work_packages.age" | include | decrypt -}}
 {{ end }}

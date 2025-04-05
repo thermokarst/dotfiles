@@ -69,7 +69,7 @@ check_paths=(
   # uv
   $HOME/.local/bin
 
-  {{ join .chezmoi.sourceDir "encrypted_work_paths.age" | include | decrypt -}}
+  {{ join .chezmoi.sourceDir "encrypted_dot_work_paths.age" | include | decrypt -}}
 )
 
 for fp in $check_paths; do
