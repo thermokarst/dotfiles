@@ -62,41 +62,6 @@ done
 
 alias devlog="cd ~/projects/personal/devlog && hx logs/$(date '+%Y-%m-%d').gmi && cd -"
 
-{{- if eq .chezmoi.hostname "devterm" }}
-function battery() {
-  upower -i /org/freedesktop/UPower/devices/battery_axp20x_battery
-}
-
-function battery_percentage() {
-  battery | grep 'percentage' | awk '{print $2}'
-}
-
-function battery_time_to_empty() {
-  battery | grep 'time to empty' | awk '{print $4, $5}'
-}
-
-export LPDEST=devterm_printer
-alias receipt="lp"
-
-function receipt_feed () {
-  echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" > /tmp/DEVTERM_PRINTER_IN
-}
-
-function brightness_half {
-  brightnessctl set 5
-}
-
-function brightness_max {
-  brightnessctl set 9
-}
-
-function brightness_min {
-  brightnessctl set 1
-}
-
-# ttyscheme
-{{- end -}}
-
 {{ if eq .hosttype "work" "personal" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(direnv hook zsh)"

@@ -3,7 +3,7 @@
 {{-  $hostname := output "scutil" "--get" "ComputerName" | trim -}}
 {{- end -}}
 
-{{- $choices := list "wsl" "devterm" "personal" "work" -}}
+{{- $choices := list "personal" "work" -}}
 {{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $choices -}}
 
 {{ $name := promptString "name" -}}

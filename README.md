@@ -1,54 +1,22 @@
 # dotfiles
 
-## hostnames
-
-- `rattusrattus`: macbook
-- `yersiniapestis`: wsl (debian)
-- `devterm`: devterm (debian)
-
-## steps
-
-(1) set the fqdn (this is necessary for some of the host-specific chezmoi config):
+## 1. set the fqdn:
 
 ```bash
-# debian standalone
-sudo hostnamectl set-hostname $MY_HOSTNAME.local
-
-# debian wsl
-echo -e "[network]\nhostname = $MY_HOSTNAME" | sudo tee -a /etc/wsl.conf
-
-# macos
+# macos-specific commands
 sudo scutil --set HostName $MY_HOSTNAME.local
 sudo scutil --set LocalHostName $MY_HOSTNAME
 sudo scutil --set ComputerName $MY_HOSTNAME
 dscacheutil -flushcache
 ```
 
-(2) reboot
+## 2. reboot
 
-(3) set up the package manager and bootstrap dependencies:
+## 3. install https://typeof.net/Iosevka/
 
-```bash
-# debian
-sudo apt update
-sudo apt install curl zsh git
-```
+## 4. install `age` private key from password manager into `~/.key.txt`
 
-(4) set the initial shell:
-
-```bash
-# debian
-chsh -s $(which zsh)
-
-# macos
-# NA
-```
-
-(5) https://typeof.net/Iosevka/
-
-(6) install `age` private key from password manager into `~/.key.txt`
-
-(7) bootstrap chezmoi:
+## 5. bootstrap chezmoi:
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- \
@@ -58,42 +26,4 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- \
   --guess-repo-url=false
 ```
 
-(8) set the new shell (in case installing from 3rd-party package manager):
-
-```bash
-# debian
-# NA
-
-# macos
-sudo chpass -s '/opt/local/bin/zsh' $USER
-```
-
-(9) restart shell
-
-(10) grab project source
-
-```bash
-ssh -T git@github.com
-gwar ~/.local/share/chezmoi/data/personal.toml
-```
-
-(11) install miniconda:
-
-```bash
-# debian
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-
-# macos
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -O miniconda.sh
-
-# then, for either os:
-chmod +x miniconda.sh
-sudo ./miniconda.sh -b -u -p /opt/miniconda3
-```
-
-(12) set up non-automated software and tools:
-
-- steermouse (license in email): btn4==fwd, btn5==bck
-- logitech control center
-- lunar
-- magnet
+## 6. restart shell

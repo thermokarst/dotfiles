@@ -2,20 +2,7 @@
 
 set -e
 
-{{ if eq .hosttype "devterm" -}}
-sudo apt install \
-  brightnessctl \
-  git \
-  libncurses-dev \
-  libssl-dev \
-  lynx \
-  ripgrep \
-  tree \
-  wget \
-  zsh \
-  -y
-
-{{ else if eq .hosttype "personal" -}}
+{{ if eq .hosttype "personal" -}}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install \
@@ -51,19 +38,6 @@ nvm use 22
 
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv tool install --force --python python3.12 aider-chat@latest
-
-{{ else if eq .hosttype "wsl" -}}
-sudo apt update
-sudo apt install \
-  build-essential \
-  clang \
-  libssl-dev \
-  pkg-config \
-  ripgrep \
-  tree \
-  wget \
-  yazi \
-  -y
 
 {{ else if eq .hosttype "work" -}}
   {{ join .chezmoi.sourceDir "encrypted_work_packages.age" | include | decrypt -}}
