@@ -79,7 +79,9 @@ for fp in $check_paths; do
 done
 
 export -U PATH
-export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export XDG_CONFIG_HOME=$HOME/.config
-export OLLAMA_API_BASE=http://127.0.0.1:11434
 
+export XDG_CONFIG_HOME=$HOME/.config
+
+export JJ_CONFIG=$XDG_CONFIG_HOME/jj/config.toml
+export OLLAMA_API_BASE=http://127.0.0.1:11434
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
