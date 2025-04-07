@@ -46,5 +46,5 @@ brew install \
   mingw-w64 \
   pandoc
 {{ else if eq .hosttype "work" -}}
-  {{ join .chezmoi.sourceDir "encrypted_work_packages.age" | include | decrypt -}}
+  {{ join .chezmoi.sourceDir "encrypted_dot_work_packages.age" | include | decrypt -}}
 {{ end }}
