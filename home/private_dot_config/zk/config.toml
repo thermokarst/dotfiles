@@ -33,3 +33,4 @@ daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
 
 [tool]
 editor = "hx"
+fzf-preview = "bat -p --color always {-1}"
