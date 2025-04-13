@@ -4,7 +4,7 @@ dir = "~/notebook"
 [note]
 language = "en"
 default-title = "untitled"
-filename = "{{id}}-{{slug title}}"
+filename = "{{format-date now 'timestamp'}}-{{id}}"
 extension = "md"
 template = "default.md"
 id-charset = "alphanum"
@@ -32,4 +32,4 @@ diff = 'jj diff'
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal/daily"'
 
 [tool]
-editor = "hx --hsplit journal/tasks.xit"
+editor = "hx"

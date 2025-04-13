@@ -1,5 +1,7 @@
-# {{ title }}
+---
+created: {{ format-date now "%Y-%m-%dT%H:%M" }}
+---
 
-{{ format-date now }}
+# {{ title }}
 
 {{ content }}
