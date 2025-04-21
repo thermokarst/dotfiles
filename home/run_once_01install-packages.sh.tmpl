@@ -11,6 +11,7 @@ brew install \
   cmus \
   curl \
   direnv \
+  exercism \
   fzf \
   gh \
   git \
@@ -21,6 +22,7 @@ brew install \
   jj \
   kitty \
   lua-language-server \
+  luarocks \
   marksman \
   nvm \
   presenterm \
@@ -48,6 +50,7 @@ uv tool install --force --python python3.12 aider-chat@latest
 
 {{ if eq .hosttype "personal" -}}
 brew install \
+  love \
   mingw-w64 \
   pandoc
 {{ else if eq .hosttype "work" -}}
