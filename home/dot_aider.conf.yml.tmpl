@@ -1,7 +1,7 @@
 {{ if eq .hosttype "personal" -}}
 model: ollama_chat/qwen2.5-coder:14b
 {{ else -}}
-model: ollama_chat/qwen2.5-coder:32b
+model: openai/claude-3.7-sonnet
 {{- end }}
 
 cache-prompts: true
@@ -10,6 +10,7 @@ auto-commits: false
 watch-files: true
 subtree-only: true
 stream: false
+show-model-warnings: false
 
 code-theme: "lightbulb"
 user-input-color: "#a6e3a1"
