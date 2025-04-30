@@ -1,0 +1,24 @@
+- model_id: crsr-claude-3.5-sonnet
+  model_name: claude-3.5-sonnet
+  api_base: "http://localhost:3000/v1"
+  api_key_name: crsr
+
+- model_id: crsr-claude-3.7-sonnet
+  model_name: claude-3.7-sonnet
+  api_base: "http://localhost:3000/v1"
+  api_key_name: crsr
+
+- model_id: crsr-claude-3.7-sonnet-max
+  model_name: claude-3.7-sonnet-max
+  api_base: "http://localhost:3000/v1"
+  api_key_name: crsr
+
+- model_id: crsr-gpt-4.1
+  model_name: gpt-4.1
+  api_base: "http://localhost:3000/v1"
+  api_key_name: crsr
+
+- model_id: crsr-o4-mini
+  model_name: o4-mini
+  api_base: "http://localhost:3000/v1"
+  api_key_name: crsr
