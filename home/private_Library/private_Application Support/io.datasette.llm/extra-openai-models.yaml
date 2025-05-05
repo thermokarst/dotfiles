@@ -22,3 +22,7 @@
   model_name: o4-mini
   api_base: "http://localhost:3000/v1"
   api_key_name: crsr
+
+- model_id: proxy-gpt-4o
+  model_name: gpt-4o
+  api_base: "http://localhost:8080"
