@@ -5,6 +5,7 @@ ssh_key_path = "$HOME/.ssh/id_ecdsa"
 origin.base_addr = "ssh://git@git.thermokar.st/thermokarst"
 origin.name = "pingo"
 repos = [
+    "copilot-proxy",
     "devlog",
     "dsort",
     "gitolite-admin",
@@ -15,6 +16,7 @@ repos = [
     "mini-lsm",
     "pingo",
     "talent-plan",
+    "trmnl-report",
 ]
 remotes = []
 
