@@ -1,7 +1,7 @@
 {{ if eq .hosttype "personal" -}}
 model: ollama_chat/qwen2.5-coder:14b
 {{ else -}}
-model: openai/claude-3.7-sonnet
+model: openai/gpt-4.1
 {{- end }}
 
 cache-prompts: true
