@@ -6,28 +6,17 @@ email = {{ .email_personal | quote }}
 push-bookmark-prefix = "{{ .github_personal }}_jj_"
 private-commits = "description(glob:'private:*') | bookmarks('merge')"
 
+[colors]
+"diff removed token" = { fg = "red", underline = false }
+"diff added token" = { fg = "green", underline = false }
+
 [revset-aliases]
 "stack()" = "trunk()..@"
 "immutable_heads()" = "builtin_immutable_heads() | (trunk().. & ~mine())"
 
 [ui]
 default-command = ["log"]
-pager = "delta"
-
-[ui.diff]
-format = "git"
-
-[merge-tools.delta]
-diff-args = [
-  "--color-only",
-  "--features", "chameleon",
-  "--navigate",
-  "--dark",
-  "--side-by-side",
-  "--true-color", "always",
-  "--syntax-theme", "base16",
-  "$left", "$right",
-]
+diff.format = "git"
 
 [[--scope]]
 --when.repositories = ["~/Klaviyo", "~/.klaviyocli"]
