@@ -13,6 +13,7 @@ repos = [
     "gwar",
     "leaving-hope",
     "llm-copilot",
+    "markdone",
     "mini-lsm",
     "pingo",
     "talent-plan",

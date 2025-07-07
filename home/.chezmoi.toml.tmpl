@@ -11,6 +11,9 @@
 {{ $email_work := promptString "email_work" -}}
 {{ $github_personal := promptString "github_personal" -}}
 {{ $github_work := promptString "github_work" -}}
+{{ $task_url := promptString "task_url" -}}
+{{ $task_client_id := promptString "task_client_id" -}}
+{{ $task_encryption_secret := promptString "task_encryption_secret" -}}
 
 encryption = "age"
 [age]
@@ -24,3 +27,6 @@ encryption = "age"
     email_work = {{ $email_work | quote }}
     github_personal = {{ $github_personal | quote }}
     github_work = {{ $github_work | quote }}
+    task_url = {{ $task_url | quote }}
+    task_client_id = {{ $task_client_id | quote }}
+    task_encryption_secret = {{ $task_encryption_secret | quote }}

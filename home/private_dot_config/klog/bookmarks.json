@@ -1,10 +1,14 @@
 [
   {
     "name": "default",
-    "path": "/Users/matthew.dillon/notebook/klaviyo/work.klg"
+    "path": "/Users/matthew.dillon/notebook/tracker.klg"
   },
   {
-    "name": "work",
-    "path": "/Users/matthew.dillon/notebook/klaviyo/work.klg"
+    "name": "tracker",
+    "path": "/Users/matthew.dillon/notebook/tracker.klg"
+  },
+  {
+    "name": "agenda",
+    "path": "/Users/matthew.dillon/notebook/agenda.klg"
   }
 ]

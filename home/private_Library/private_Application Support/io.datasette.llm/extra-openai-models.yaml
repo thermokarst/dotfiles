@@ -2,8 +2,10 @@
   model_name: gpt-4.1
   api_base: "https://api.githubcopilot.com"
   api_key_name: copilot
+  supports_tools: true
 
 - model_id: copilot-gpt-4o
   model_name: gpt-4o
   api_base: "https://api.githubcopilot.com"
   api_key_name: copilot
+  supports_tools: true

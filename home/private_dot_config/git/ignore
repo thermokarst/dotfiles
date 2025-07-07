@@ -4,3 +4,4 @@
 .vscode
 .envrc
 .aider*
+**/.claude/settings.local.json
