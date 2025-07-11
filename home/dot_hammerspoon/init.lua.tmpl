@@ -1,0 +1,156 @@
+local preloadView = hs.webview.new({x=0, y=0, w=10, h=10}):html("<html></html>")
+preloadView:hide()
+hs.timer.doAfter(2, function() preloadView:delete() end) -- delete after 2 seconds
+
+local GitSync = {}
+
+GitSync.config = {
+    repoPath = "/Users/matthew.dillon/notebook",
+    remoteName = "pingo",
+    syncInterval = 60,
+    commitMessage = "Auto-sync: $(date +\"%Y-%m-%d %H:%M:%S\") from $(hostname)"
+}
+
+GitSync.scriptPath = os.getenv("HOME") .. "/.hammerspoon/git-sync.sh"
+
+GitSync.timer = nil
+
+GitSync.caffeineWatcher = nil
+
+function GitSync.runSync(reason)
+    reason = reason or "periodic"
+    print("Git sync triggered: " .. reason)
+
+    local task = hs.task.new(GitSync.scriptPath, function(exitCode, stdOut, stdErr)
+        if exitCode == 0 then
+            print("Git sync completed successfully (" .. reason .. ")")
+            if stdOut and stdOut ~= "" then
+                print("Output: " .. stdOut)
+            end
+        else
+            print("Git sync failed (" .. reason .. ") with exit code: " .. exitCode)
+            if stdErr and stdErr ~= "" then
+                print("Error: " .. stdErr)
+            end
+        end
+    end, {
+        GitSync.config.repoPath,
+        GitSync.config.remoteName,
+        GitSync.config.commitMessage
+    })
+
+    task:start()
+end
+
+function GitSync.startPeriodicSync()
+    if GitSync.timer then
+        GitSync.timer:stop()
+    end
+
+    GitSync.timer = hs.timer.doEvery(GitSync.config.syncInterval, function()
+        GitSync.runSync("periodic")
+    end)
+
+    print("Git periodic sync started (interval: " .. GitSync.config.syncInterval .. " seconds)")
+end
+
+function GitSync.stopPeriodicSync()
+    if GitSync.timer then
+        GitSync.timer:stop()
+        GitSync.timer = nil
+        print("Git periodic sync stopped")
+    end
+end
+
+function GitSync.handlePowerEvent(eventType)
+    if eventType == hs.caffeinate.watcher.systemWillSleep then
+        print("System going to sleep, running git sync...")
+        GitSync.runSync("pre-sleep")
+    elseif eventType == hs.caffeinate.watcher.systemDidWake then
+        print("System woke up, running git sync...")
+        -- Add a small delay to ensure network is available
+        hs.timer.doAfter(5, function()
+            GitSync.runSync("post-wake")
+        end)
+    end
+end
+
+function GitSync.startPowerEventMonitoring()
+    GitSync.caffeineWatcher = hs.caffeinate.watcher.new(GitSync.handlePowerEvent)
+    GitSync.caffeineWatcher:start()
+    print("Git power event monitoring started")
+end
+
+function GitSync.stopPowerEventMonitoring()
+    if GitSync.caffeineWatcher then
+        GitSync.caffeineWatcher:stop()
+        GitSync.caffeineWatcher = nil
+        print("Git power event monitoring stopped")
+    end
+end
+
+function GitSync.start()
+    GitSync.startPeriodicSync()
+    GitSync.startPowerEventMonitoring()
+
+    GitSync.runSync("initial")
+
+    print("Git auto-sync initialized")
+    print("Repository: " .. GitSync.config.repoPath)
+    print("Remote: " .. GitSync.config.remoteName)
+    print("Sync interval: " .. GitSync.config.syncInterval .. " seconds")
+end
+
+function GitSync.stop()
+    GitSync.stopPeriodicSync()
+    GitSync.stopPowerEventMonitoring()
+    print("Git auto-sync stopped")
+end
+
+GitSync.start()
+
+if hs.menubar then
+    GitSync.menubar = hs.menubar.new()
+    GitSync.menubar:setTitle("🦖")
+    GitSync.menubar:setTooltip("Git Auto-Sync")
+    GitSync.menubar:setMenu({
+        { title = "Sync Now", fn = function() GitSync.runSync("manual") end },
+        { title = "Start Auto-Sync", fn = GitSync.start },
+        { title = "Stop Auto-Sync", fn = GitSync.stop },
+        { title = "-" },
+        { title = "Repository: " .. GitSync.config.repoPath, disabled = true }
+    })
+end
+
+-- Make GitSync available globally for console access
+_G.GitSync = GitSync
+
+local filePath = "/Users/matthew.dillon/notebook/inbox.md"
+
+hs.hotkey.bind({"cmd", "shift"}, "J", function()
+   local button, text = hs.dialog.textPrompt(
+        "Add To-Do",
+        "Enter your tasks (one per line):",
+        "",
+        "OK",
+        "Cancel"
+    )
+    if button == "OK" and text ~= "" then
+        -- Split input into lines
+        local lines = {}
+        for line in text:gmatch("[^\r\n]+") do
+            table.insert(lines, "- [ ] " .. line)
+        end
+        -- Concatenate lines with newlines
+        local formatted = table.concat(lines, "\n") .. "\n"
+        -- Append to file
+        local file = io.open(filePath, "a")
+        if file then
+            file:write(formatted)
+            file:close()
+            hs.alert.show("Tasks added!")
+        else
+            hs.alert.show("Failed to open file.")
+        end
+    end
+end)

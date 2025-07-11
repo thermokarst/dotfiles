@@ -3,8 +3,10 @@ name = {{ .name | quote }}
 email = {{ .email_personal | quote }}
 
 [git]
-push-bookmark-prefix = "{{ .github_personal }}_jj_"
 private-commits = "description(glob:'private:*') | bookmarks('merge')"
+
+[templates]
+git_push_bookmark = '"{{ .github_personal }}_jj_" ++ change_id.short()'
 
 [colors]
 "diff removed token" = { fg = "red", underline = false }
@@ -22,5 +24,5 @@ diff-formatter = ":git"
 --when.repositories = ["~/Klaviyo", "~/.klaviyocli"]
 [--scope.user]
 email = {{ .email_work | quote }}
-[--scope.git]
-push-bookmark-prefix = "2025_{{ .github_work }}_jj_"
+[--scope.templates]
+git_push_bookmark = '"2025_{{ .github_work }}_jj_" ++ change_id.short()'
