@@ -5,7 +5,7 @@ hs.timer.doAfter(2, function() preloadView:delete() end) -- delete after 2 secon
 local GitSync = {}
 
 GitSync.config = {
-    repoPath = "/Users/matthew.dillon/notebook",
+    repoPath = "{{ .chezmoi.homeDir }}/notebook",
     remoteName = "pingo",
     syncInterval = 60,
     commitMessage = "Auto-sync: $(date +\"%Y-%m-%d %H:%M:%S\") from $(hostname)"
