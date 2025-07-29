@@ -4,17 +4,14 @@ name = "rust"
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-{{ if eq .hosttype "work" -}}
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"]
 config = {}
-environment = { "PYENV_VERSION" = "pyright" }
 
 [[language]]
 name = "python"
 language-servers = ["pyright"]
-{{- end }}
 
 [language-server.roc-ls]
 command = "roc_language_server"
