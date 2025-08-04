@@ -83,3 +83,17 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
 --color=border:#313244,label:#cdd6f4"
+
+find_note() {
+    if [ -z "$1" ]; then
+        echo "error: no substring provided. usage: note_search <substring>"
+        return 1
+    fi
+
+    cd ~/notebook || {
+        echo "error: directory '~/notebook' does not exist."
+        return 1
+    }
+
+    git log --oneline -G"$1"
+}

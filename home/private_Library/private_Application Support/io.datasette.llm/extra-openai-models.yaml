@@ -9,3 +9,8 @@
   api_base: "https://api.githubcopilot.com"
   api_key_name: copilot
   supports_tools: true
+
+- model_id: lms-qwen3-coder-30b
+  model_name: qwen3/qwen3-coder-30b
+  api_base: "http://localhost:1234/v1"
+  api_key_name: copilot
