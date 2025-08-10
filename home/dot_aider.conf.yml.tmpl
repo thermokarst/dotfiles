@@ -1,8 +1,4 @@
-{{ if eq .hosttype "personal" -}}
-model: ollama_chat/qwen2.5-coder:14b
-{{ else -}}
-model: openai/gpt-4.1
-{{- end }}
+model: openai/qwen/qwen3-coder-30b
 
 cache-prompts: true
 gitignore: false
