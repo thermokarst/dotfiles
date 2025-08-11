@@ -13,8 +13,13 @@ git_push_bookmark = '"{{ .github_personal }}_jj_" ++ change_id.short()'
 "diff added token" = { fg = "green", underline = false }
 
 [revset-aliases]
-"stack()" = "trunk()..@"
 "immutable_heads()" = "builtin_immutable_heads() | (trunk().. & ~mine())"
+
+[aliases]
+l = ["log", "-r", "(trunk()..@):: | (trunk()..@)-"]
+refresh = ["rebase", "-s", "roots(trunk()..@)", "-d", "trunk()"]
+insert = ["rebase", "-r", "@", "--before", "merge", "--after", "trunk()"]
+bdiff = ["diff", "-r", "(trunk()..@)::"]
 
 [ui]
 default-command = ["log"]

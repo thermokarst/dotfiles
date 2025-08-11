@@ -97,3 +97,6 @@ find_note() {
 
     git log --oneline -G"$1"
 }
+
+alias aider-gh="aider --openai-api-base $GH_OPENAI_BASE_URL --openai-api-key $GH_OPENAI_API_KEY --model $GH_OPENAI_MODEL --no-git"
+alias aider-lms="aider --openai-api-base $LMS_OPENAI_BASE_URL --openai-api-key $LMS_OPENAI_API_KEY --model openai/$LMS_OPENAI_MODEL --no-git"
