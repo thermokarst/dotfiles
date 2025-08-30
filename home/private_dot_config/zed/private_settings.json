@@ -1,96 +1,28 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "outline_panel": {
-    "dock": "left"
-  },
-
-  "features": { "edit_prediction_provider": "zed" },
-
-  "assistant": {
-    "enable_experimental_live_diffs": true,
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4"
+    }
   },
-
-  "vim_mode": true,
-  "ui_font_size": 14,
+  "ui_font_size": 15,
+  "ui_font_family": "Iosevka Term",
   "buffer_font_family": "Iosevka Term",
-  "buffer_font_size": 14,
-  "font_size": 14,
-  "font_family": "Iosevka Term",
-
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "helix_mode": true,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "theme": {
     "mode": "dark",
     "light": "One Light",
     "dark": "Catppuccin Mocha"
-  },
-
-  "terminal": {
-    "line_height": "standard"
-  },
-
-  "auto_install_extensions": {
-    "html": true,
-    "toml": true,
-    "catppuccin": true,
-    "make": true,
-    "dockerfile": true,
-    "sql": true,
-    "terraform": true,
-    "lua": true,
-    "log": true,
-    "docker-compose": true,
-    "csv": true,
-    "basher": true,
-    "proto": true,
-    "gdscript": true,
-    "jinja2": true,
-    "roc": true,
-    "gemini": true,
-    "graphviz": true,
-    "ssh-config": true
-  },
-
-  "languages": {
-    "Python": {
-      "language_servers": ["pyright", "ruff"]
-    }
-  },
-
-  "lsp": {
-    "ruff": {
-      "initialization_options": {
-        "settings": {
-          "lint": {
-            "extendSelect": ["I"]
-          }
-        }
-      }
-    },
-
-    "rust-analyzer": {
-      "initialization_options": {
-        "inlayHints": {
-          "maxLength": null,
-          "lifetimeElisionHints": {
-            "enable": "skip_trivial",
-            "useParameterNames": true
-          },
-          "closureReturnTypeHints": {
-            "enable": "always"
-          }
-        }
-      }
-    }
   }
 }
