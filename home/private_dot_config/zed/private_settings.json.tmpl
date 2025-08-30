@@ -3,7 +3,11 @@
     "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "copilot_chat",
+      {{- if eq .hosttype "work" }}
+      "provider": "zed.dev",
+      {{- else }}
+      "provider": "zed.dev",
+      {{- end }}
       "model": "claude-sonnet-4"
     }
   },
@@ -11,14 +15,13 @@
   "ui_font_family": "Iosevka Term",
   "buffer_font_family": "Iosevka Term",
   "buffer_font_size": 15,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
   "helix_mode": true,
   "features": {
+    {{- if eq .hosttype "work" }}
     "edit_prediction_provider": "copilot"
+    {{- else }}
+    "edit_prediction_provider": "zed"
+    {{- end }}
   },
   "theme": {
     "mode": "dark",
