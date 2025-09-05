@@ -5,3 +5,4 @@
 .envrc
 .aider*
 **/.claude/settings.local.json
+CLAUDE.md
